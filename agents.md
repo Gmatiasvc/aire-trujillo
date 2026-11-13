@@ -10,21 +10,21 @@
 
 ## 1. `@hardware-architect`
 * **Scope:** `hardware/`
-* **Stack:** KiCad (vía MCP), C/ESP-IDF, buses I2C / I2S / UART.
-* **Responsabilidad:** Diseñar el esquemático y PCB del nodo ambiental (`SPS30`, `SCD41`, `BME280`, `ICS-43434`, `ADS1115`) y el firmware de referencia.
-* **Restricción:** El payload serializado en `telemetry_http.c` debe coincidir byte a byte con el contrato JSON definido en `docs/design/02-domain-and-data.md`.
+* **Stack:** KiCad (vía MCP), C/ESP-IDF (`ESP32-S3-WROOM-1-N16R8`), MQTT sobre LTE-M (`SIMCom SIM7080G`), buses I2C / I2S / UART / ADC.
+* **Responsabilidad:** Diseñar el esquemático y PCB del nodo ambiental (`SPS30`, 4x `Winsen ZE03` con 2x `ADS1115`, `SCD41`, `SGP40`, `BME280`, `ICS-43434`, `CN3791`, `TPS61023` + `TPS22919`, `MicroSD`, `USB-C 16P`, protección *conformal coating* + caja IP66) y el firmware de referencia con respaldo local en MicroSD.
+* **Restricción:** El payload MQTT publicado hacia el backend debe coincidir exactamente con el contrato JSON definido en `docs/design/02-domain-and-data.md`.
 
 ## 2. `@backend-engineer`
 * **Scope:** `backend/` y `docker-compose.yml`
-* **Stack:** Go 1.23+, `pgx/v5`, `chi/v5`, PostgreSQL 16 + PostGIS.
-* **Responsabilidad:** Implementar el motor de simulación física (perfiles Trujillo vs. Huanchaco), la interpolación espacial IDW, la caché en memoria (`sync.RWMutex`), la persistencia en PostGIS y la API REST con CORS.
-* **Restricción:** Prohibido usar `math/rand` puro sin semillas o funciones de tendencia temporal/eólica. Todo cálculo ambiental debe respetar los umbrales ECA Perú documentados.
+* **Stack:** Go 1.23+, `pgx/v5`, `chi/v5`, PostgreSQL 16 + PostGIS, Eclipse Mosquitto (MQTT).
+* **Responsabilidad:** Implementar la ingesta MQTT, el CRUD de nodos virtuales y carga de series simuladas (intervalos de 5 min), la autenticación por *passphrase* (hash + salt), el cálculo de índices (ECA/INCA Perú y AQI EPA), la interpolación espacial dinámica en backend (indicando ausencia de datos fuera de cobertura) y la API REST lista para renderizar.
+* **Restricción:** Todo cálculo ambiental debe respetar los umbrales ECA/INCA Perú y AQI EPA documentados en `docs/design/`. Ninguna lógica de interpolación debe delegarse al frontend.
 
 ## 3. `@frontend-developer`
 * **Scope:** `frontend/`
-* **Stack:** Vue 3 (`<script setup lang="ts">`), Vite, TypeScript estricto, Pinia, MapLibre GL JS, Tailwind CSS.
-* **Responsabilidad:** Construir el dashboard geoespacial, las capas WebGL de mapas de calor (ICA, PM2.5, NO2, Ruido dBA, Microclima) y el control de *time-travel* entre snapshots.
-* **Restricción:** No usar `any` en TypeScript. Las interfaces en `src/types/telemetry.ts` deben ser un espejo exacto de `backend/internal/domain/models.go`.
+* **Stack:** Vue 3 (`<script setup lang="ts">`), Vite, TypeScript estricto (librerías de mapas, gráficos y 3D por definir en Design Docs).
+* **Responsabilidad:** Construir la página Home (explicación, links y visor 3D interactivo del PCB), el mapa principal con capas de calor (ECA/INCA, botón AQI EPA, variables), consulta puntual con gráfico, *playback* 24h (mostrando explícitamente "No hay datos" fuera de cobertura), y la interfaz de administrador (acceso discreto por *passphrase*, registro de nodos en mapa/`lat,lon`, carga de valores por comas con combobox 24h cada 5 min y previsualización en gráficos por variable).
+* **Restricción:** No usar `any` en TypeScript. Las interfaces en `src/types/telemetry.ts` deben ser un espejo exacto de `backend/internal/domain/models.go`. El frontend solo renderiza datos procesados por el backend.
 
 ## 4. `@academic-writer`
 * **Scope:** `docs/ieee-paper/` y `README.md`
