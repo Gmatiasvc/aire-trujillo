@@ -94,20 +94,9 @@ func (h *Handler) GetHeatmap(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	atRaw := strings.TrimSpace(r.URL.Query().Get("at"))
-	var (
-		requestedAt *time.Time
-		atKey       = "latest"
-	)
-	if atRaw != "" {
-		parsed, err := time.Parse(time.RFC3339, atRaw)
-		if err != nil {
-			writeError(w, http.StatusBadRequest, "invalid_request", "invalid 'at' timestamp, expected RFC3339")
-			return
-		}
-		utc := parsed.UTC()
-		requestedAt = &utc
-		atKey = utc.Format(time.RFC3339)
+	requestedAt, atKey, ok := parseOptionalAtParam(w, r)
+	if !ok {
+		return
 	}
 
 	cacheKey := fmt.Sprintf("%s|%s|%s", layer, standard, atKey)
@@ -214,6 +203,10 @@ func (h *Handler) GetPoint(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		return
 	}
+	requestedAt, _, ok := parseOptionalAtParam(w, r)
+	if !ok {
+		return
+	}
 	unit := domain.UnitForLayer(layer, standard)
 
 	noDataResp := domain.PointResponse{
@@ -228,17 +221,23 @@ func (h *Handler) GetPoint(w http.ResponseWriter, r *http.Request) {
 		Series:   []domain.PointSeriesItem{},
 	}
 
-	latest, err := h.repo.GetLatestTimestamp(r.Context())
-	if err != nil {
-		writeError(w, http.StatusInternalServerError, "internal_error", "failed to query latest timestamp")
-		return
+	var targetTime *time.Time
+	if requestedAt != nil {
+		targetTime = requestedAt
+	} else {
+		latest, err := h.repo.GetLatestTimestamp(r.Context())
+		if err != nil {
+			writeError(w, http.StatusInternalServerError, "internal_error", "failed to query latest timestamp")
+			return
+		}
+		targetTime = latest
 	}
-	if latest == nil {
+	if targetTime == nil {
 		writeJSON(w, http.StatusOK, noDataResp)
 		return
 	}
 
-	currentSnapshots, err := h.repo.GetSnapshotReadings(r.Context(), *latest)
+	currentSnapshots, err := h.repo.GetSnapshotReadings(r.Context(), *targetTime)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "internal_error", "failed to query snapshot readings")
 		return
@@ -257,13 +256,13 @@ func (h *Handler) GetPoint(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if len(timestamps) == 0 {
-		timestamps = []time.Time{*latest}
+		timestamps = []time.Time{*targetTime}
 	}
 
 	windowFrom := timestamps[0].Add(-15 * time.Minute)
 	windowTo := timestamps[len(timestamps)-1]
-	if latest.After(windowTo) {
-		windowTo = *latest
+	if targetTime.After(windowTo) {
+		windowTo = *targetTime
 	}
 
 	windowReadings, err := h.repo.GetActiveNodesReadingsWindow(r.Context(), windowFrom, windowTo)
@@ -282,7 +281,7 @@ func (h *Handler) GetPoint(w http.ResponseWriter, r *http.Request) {
 		HasData:  true,
 		Label:    currentCell.Category,
 		Current: &domain.PointCurrent{
-			RecordedAt: latest.UTC().Format(time.RFC3339),
+			RecordedAt: targetTime.UTC().Format(time.RFC3339),
 			Value:      *currentCell.Value,
 			Category:   currentCell.Category,
 			Color:      currentCell.Color,
@@ -645,6 +644,20 @@ func (h *Handler) BatchInsertNodeReadings(w http.ResponseWriter, r *http.Request
 		From:              from.In(simulator.LimaLocation).Format(time.RFC3339),
 		To:                to.In(simulator.LimaLocation).Format(time.RFC3339),
 	})
+}
+
+func parseOptionalAtParam(w http.ResponseWriter, r *http.Request) (*time.Time, string, bool) {
+	atRaw := strings.TrimSpace(r.URL.Query().Get("at"))
+	if atRaw == "" {
+		return nil, "latest", true
+	}
+	parsed, err := time.Parse(time.RFC3339, atRaw)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "invalid_request", "invalid 'at' timestamp, expected RFC3339")
+		return nil, "", false
+	}
+	utc := parsed.UTC()
+	return &utc, utc.Format(time.RFC3339), true
 }
 
 func parseLayerAndStandard(w http.ResponseWriter, r *http.Request) (string, string, bool) {

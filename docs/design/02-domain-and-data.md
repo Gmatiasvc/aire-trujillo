@@ -262,7 +262,8 @@ Si se omite `at`, usa el snapshot más reciente. Si no hay nodos activos o lectu
 }
 ```
 
-#### `GET /api/v1/map/point?lat=-8.1116&lon=-79.0288&layer=air_quality&standard=inca`
+#### `GET /api/v1/map/point?lat=-8.1116&lon=-79.0288&layer=air_quality&standard=inca&at=2026-11-13T16:00:00Z`
+Si se omite `at`, usa el snapshot más reciente para `current` y la verificación de cobertura; durante el *playback*, `at` (RFC3339) resuelve `current` para ese instante manteniendo la serie histórica de 24h.
 * **Fuera de cobertura (zona gris):**
 ```json
 {

@@ -426,6 +426,27 @@ func TestEndToEndFlowThroughAPI(t *testing.T) {
 		t.Fatalf("expected valid point data with 3 series points, got %+v", ptIn)
 	}
 
+	// 7b. Query point with explicit playback timestamp 'at' (2026-11-13T15:50:00-05:00 = 20:50:00Z, pm25=16.5)
+	rec = httptest.NewRecorder()
+	router.ServeHTTP(rec, httptest.NewRequest(http.MethodGet, "/api/v1/map/point?lat=-8.1116&lon=-79.0288&layer=pm25&at=2026-11-13T20:50:00Z", nil))
+	if rec.Code != http.StatusOK {
+		t.Fatalf("expected 200 on point query with at, got %d", rec.Code)
+	}
+	var ptAt domain.PointResponse
+	if err := json.Unmarshal(rec.Body.Bytes(), &ptAt); err != nil {
+		t.Fatalf("unmarshal point with at: %v", err)
+	}
+	if !ptAt.HasData || ptAt.Current == nil || ptAt.Current.RecordedAt != "2026-11-13T20:50:00Z" || ptAt.Current.Value != 16.5 {
+		t.Fatalf("expected historical point current at 20:50:00Z with pm25=16.5, got %+v", ptAt.Current)
+	}
+
+	// 7c. Query point with invalid 'at' returns 400
+	rec = httptest.NewRecorder()
+	router.ServeHTTP(rec, httptest.NewRequest(http.MethodGet, "/api/v1/map/point?lat=-8.1116&lon=-79.0288&at=not-a-timestamp", nil))
+	if rec.Code != http.StatusBadRequest {
+		t.Fatalf("expected 400 on invalid point at param, got %d", rec.Code)
+	}
+
 	// 8. Query point far outside coverage returns No hay datos (never 0)
 	rec = httptest.NewRecorder()
 	router.ServeHTTP(rec, httptest.NewRequest(http.MethodGet, "/api/v1/map/point?lat=-8.1500&lon=-79.1300", nil))

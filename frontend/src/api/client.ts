@@ -55,6 +55,23 @@ function isBackendUnreachableStatus(status: number): boolean {
 interface RequestOptions {
   method?: 'GET' | 'POST' | 'PATCH' | 'DELETE'
   body?: unknown
+  allowDemoFallback?: boolean
+}
+
+function resolveOfflineOrThrow<T>(
+  allowDemoFallback: boolean,
+  buildDemoFallback: () => T,
+  status: number,
+  code: string,
+  message: string,
+): ApiResult<T> {
+  if (import.meta.env.DEV && allowDemoFallback) {
+    return {
+      data: buildDemoFallback(),
+      isOfflineDemo: true,
+    }
+  }
+  throw new ApiClientError(status, code, message)
 }
 
 async function requestJsonOrDemo<T>(
@@ -62,6 +79,7 @@ async function requestJsonOrDemo<T>(
   options: RequestOptions,
   buildDemoFallback: () => T,
 ): Promise<ApiResult<T>> {
+  const allowDemoFallback = options.allowDemoFallback ?? true
   const headers: Record<string, string> = {
     Accept: 'application/json',
   }
@@ -79,17 +97,23 @@ async function requestJsonOrDemo<T>(
   try {
     response = await fetch(`${API_BASE}${path}`, init)
   } catch {
-    return {
-      data: buildDemoFallback(),
-      isOfflineDemo: true,
-    }
+    return resolveOfflineOrThrow(
+      allowDemoFallback,
+      buildDemoFallback,
+      0,
+      'network_error',
+      'No se pudo conectar con el servidor. Intenta nuevamente en unos segundos.',
+    )
   }
 
   if (isBackendUnreachableStatus(response.status)) {
-    return {
-      data: buildDemoFallback(),
-      isOfflineDemo: true,
-    }
+    return resolveOfflineOrThrow(
+      allowDemoFallback,
+      buildDemoFallback,
+      response.status,
+      'backend_unavailable',
+      'El servidor está iniciando o no responde. Intenta nuevamente en unos segundos.',
+    )
   }
 
   const contentType = response.headers.get('content-type') ?? ''
@@ -97,14 +121,17 @@ async function requestJsonOrDemo<T>(
 
   if (!response.ok) {
     // Live backend always returns JSON (or explicit 401/403/429). Proxy ECONNREFUSED (500 empty)
-    // or static SPA 404/405 HTML indicates :8080 is absent.
+    // or static SPA 404/405 HTML indicates local :8080 is absent in dev.
     const isAuthOrRateLimit =
       response.status === 401 || response.status === 403 || response.status === 429
     if (!isJson && !isAuthOrRateLimit) {
-      return {
-        data: buildDemoFallback(),
-        isOfflineDemo: true,
-      }
+      return resolveOfflineOrThrow(
+        allowDemoFallback,
+        buildDemoFallback,
+        response.status,
+        'backend_unavailable',
+        'El servidor no devolvió una respuesta válida.',
+      )
     }
 
     if (isJson) {
@@ -127,10 +154,13 @@ async function requestJsonOrDemo<T>(
 
   // If Vite or an SPA fallback returned HTML instead of JSON, treat backend as absent.
   if (!isJson) {
-    return {
-      data: buildDemoFallback(),
-      isOfflineDemo: true,
-    }
+    return resolveOfflineOrThrow(
+      allowDemoFallback,
+      buildDemoFallback,
+      response.status,
+      'invalid_content_type',
+      'Respuesta inesperada del servidor.',
+    )
   }
 
   const payload = (await response.json()) as T
@@ -210,8 +240,8 @@ export function verifyAccessPhrase(phrase: string): Promise<ApiResult<AccessResp
   const payload: AccessVerifyRequest = { phrase }
   return requestJsonOrDemo<AccessResponse>(
     '/api/v1/access/verify',
-    { method: 'POST', body: payload },
-    () => ({ ok: phrase.trim().length > 0 }),
+    { method: 'POST', body: payload, allowDemoFallback: false },
+    () => ({ ok: false }),
   )
 }
 
