@@ -39,8 +39,16 @@ func TestAuthenticatorPassphraseAndCookies(t *testing.T) {
 		t.Fatalf("expected 1 cookie, got %d", len(cookies))
 	}
 	c := cookies[0]
-	if !c.HttpOnly || c.Name != SessionCookieName {
+	if !c.HttpOnly || c.Name != SessionCookieName || c.Secure || c.SameSite != http.SameSiteLaxMode {
 		t.Fatalf("unexpected cookie attributes: %+v", c)
+	}
+
+	// Secure mode must set SameSite=None + Secure for cross-site HTTPS clients
+	secRec := httptest.NewRecorder()
+	a.IssueSessionCookie(secRec, true)
+	secCookies := secRec.Result().Cookies()
+	if len(secCookies) != 1 || !secCookies[0].Secure || secCookies[0].SameSite != http.SameSiteNoneMode {
+		t.Fatalf("expected Secure+SameSiteNone cookie, got %+v", secCookies)
 	}
 
 	req := httptest.NewRequest(http.MethodGet, "/api/v1/admin/nodes", nil)

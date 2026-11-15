@@ -108,6 +108,14 @@ func (a *Authenticator) signExpiration(expUnix int64) string {
 	return payload + "." + sig
 }
 
+func sessionSameSite(secure bool) http.SameSite {
+	if secure {
+		// Cross-site frontends (e.g. Vercel/localhost -> Render) require SameSite=None with Secure.
+		return http.SameSiteNoneMode
+	}
+	return http.SameSiteLaxMode
+}
+
 // IssueSessionCookie writes an HttpOnly HMAC-signed session cookie.
 func (a *Authenticator) IssueSessionCookie(w http.ResponseWriter, secure bool) {
 	exp := a.nowFn().Add(sessionTTL).Unix()
@@ -118,7 +126,7 @@ func (a *Authenticator) IssueSessionCookie(w http.ResponseWriter, secure bool) {
 		Path:     "/",
 		HttpOnly: true,
 		Secure:   secure,
-		SameSite: http.SameSiteLaxMode,
+		SameSite: sessionSameSite(secure),
 		MaxAge:   int(sessionTTL.Seconds()),
 	})
 }
@@ -131,7 +139,7 @@ func (a *Authenticator) ClearSessionCookie(w http.ResponseWriter, secure bool) {
 		Path:     "/",
 		HttpOnly: true,
 		Secure:   secure,
-		SameSite: http.SameSiteLaxMode,
+		SameSite: sessionSameSite(secure),
 		MaxAge:   -1,
 		Expires:  time.Unix(0, 0),
 	})

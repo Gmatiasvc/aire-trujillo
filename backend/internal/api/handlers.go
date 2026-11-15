@@ -66,7 +66,7 @@ func writeError(w http.ResponseWriter, status int, code, message string) {
 }
 
 func (h *Handler) isSecureCookie(r *http.Request) bool {
-	return h.cookieSecure || r.TLS != nil
+	return h.cookieSecure || r.TLS != nil || strings.EqualFold(r.Header.Get("X-Forwarded-Proto"), "https")
 }
 
 // Health handles GET /health and GET /api/v1/health.

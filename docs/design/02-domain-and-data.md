@@ -317,7 +317,7 @@ Devuelve los *timestamps* disponibles en las últimas 24 horas (pasos de 5 min, 
 ### 5.3. Endpoints de Acceso y Administración
 
 #### `POST /api/v1/access/verify`
-Valida la *passphrase* contra `ADMIN_PASSPHRASE_HASH` + `ADMIN_PASSPHRASE_SALT` (Argon2id). Emite cookie `HttpOnly` de sesión (`aire_admin_session`, `SameSite=Lax` o `Strict`, `Secure` en producción).
+Valida la *passphrase* contra `ADMIN_PASSPHRASE_HASH` + `ADMIN_PASSPHRASE_SALT` (Argon2id). Emite cookie `HttpOnly` de sesión (`aire_admin_session`, `SameSite=Lax` en local HTTP y `SameSite=None` con `Secure` en producción HTTPS).
 ```json
 { "phrase": "..." }
 ```

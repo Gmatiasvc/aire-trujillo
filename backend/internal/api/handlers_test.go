@@ -336,7 +336,19 @@ func TestEndToEndFlowThroughAPI(t *testing.T) {
 		t.Fatalf("expected 401 on unauth admin, got %d", rec.Code)
 	}
 
-	// 4. Verify passphrase issues session cookie
+	// 4. Verify passphrase issues session cookie (and respects X-Forwarded-Proto: https)
+	fwdReq := httptest.NewRequest(http.MethodPost, "/api/v1/access/verify", bytes.NewBufferString(`{"phrase":"test-secret-phrase"}`))
+	fwdReq.Header.Set("X-Forwarded-Proto", "https")
+	fwdRec := httptest.NewRecorder()
+	router.ServeHTTP(fwdRec, fwdReq)
+	if fwdRec.Code != http.StatusOK {
+		t.Fatalf("expected 200 on forwarded access verify, got %d", fwdRec.Code)
+	}
+	fwdCookies := fwdRec.Result().Cookies()
+	if len(fwdCookies) == 0 || !fwdCookies[0].Secure || fwdCookies[0].SameSite != http.SameSiteNoneMode {
+		t.Fatalf("expected Secure+SameSiteNone cookie behind HTTPS proxy, got %+v", fwdCookies)
+	}
+
 	verifyBody := bytes.NewBufferString(`{"phrase":"test-secret-phrase"}`)
 	rec = httptest.NewRecorder()
 	router.ServeHTTP(rec, httptest.NewRequest(http.MethodPost, "/api/v1/access/verify", verifyBody))
