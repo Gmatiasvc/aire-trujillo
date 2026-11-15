@@ -301,8 +301,32 @@ func setupTestRouter(t *testing.T) (http.Handler, *memRepo) {
 	memCache := cache.NewMemoryCache(time.Minute)
 	limiter := auth.NewIPRateLimiter(10, time.Minute)
 	h := NewHandler(repo, memCache, authenticator, limiter, spatial.DefaultConfig(), false)
-	router := NewRouter(h, []string{"http://localhost:5173"})
+	router := NewRouter(h, []string{"http://localhost:5173", "https://aire-trujillo.vercel.app", "https://aire-trujillo-*.vercel.app"})
 	return router, repo
+}
+
+func TestCORSProductionAndPreviewOrigins(t *testing.T) {
+	router, _ := setupTestRouter(t)
+
+	for _, origin := range []string{
+		"https://aire-trujillo.vercel.app",
+		"https://aire-trujillo-git-main-demo.vercel.app",
+	} {
+		req := httptest.NewRequest(http.MethodGet, "/api/v1/map/point?lat=-8.079400&lon=-79.120600&layer=air_quality&standard=inca", nil)
+		req.Header.Set("Origin", origin)
+		rec := httptest.NewRecorder()
+		router.ServeHTTP(rec, req)
+
+		if rec.Code != http.StatusOK {
+			t.Fatalf("expected 200 for origin %s, got %d", origin, rec.Code)
+		}
+		if got := rec.Header().Get("Access-Control-Allow-Origin"); got != origin {
+			t.Fatalf("expected Access-Control-Allow-Origin=%q, got %q", origin, got)
+		}
+		if got := rec.Header().Get("Access-Control-Allow-Credentials"); got != "true" {
+			t.Fatalf("expected Access-Control-Allow-Credentials=true for %s, got %q", origin, got)
+		}
+	}
 }
 
 func TestEndToEndFlowThroughAPI(t *testing.T) {

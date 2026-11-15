@@ -38,7 +38,7 @@ func Load() Config {
 		AdminPassphraseHash: getEnv("ADMIN_PASSPHRASE_HASH", "11bbd278fb82bb25da2f6d17094d1cca4ed67844fc4099d23413c6b632ea8f2b"),
 		SessionSecret:       getEnv("SESSION_SECRET", "aire-trujillo-dev-session-secret-change-in-prod"),
 		CookieSecure:        getEnvBool("COOKIE_SECURE", false),
-		CORSAllowedOrigins:  parseCSV(getEnv("CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173")),
+		CORSAllowedOrigins:  parseCSV(getEnv("CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,https://aire-trujillo.vercel.app,https://aire-trujillo-*.vercel.app")),
 		MigrationsDir:       resolveMigrationsDir(getEnv("MIGRATIONS_DIR", "migrations")),
 		Spatial: spatial.Config{
 			CellSizeM:  getEnvFloat("INTERP_CELL_SIZE_M", 50),
