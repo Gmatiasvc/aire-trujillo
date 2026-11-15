@@ -8,7 +8,7 @@ Plataforma de monitoreo ambiental y calidad del aire granularizada a nivel urban
 
 * **Cobertura geográfica inicial:** Trujillo / Huanchaco, Perú (cobertura dinámica según nodos activos).
 * **Frecuencia de actualización:** Recopilación de datos cada 5 a 10 minutos (pasos exactos de 5 minutos en simulación, zona horaria `America/Lima` / `UTC-5`).
-* **Modo de operación actual (Demostración):** Simulación de nodos virtuales, con interfaz de administrador protegida (`/sixseven`) para registrar nodos y cargar series de datos para la demo pública.
+* **Modo de operación actual (Demostración):** Simulación de nodos virtuales, con interfaz de administrador protegida (`/edit`) para registrar nodos y cargar series de datos para la demo pública.
 * **Despliegue:** Orquestado con `docker-compose.yml` y optimizado para despliegue en servicio gratuito.
 
 ## 2. Componentes Principales
@@ -46,7 +46,7 @@ Plataforma de monitoreo ambiental y calidad del aire granularizada a nivel urban
   * Consulta puntual con interpolación: gráfico de evolución temporal en un punto seleccionado.
   * *Playback* de las últimas 24 horas (pasos de 5 min).
   * En la zona gris / fuera de cobertura muestra explícitamente **"No hay datos"** (nunca `0`).
-* **Acceso Discreto e Interfaz de Administrador (`/sixseven`):**
+* **Acceso Discreto e Interfaz de Administrador (`/edit`):**
   * **Pantalla de acceso discreta:** Solo un campo de texto y un botón para enviar la *passphrase*, sin ningún texto o pista que indique qué hay detrás (y sin enlaces públicos hacia esta ruta).
   * **Registro de nodos virtuales:** Nombre, ubicación (`lat/lon` manual o selección directa en mapa) y estado.
   * **Carga de datos simulados:** Valores separados por comas (el primero es el más reciente y cada siguiente tiene desfase de 5 minutos hacia atrás), con hora de inicio en formato 24h (`America/Lima`) cada 5 minutos exactos (`00:00`, `00:05`, ...) seleccionada mediante *combobox*.

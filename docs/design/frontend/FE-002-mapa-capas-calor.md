@@ -1,6 +1,6 @@
 # FE-002 — Mapa Principal con Capas de Calor
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Frontend / Mapa Geoespacial
 
 ## 1. Objetivo

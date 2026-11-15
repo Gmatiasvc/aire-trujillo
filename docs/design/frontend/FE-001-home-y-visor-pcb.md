@@ -1,6 +1,6 @@
 # FE-001 — Página Home y Visualizador Interactivo del PCB
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Frontend / Landing
 
 ## 1. Objetivo

@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: air_quality_db
+      POSTGRES_USER: air_admin
+      POSTGRES_PASSWORD: air_admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U air_admin -d air_quality_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./backend/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquitto_data:/mosquitto/data
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      DATABASE_URL: postgres://air_admin:air_admin@postgres:5432/air_quality_db?sslmode=disable
+      MQTT_BROKER_URL: tcp://mosquitto:1883
+      MQTT_ENABLED: "true"
+      ADMIN_PASSPHRASE_SALT: ${ADMIN_PASSPHRASE_SALT:-616972655f7472756a696c6c6f5f73616c74}
+      ADMIN_PASSPHRASE_HASH: ${ADMIN_PASSPHRASE_HASH:-11bbd278fb82bb25da2f6d17094d1cca4ed67844fc4099d23413c6b632ea8f2b}
+      SESSION_SECRET: ${SESSION_SECRET:-aire-trujillo-dev-session-secret-change-in-prod}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      INTERP_CELL_SIZE_M: "50"
+      INTERP_IDW_POWER: "2"
+      INTERP_FADE_START_M: "400"
+      INTERP_MAX_RADIUS_M: "600"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mosquitto:
+        condition: service_started
+
+volumes:
+  postgres_data:
+  mosquitto_data:

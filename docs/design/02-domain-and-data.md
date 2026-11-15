@@ -325,7 +325,7 @@ Valida la *passphrase* contra `ADMIN_PASSPHRASE_HASH` + `ADMIN_PASSPHRASE_SALT` 
 *Respuesta inválida (`401 Unauthorized`):* `{ "ok": false }`
 
 #### `GET /api/v1/access/session`
-Verifica si el cliente tiene sesión válida activa (útil al recargar `/sixseven` sin exponer nada en HTML público).
+Verifica si el cliente tiene sesión válida activa (útil al recargar `/edit` sin exponer nada en HTML público).
 *Respuesta válida (`200 OK`):* `{ "ok": true }`
 *Sin sesión (`401 Unauthorized`):* `{ "ok": false }`
 

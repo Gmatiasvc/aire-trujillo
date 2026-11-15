@@ -1,6 +1,6 @@
 # BE-007 — API REST (Heatmap, Consulta Puntual y Playback 24h)
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Backend / API
 
 ## 1. Objetivo

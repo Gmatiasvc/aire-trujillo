@@ -1,6 +1,6 @@
 # FE-005 — Control de Playback de las Últimas 24 Horas
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Frontend / Análisis Temporal
 
 ## 1. Objetivo

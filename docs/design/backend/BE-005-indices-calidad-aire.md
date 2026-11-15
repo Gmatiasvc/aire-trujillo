@@ -1,6 +1,6 @@
 # BE-005 — Motor de Cálculo de Índices (ECA/INCA Perú y AQI EPA)
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Backend / Dominio Ambiental
 
 ## 1. Objetivo

@@ -9,7 +9,7 @@
 * **Nota sobre diseño visual:** El usuario proveerá un MCP/skill de diseño antes o durante la implementación del frontend para lograr una estética moderna y creativa (no genérica) en el Home y la UI. Respetar los requisitos funcionales y estéticos de cada feature doc.
 
 ## 2. Dependencias Recomendadas
-* `vue-router` (rutas `/`, `/map`, `/sixseven`)
+* `vue-router` (rutas `/`, `/map`, `/edit`)
 * `pinia` (estado global: capa activa, estándar `inca` | `epa`, timestamp de playback, sesión admin)
 * `maplibre-gl` (renderizado WebGL ligero del mapa y capas de calor con datos ya calculados por backend)
 * `echarts` o `chart.js` (gráfico de evolución temporal en consulta puntual y gráficos por variable en el panel de administrador)
@@ -26,7 +26,7 @@
 | :--- | :--- | :--- |
 | `/` | Home (`FE-001`) | Explicación del proyecto, visualizador interactivo del PCB (con hotspots/inspección de componentes), botón hacia `/map`, link a `https://gmatiasvc.vercel.app` y link al paper (`[URL por definir]`). |
 | `/map` | Mapa Principal (`FE-002`–`FE-005`) | Mapa MapLibre GL JS con capa principal **ECA / INCA**, botón para cambiar a **AQI EPA**, selector de variables individuales, degradado a gris `#9CA3AF` con etiqueta explícita `"No hay datos"`, panel lateral/drawer de consulta puntual con gráfico 24h y barra de *playback* 24h (pasos de 5 min). |
-| `/sixseven` | Acceso Discreto + Admin (`FE-006`, `FE-007`) | **No enlazar esta ruta en ningún menú o footer público.** Si no hay sesión válida (`GET /api/v1/access/session`), renderiza exclusivamente un input de contraseña y un botón de envío (sin títulos, logos ni pistas). Tras autenticarse (`POST /api/v1/access/verify`), monta el panel de administrador. |
+| `/edit` | Acceso Discreto + Admin (`FE-006`, `FE-007`) | **No enlazar esta ruta en ningún menú o footer público.** Si no hay sesión válida (`GET /api/v1/access/session`), renderiza exclusivamente un input de contraseña y un botón de envío (sin títulos, logos ni pistas). Tras autenticarse (`POST /api/v1/access/verify`), monta el panel de administrador. |
 
 ## 5. Detalles Críticos de UX
 * **Zona sin cobertura (`FE-003`):** En cualquier hover/clic sobre celdas con `has_data === false` o respuesta de punto con `has_data === false`, mostrar textualmente `"No hay datos"`. Nunca mostrar `0`.

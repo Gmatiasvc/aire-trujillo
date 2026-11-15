@@ -1,6 +1,6 @@
 # FE-006 — Pantalla de Acceso Discreta a Administración
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Frontend / Seguridad Admin
 
 ## 1. Objetivo
@@ -11,4 +11,4 @@ Proveer una puerta de entrada minimalista para el administrador en la demo públ
 * **Prohibiciones:**
   * Sin títulos, subtítulos, logos de "Admin", placeholders descriptivos, enlaces desde la navegación pública ni mensajes de ayuda.
   * Ante una frase incorrecta, no dar pistas ni mensajes detallados; mantener la pantalla neutra.
-* **Acceso:** Ruta dedicada `/sixseven`, no enlazada en el menú público; tras autenticación exitosa contra `BE-002`, redirige/monta el panel de administración (`FE-007`).
+* **Acceso:** Ruta dedicada `/edit`, no enlazada en el menú público; tras autenticación exitosa contra `BE-002`, redirige/monta el panel de administración (`FE-007`).

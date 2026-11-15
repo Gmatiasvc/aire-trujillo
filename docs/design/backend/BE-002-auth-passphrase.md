@@ -1,6 +1,6 @@
 # BE-002 — Autenticación de Administrador por Passphrase
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Backend / Seguridad
 
 ## 1. Objetivo

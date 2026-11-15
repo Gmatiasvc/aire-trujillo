@@ -1,6 +1,6 @@
 # BE-004 — Ingesta MQTT (Eclipse Mosquitto) y Persistencia PostGIS
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Backend / Ingesta
 
 ## 1. Objetivo

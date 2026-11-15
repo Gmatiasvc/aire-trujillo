@@ -50,5 +50,5 @@ Aprovechar los paquetes existentes y añadir los módulos faltantes de forma lim
 ## 4. Notas Importantes para Free Tier y Demo
 * Incluir en `docker-compose.yml` (en la raíz del repo): `postgres` (`postgis/postgis:16-3.4-alpine`), `mosquitto` (`eclipse-mosquitto:2`), y `api` (`./backend`).
 * Incluir una herramienta CLI pequeña o subcomando (ej. `go run ./cmd/hashphrase`) para que el usuario genere fácilmente su `ADMIN_PASSPHRASE_HASH` + `ADMIN_PASSPHRASE_SALT`.
-* Mantener `migrations/002_seed_stations.sql` idempotente (opcionalmente vacío o con nodos de prueba solo si se habilita seed de desarrollo, respetando que en producción/demo el administrador pueda gestionar todo desde `/sixseven`).
+* Mantener `migrations/002_seed_stations.sql` idempotente (opcionalmente vacío o con nodos de prueba solo si se habilita seed de desarrollo, respetando que en producción/demo el administrador pueda gestionar todo desde `/edit`).
 * Al finalizar cada feature, actualizar el estado en [features.md](./features.md).

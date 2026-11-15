@@ -1,6 +1,6 @@
 # FE-003 — Degradado hacia Gris y Manejo de "No hay datos"
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Frontend / Visualización Geoespacial
 
 ## 1. Objetivo

@@ -27,7 +27,7 @@
 * **Tipado estricto (`vue-tsc -b`):** Cero usos de `any`; `src/types/telemetry.ts` debe reflejar exactamente `backend/internal/domain/models.go` y `02-domain-and-data.md`.
 * **Build de producción:** `npm run build` (`vue-tsc -b && vite build`) sin errores.
 * **Verificación funcional de UI:**
-  * Ruta `/sixseven`: únicamente 1 campo de texto y 1 botón, sin textos descriptivos ni enlaces desde la UI pública.
+  * Ruta `/edit`: únicamente 1 campo de texto y 1 botón, sin textos descriptivos ni enlaces desde la UI pública.
   * Zona gris en mapa y consulta puntual: muestra `"No hay datos"`, nunca `0`.
   * Admin: combobox en formato 24h cada 5 min (`00:00`–`23:55`), entrada por comas (primero el más reciente) y gráfico individual por cada variable ingresada.
 

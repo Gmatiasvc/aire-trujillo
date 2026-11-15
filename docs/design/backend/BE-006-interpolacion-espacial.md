@@ -1,6 +1,6 @@
 # BE-006 — Interpolación Espacial Dinámica y Manejo de Ausencia de Datos
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Backend / Cómputo Geoespacial
 
 ## 1. Objetivo

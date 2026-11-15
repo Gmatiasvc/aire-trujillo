@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T20:15:11Z",
+  "title": "Design System: Aire Trujillo",
+  "extensions": {
+    "colorMeta": {
+      "vermilion-signal": {
+        "role": "primary",
+        "displayName": "Signal Vermilion",
+        "canonical": "#b83a28",
+        "tonalRamp": ["#2d0c07", "#4a150d", "#6d2116", "#9d2f20", "#b83a28", "#d6604e", "#eb9e91", "#fff9f2"]
+      },
+      "vermilion-signal-hover": {
+        "role": "primary",
+        "displayName": "Signal Vermilion Hover",
+        "canonical": "#9d2f20",
+        "tonalRamp": ["#260a06", "#42120b", "#631d13", "#84271a", "#9d2f20", "#c7513f", "#e59487", "#fdf1ee"]
+      },
+      "vermilion-ink": {
+        "role": "primary",
+        "displayName": "Vermilion Ink",
+        "canonical": "#fff9f2",
+        "tonalRamp": ["#2c2219", "#4e3e30", "#75604d", "#9c8570", "#c2ad98", "#dfd1c2", "#f2e9df", "#fff9f2"]
+      },
+      "bottle-green": {
+        "role": "primary",
+        "displayName": "Bottle Green",
+        "canonical": "#265d43",
+        "tonalRamp": ["#0b1e15", "#133324", "#1b4632", "#265d43", "#387c5c", "#5ea181", "#9ec9b4", "#e7f3ec"]
+      },
+      "bottle-ink": {
+        "role": "primary",
+        "displayName": "Bottle Ink",
+        "canonical": "#f7f1e3",
+        "tonalRamp": ["#262118", "#433a2c", "#665944", "#8a7a61", "#ae9d82", "#cec0a8", "#e6dccb", "#f7f1e3"]
+      },
+      "amber-gold-fill": {
+        "role": "primary",
+        "displayName": "Golden Amber Fill",
+        "canonical": "#e7b043",
+        "tonalRamp": ["#2b1e06", "#4b360c", "#745414", "#a3771e", "#d49b2c", "#e7b043", "#f1cc7c", "#fbf0d4"]
+      },
+      "amber-ochre-accent": {
+        "role": "primary",
+        "displayName": "Ochre Amber Accent",
+        "canonical": "#8a5607",
+        "tonalRamp": ["#241502", "#3e2503", "#613b05", "#8a5607", "#b57614", "#d99b38", "#ecc47c", "#faf0d9"]
+      },
+      "amber-bed-light": {
+        "role": "neutral",
+        "displayName": "Amber Light-Table Bed",
+        "canonical": "#dda126",
+        "tonalRamp": ["#2a1d05", "#4c360a", "#765412", "#a5771b", "#dda126", "#e7b958", "#f2d694", "#fcf3da"]
+      },
+      "amber-bed-deep-light": {
+        "role": "neutral",
+        "displayName": "Deep Amber Bed",
+        "canonical": "#c98c19",
+        "tonalRamp": ["#281b04", "#473008", "#6f4d0e", "#9b6d14", "#c98c19", "#dfa942", "#eed08c", "#fbf1d6"]
+      },
+      "ivory-sheet-light": {
+        "role": "neutral",
+        "displayName": "Archival Ivory Sheet",
+        "canonical": "#f7f1e3",
+        "tonalRamp": ["#262118", "#433a2c", "#665944", "#8a7a61", "#ae9d82", "#cec0a8", "#e6dccb", "#f7f1e3"]
+      },
+      "ivory-well-light": {
+        "role": "neutral",
+        "displayName": "Warm Ivory Well",
+        "canonical": "#efe6d2",
+        "tonalRamp": ["#272116", "#453b28", "#685a3f", "#8d7b59", "#b19e7c", "#d0c2a4", "#e3d7be", "#f5efe2"]
+      },
+      "carbon-surface-light": {
+        "role": "neutral",
+        "displayName": "Carbon Ink Surface",
+        "canonical": "#191d20",
+        "tonalRamp": ["#0f1214", "#191d20", "#2c3338", "#444e55", "#637079", "#8d99a1", "#bdc5ca", "#eaedf0"]
+      },
+      "slate-surface-light": {
+        "role": "secondary",
+        "displayName": "Deep Slate Surface",
+        "canonical": "#29373e",
+        "tonalRamp": ["#101619", "#1c262b", "#29373e", "#3d5059", "#58707c", "#8097a2", "#b3c2c9", "#e7ecef"]
+      },
+      "glass-slate-light": {
+        "role": "secondary",
+        "displayName": "Tinted Glass Slate (Light)",
+        "canonical": "rgba(25, 34, 38, 0.91)",
+        "tonalRamp": ["#0e1316", "#192226", "#27353b", "#3a4d55", "#546b75", "#7d929b", "#b2c0c6", "#e6ecee"]
+      },
+      "ink-primary-light": {
+        "role": "neutral",
+        "displayName": "Primary Carbon Ink",
+        "canonical": "#181a1c",
+        "tonalRamp": ["#0e0f10", "#181a1c", "#2d3033", "#464a4f", "#666b71", "#8f9499", "#bfc3c7", "#ebedee"]
+      },
+      "ink-secondary-light": {
+        "role": "neutral",
+        "displayName": "Warm Umber Ink",
+        "canonical": "#433a2e",
+        "tonalRamp": ["#1d1812", "#2f281f", "#433a2e", "#615444", "#847561", "#aa9b88", "#cfc4b6", "#f0ebe5"]
+      },
+      "ink-muted-carbon-light": {
+        "role": "neutral",
+        "displayName": "Muted Parchment on Carbon",
+        "canonical": "#cfc3af",
+        "tonalRamp": ["#24201a", "#3f382e", "#5e5446", "#807361", "#a69783", "#cfc3af", "#e4dccf", "#f6f3ee"]
+      },
+      "rule-soft-light": {
+        "role": "neutral",
+        "displayName": "Soft Parchment Rule",
+        "canonical": "#c7b698",
+        "tonalRamp": ["#241f16", "#3f3628", "#5f523c", "#837256", "#a89677", "#c7b698", "#dfd4bf", "#f5f0e6"]
+      },
+      "vermilion-dark": {
+        "role": "primary",
+        "displayName": "Signal Vermilion (Dark)",
+        "canonical": "#bf4128",
+        "tonalRamp": ["#2c0d07", "#4b170d", "#722415", "#9d331e", "#bf4128", "#dc6a53", "#efa393", "#fff1ed"]
+      },
+      "vermilion-dark-hover": {
+        "role": "primary",
+        "displayName": "Signal Vermilion Hover (Dark)",
+        "canonical": "#d35035",
+        "tonalRamp": ["#2d0e07", "#4f1a0f", "#772919", "#a33a24", "#d35035", "#e47862", "#f2ae9f", "#fff2ef"]
+      },
+      "vermilion-ink-dark": {
+        "role": "primary",
+        "displayName": "Vermilion Ink (Dark)",
+        "canonical": "#fff8f0",
+        "tonalRamp": ["#2c2116", "#4e3c29", "#745c42", "#9c8266", "#c2aa90", "#dfd0be", "#f2e8dc", "#fff8f0"]
+      },
+      "bottle-green-dark": {
+        "role": "primary",
+        "displayName": "Bottle Green (Dark)",
+        "canonical": "#2f6e4f",
+        "tonalRamp": ["#0d2117", "#163727", "#215039", "#2f6e4f", "#458e6a", "#6db08e", "#a9d2bd", "#ebf5f0"]
+      },
+      "bottle-ink-dark": {
+        "role": "primary",
+        "displayName": "Bottle Ink (Dark)",
+        "canonical": "#f5ecdb",
+        "tonalRamp": ["#272116", "#443a28", "#675940", "#8c7a5a", "#b09e7d", "#d0c1a5", "#e6dcc8", "#f5ecdb"]
+      },
+      "amber-gold-dark": {
+        "role": "primary",
+        "displayName": "Amber Gold Ink (Dark)",
+        "canonical": "#e6aa3c",
+        "tonalRamp": ["#2b1e06", "#4b350b", "#735212", "#a2741b", "#d1982a", "#e6aa3c", "#f1c878", "#fcf0d3"]
+      },
+      "amber-gold-fill-dark": {
+        "role": "primary",
+        "displayName": "Golden Amber Fill (Dark)",
+        "canonical": "#d99b26",
+        "tonalRamp": ["#2a1d05", "#4a3309", "#704f10", "#9e7018", "#d99b26", "#e6b454", "#f1d392", "#fcf3da"]
+      },
+      "amber-bed-dark": {
+        "role": "neutral",
+        "displayName": "Umber Charcoal Bed",
+        "canonical": "#15120e",
+        "tonalRamp": ["#0c0a08", "#15120e", "#28221b", "#40372b", "#5f5241", "#887b69", "#bab0a2", "#ece8e2"]
+      },
+      "amber-bed-deep-dark": {
+        "role": "neutral",
+        "displayName": "Deepest Espresso Bed",
+        "canonical": "#0e0c09",
+        "tonalRamp": ["#090806", "#0e0c09", "#221d17", "#393126", "#584c3c", "#817462", "#b5aba0", "#eae6e1"]
+      },
+      "ivory-sheet-dark": {
+        "role": "neutral",
+        "displayName": "Warm Charcoal Sheet",
+        "canonical": "#211c16",
+        "tonalRamp": ["#110e0b", "#211c16", "#362e24", "#514537", "#726350", "#9a8b79", "#c7bdb0", "#f0ece6"]
+      },
+      "ivory-well-dark": {
+        "role": "neutral",
+        "displayName": "Warm Charcoal Well",
+        "canonical": "#2b241c",
+        "tonalRamp": ["#14110d", "#2b241c", "#42372b", "#5e4f3e", "#806d57", "#a59480", "#cec2b3", "#f2eee8"]
+      },
+      "carbon-surface-dark": {
+        "role": "neutral",
+        "displayName": "Deepest Carbon Anchor",
+        "canonical": "#100d0a",
+        "tonalRamp": ["#0a0806", "#100d0a", "#241e18", "#3b3228", "#5a4d3e", "#837565", "#b7aca0", "#ece8e3"]
+      },
+      "slate-surface-dark": {
+        "role": "secondary",
+        "displayName": "Warm Umber Slate",
+        "canonical": "#332c24",
+        "tonalRamp": ["#16130f", "#231e18", "#332c24", "#4d4337", "#6e6151", "#968877", "#c4bab0", "#efebe6"]
+      },
+      "glass-slate-dark": {
+        "role": "secondary",
+        "displayName": "Tinted Glass Slate (Dark)",
+        "canonical": "rgba(17, 14, 11, 0.88)",
+        "tonalRamp": ["#0a0806", "#110e0b", "#251f18", "#3d3328", "#5c4e3e", "#857666", "#b8aea2", "#ede9e4"]
+      },
+      "ink-primary-dark": {
+        "role": "neutral",
+        "displayName": "Warm Cream Ink",
+        "canonical": "#f5ecdb",
+        "tonalRamp": ["#272116", "#443a28", "#675940", "#8c7a5a", "#b09e7d", "#d0c1a5", "#e6dcc8", "#f5ecdb"]
+      },
+      "ink-secondary-dark": {
+        "role": "neutral",
+        "displayName": "Warm Sand Ink",
+        "canonical": "#cbbca3",
+        "tonalRamp": ["#241f18", "#3e362a", "#5d5240", "#80715a", "#a5957d", "#cbbca3", "#e2d8c7", "#f5f1ea"]
+      },
+      "ink-muted-carbon-dark": {
+        "role": "neutral",
+        "displayName": "Muted Sand on Carbon",
+        "canonical": "#c2b298",
+        "tonalRamp": ["#231e17", "#3d3428", "#5c4f3d", "#7e6e56", "#a29177", "#c2b298", "#dcd2c0", "#f4f0e8"]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Warm Bronze Rule",
+        "canonical": "#6b563a",
+        "tonalRamp": ["#1f1810", "#352a1b", "#4f402b", "#6b563a", "#8f7553", "#b29978", "#d4c3aa", "#f3ede4"]
+      },
+      "rule-soft-dark": {
+        "role": "neutral",
+        "displayName": "Subtle Umber Divider",
+        "canonical": "#3d3224",
+        "tonalRamp": ["#16120d", "#261f16", "#3d3224", "#584936", "#7a6850", "#9e8d75", "#c7bba9", "#f0ece5"]
+      },
+      "pcb-board-light": {
+        "role": "secondary",
+        "displayName": "PCB Pine Substrate (Light)",
+        "canonical": "#23332d",
+        "tonalRamp": ["#0d1411", "#16211d", "#23332d", "#364d44", "#4f6d61", "#78958a", "#aec2ba", "#e6eeeb"]
+      },
+      "pcb-board-dark": {
+        "role": "secondary",
+        "displayName": "PCB Pine Substrate (Dark)",
+        "canonical": "#1b2420",
+        "tonalRamp": ["#0b100e", "#1b2420", "#2c3933", "#42544b", "#5f746a", "#869a91", "#b7c4be", "#e8eeeb"]
+      },
+      "pcb-copper": {
+        "role": "secondary",
+        "displayName": "Exposed PCB Copper",
+        "canonical": "#d99b26",
+        "tonalRamp": ["#2a1d05", "#4a3309", "#704f10", "#9e7018", "#d99b26", "#e6b454", "#f1d392", "#fcf3da"]
+      },
+      "pcb-silk": {
+        "role": "secondary",
+        "displayName": "PCB Silkscreen Ink",
+        "canonical": "#f1e6cf",
+        "tonalRamp": ["#272115", "#443a25", "#67593b", "#8c7a54", "#b09e77", "#cfc09f", "#e4dac1", "#f1e6cf"]
+      },
+      "nodata-gray": {
+        "role": "tertiary",
+        "displayName": "Cartographic No-Data Neutral",
+        "canonical": "#9ca3af",
+        "tonalRamp": ["#1b1e23", "#2f343c", "#474e59", "#646d7a", "#828b99", "#9ca3af", "#c2c7d0", "#ecedf0"]
+      },
+      "nodata-ink": {
+        "role": "tertiary",
+        "displayName": "No-Data High-Contrast Ink",
+        "canonical": "#111827",
+        "tonalRamp": ["#0a0e17", "#111827", "#232d42", "#3a4661", "#576582", "#808ca6", "#b4bccb", "#e8ebf0"]
+      },
+      "status-active-green": {
+        "role": "secondary",
+        "displayName": "Active Telemetry Green",
+        "canonical": "#22c55e",
+        "tonalRamp": ["#0a2915", "#114323", "#186234", "#1f8b49", "#22c55e", "#54d582", "#95e5b0", "#e4f9eb"]
+      },
+      "saved-series-light": {
+        "role": "secondary",
+        "displayName": "Saved Series Forest (Light)",
+        "canonical": "#166534",
+        "tonalRamp": ["#072111", "#0c351c", "#114c28", "#166534", "#28844b", "#4fa570", "#8ec9a4", "#e3f3e9"]
+      },
+      "saved-series-dark": {
+        "role": "secondary",
+        "displayName": "Saved Series Mint (Dark)",
+        "canonical": "#4ade80",
+        "tonalRamp": ["#0d2b18", "#174829", "#23693d", "#329456", "#4ade80", "#7ae6a2", "#afeec7", "#e8fbf0"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Main hero H1, large IDW readout metrics, and /map 2.75rem inspection values in condensed uppercase poster scale."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Progressive stage H2 titles (02–06) and IEEE modal header."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Station detail headers, BOM block dossier titles, /map and /edit toolbar wordmarks, /edit panel and variable card titles, and legend/drawer headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Editorial prose, hero lead (58ch max), section summaries (68ch max), legend rows, inspection notes, and /edit directory/form names."
+      },
+      "label": {
+        "displayName": "Label & Tabular Mono",
+        "purpose": "Raked action labels, 01–06 rail ticks, timetable columns, /map and /edit controls, gate/CSV inputs, 24h Lima slots, coordinates, and chart ticks with tabular-nums lock."
+      }
+    },
+    "shadows": [
+      {
+        "name": "drop-shadow-policy",
+        "value": "none",
+        "purpose": "Outer drop shadows are prohibited; surfaces separate via four tonal planes and 1px/1.5px hairline rules."
+      },
+      {
+        "name": "map-control-shadow-reset",
+        "value": "none",
+        "purpose": "Overrides MapLibre GL default navigation group box-shadow so /map controls match the flat 0px hairline aesthetic."
+      },
+      {
+        "name": "glass-slate-specular-light",
+        "value": "inset 0 1px 0 rgba(255, 240, 200, 0.24)",
+        "purpose": "Top edge specular rim inside the smoked glass-slate opening timetable overlay (light mode)."
+      },
+      {
+        "name": "glass-slate-specular-dark",
+        "value": "inset 0 1px 0 rgba(230, 170, 60, 0.28)",
+        "purpose": "Top edge specular rim inside the smoked glass-slate opening timetable overlay (dark mode)."
+      },
+      {
+        "name": "glass-slate-backdrop",
+        "value": "blur(12px) saturate(118%)",
+        "purpose": "Single authored backdrop blur reserved exclusively for the hero timetable overlay."
+      },
+      {
+        "name": "modal-scrim-light",
+        "value": "rgba(24, 20, 14, 0.62)",
+        "purpose": "Warm backdrop scrim behind the IEEE technical report modal in light polarity."
+      },
+      {
+        "name": "modal-scrim-dark",
+        "value": "rgba(8, 6, 4, 0.78)",
+        "purpose": "Deep warm backdrop scrim behind the IEEE technical report modal in dark polarity."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Primary exponential ease-out curve for UI transitions, glides, and view swaps."
+      },
+      {
+        "name": "body-theme-transition",
+        "value": "background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Smooth polarity shift when toggling between warm light and warm dark themes."
+      },
+      {
+        "name": "raked-control-transition",
+        "value": "background-color 0.22s cubic-bezier(0.16, 1, 0.3, 1), color 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Tactile hover inversion and -2px lift along the -9deg raked axis."
+      },
+      {
+        "name": "slide-swap",
+        "value": "opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Vue Transition for switching stations, IDW checkpoints, and PCB block dossiers."
+      },
+      {
+        "name": "modal-sheet",
+        "value": "transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Modal sheet entrance and exit choreography (14px rise, 0.985 scale)."
+      },
+      {
+        "name": "map-drawer-slide",
+        "value": "transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.18s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "PointInspectionDrawer entrance and exit slide (18px horizontal desktop, 20px vertical mobile bottom sheet)."
+      },
+      {
+        "name": "map-skeleton-pulse",
+        "value": "1.2s ease-in-out infinite",
+        "purpose": "Subtle opacity pulse on loading wells inside the /map point inspection drawer."
+      },
+      {
+        "name": "bed-light-sweep",
+        "value": "16s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate",
+        "purpose": "Ambient warm diagonal sheen drifting across the amber light-table bed."
+      },
+      {
+        "name": "idw-probe-glide",
+        "value": "transform 0.36s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Horizontal glide of the SVG distance cursor across the 0–750 m cross-section."
+      },
+      {
+        "name": "pcb-trace-flow",
+        "value": "0.9s linear infinite",
+        "purpose": "Dashed copper trace signal animation highlighting the inspected PCB bus."
+      },
+      {
+        "name": "edit-control-transition",
+        "value": "background-color 0.16s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.16s cubic-bezier(0.16, 1, 0.3, 1), color 0.16s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Snappy 0.14s–0.18s hover inversion across /edit gate submit, directory rows, mode toggles, and coordinate picker buttons."
+      },
+      {
+        "name": "admin-chart-transition",
+        "value": "150ms",
+        "purpose": "Chart.js dataset transition on /edit individual variable preview cards backed by ResizeObserver."
+      },
+      {
+        "name": "reduced-motion-clamp",
+        "value": "0.01ms !important",
+        "purpose": "Collapses all animation and transition durations under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xl-nav-hide", "value": "1160px" },
+      { "name": "map-clock-hide", "value": "1100px" },
+      { "name": "edit-workbench-stack", "value": "1079px" },
+      { "name": "lg-pcb-stack", "value": "1024px" },
+      { "name": "md-rack-collapse", "value": "960px" },
+      { "name": "map-mobile-sheet", "value": "900px" },
+      { "name": "edit-charts-stack", "value": "820px" },
+      { "name": "map-compact-bars", "value": "780px" },
+      { "name": "edit-picker-compact", "value": "720px" },
+      { "name": "sm-pcb-scroll", "value": "640px" },
+      { "name": "map-banner-compact", "value": "600px" },
+      { "name": "xs-topbar-unwrap", "value": "580px" },
+      { "name": "xs-probe-grid", "value": "560px" },
+      { "name": "map-micro-labels", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Raked Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary map CTA skewed -9deg with upright counter-skewed monospace label and vermilion fill.",
+      "html": "<button type=\"button\" class=\"ds-raked-btn ds-raked-btn-primary\"><span>Ir al mapa interactivo <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m13 6 6 6-6 6\"/></svg></span></button>",
+      "css": ".ds-raked-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border: 1.5px solid var(--rule-color, #191d20); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 12.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; border-radius: 0; transform: skewX(var(--rake-deg, -9deg)); transition: background-color 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), color 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), transform 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-raked-btn > span { display: inline-flex; align-items: center; gap: 8px; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-raked-btn:hover { transform: skewX(var(--rake-deg, -9deg)) translateY(-2px); } .ds-raked-btn:active { transform: skewX(var(--rake-deg, -9deg)) translateY(0); } .ds-raked-btn:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; } .ds-raked-btn-primary { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); } .ds-raked-btn-primary:hover { background: var(--accent-vermilion-hover, #9d2f20); border-color: var(--accent-vermilion-hover, #9d2f20); }"
+    },
+    {
+      "name": "Secondary & Carbon Raked Buttons",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Raised ivory well and solid carbon raked buttons for hardware jumps, standard switches, and closing links.",
+      "html": "<div class=\"ds-btn-pair\"><button type=\"button\" class=\"ds-raked-btn-alt ds-btn-secondary\"><span>Explorar placa PCB <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M12 5v14\"/><path d=\"m6 13 6 6 6-6\"/></svg></span></button><button type=\"button\" class=\"ds-raked-btn-alt ds-btn-carbon\"><span>Abrir mapa en vivo <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m13 6 6 6-6 6\"/></svg></span></button></div>",
+      "css": ".ds-btn-pair { display: flex; flex-wrap: wrap; gap: 14px; } .ds-raked-btn-alt { display: inline-flex; align-items: center; justify-content: center; padding: 12px 22px; border: 1.5px solid var(--rule-color, #191d20); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 12.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; border-radius: 0; transform: skewX(var(--rake-deg, -9deg)); transition: background-color 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), color 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), transform 0.22s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-raked-btn-alt > span { display: inline-flex; align-items: center; gap: 8px; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-raked-btn-alt:hover { transform: skewX(var(--rake-deg, -9deg)) translateY(-2px); } .ds-raked-btn-alt:active { transform: skewX(var(--rake-deg, -9deg)) translateY(0); } .ds-raked-btn-alt:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; } .ds-btn-secondary { background: var(--surface-ivory-2, #efe6d2); color: var(--ink-primary, #181a1c); } .ds-btn-secondary:hover { background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); } .ds-btn-carbon { background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); } .ds-btn-carbon:hover { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); }"
+    },
+    {
+      "name": "Timetable Top Nav & Ruler Rail Ticks",
+      "kind": "nav",
+      "refersTo": "nav-slide-tab",
+      "description": "Horizontal -9deg slide tabs paired with the graduated carbon rail ticks highlighting the active stage in amber.",
+      "html": "<div class=\"ds-nav-cluster\"><div class=\"ds-top-tabs\"><button type=\"button\" class=\"ds-slide-tab ds-is-active\"><span>Mapa</span></button><button type=\"button\" class=\"ds-slide-tab\"><span>Pulso</span></button><button type=\"button\" class=\"ds-slide-tab\"><span>Cobertura</span></button></div><div class=\"ds-rail-sample\"><button type=\"button\" class=\"ds-rail-tick ds-is-active\"><span class=\"ds-tick-code\">01</span><span class=\"ds-tick-short\">MAPA</span></button><button type=\"button\" class=\"ds-rail-tick\"><span class=\"ds-tick-code\">02</span><span class=\"ds-tick-short\">DEMO</span></button></div></div>",
+      "css": ".ds-nav-cluster { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; } .ds-top-tabs { display: inline-flex; gap: 6px; padding: 10px 14px; background: var(--surface-ivory, #f7f1e3); border: 1.5px solid var(--rule-color, #191d20); } .ds-slide-tab { border: 1px solid var(--rule-soft, #c7b698); background: transparent; color: var(--ink-secondary, #433a2e); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; text-transform: uppercase; padding: 6px 11px; cursor: pointer; transform: skewX(var(--rake-deg, -9deg)); transition: background-color 0.2s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), color 0.2s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.2s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-slide-tab > span { display: block; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-slide-tab:hover { border-color: var(--rule-color, #191d20); color: var(--ink-primary, #181a1c); } .ds-slide-tab.ds-is-active { background: var(--surface-carbon, #191d20); border-color: var(--rule-color, #191d20); color: var(--ink-on-carbon, #f7f1e3); } .ds-slide-tab:focus-visible, .ds-rail-tick:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; } .ds-rail-sample { position: relative; display: flex; flex-direction: column; gap: 6px; width: 78px; padding: 10px 12px 10px 8px; background: var(--surface-carbon, #191d20); border: 1.5px solid var(--rule-color, #191d20); } .ds-rail-sample::after { content: ''; position: absolute; top: 8px; bottom: 8px; right: 0; width: 5px; background: repeating-linear-gradient(to bottom, rgba(231, 176, 67, 0.55) 0 1px, transparent 1px 8px); } .ds-rail-tick { border: 1px solid transparent; border-top: 1px solid var(--rule-soft, #c7b698); background: transparent; color: var(--ink-muted-on-carbon, #cfc3af); padding: 8px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; font-family: var(--font-mono, 'Azeret Mono', monospace); font-variant-numeric: tabular-nums; transition: color 0.2s, background-color 0.2s; } .ds-rail-tick:hover { color: var(--ink-on-carbon, #f7f1e3); background: rgba(255, 255, 255, 0.05); } .ds-rail-tick.ds-is-active { background: var(--accent-amber-fill, #e7b043); border-color: var(--accent-amber-fill, #e7b043); color: #181a1c; } .ds-tick-code { font-size: 13px; font-weight: 600; } .ds-tick-short { font-size: 9.5px; letter-spacing: 0.06em; }"
+    },
+    {
+      "name": "Discreet Access Gate Input",
+      "kind": "input",
+      "refersTo": "input-gate",
+      "description": "Sharp 0px 1.5px-bordered sunken-well password field and carbon arrow submit used on the /edit unauthenticated gate.",
+      "html": "<form class=\"ds-gate-form\" onsubmit=\"return false\"><input type=\"password\" class=\"ds-gate-input\" value=\"••••••••\" aria-label=\"Passphrase\" /><button type=\"submit\" class=\"ds-gate-submit\" aria-label=\"Enviar\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m13 6 6 6-6 6\"/></svg></button></form>",
+      "css": ".ds-gate-form { display: flex; gap: 8px; width: 300px; } .ds-gate-input { flex: 1; padding: 10px 12px; border: 1.5px solid var(--rule-color, #191d20); border-radius: 0; background: var(--surface-ivory-2, #efe6d2); color: var(--ink-primary, #181a1c); caret-color: var(--accent-vermilion, #b83a28); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 13px; } .ds-gate-input:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; } .ds-gate-submit { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border: 1.5px solid var(--rule-color, #191d20); border-radius: 0; background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); cursor: pointer; transition: background-color 0.16s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.16s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), color 0.16s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-gate-submit:hover { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); } .ds-gate-submit:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; }"
+    },
+    {
+      "name": "Cartographic No-Data & Telemetry Chips",
+      "kind": "chip",
+      "refersTo": "nodata-chip",
+      "description": "Zero-radius status stamps pairing amber timestamps, bottle-green geospatial tags, and immutable #9CA3AF No-Data markers.",
+      "html": "<div class=\"ds-tag-row\"><span class=\"ds-tag ds-tag-amber\">21:15 UTC-5</span><span class=\"ds-tag ds-tag-bottle\">GRILLA 50 M · INCA</span><span class=\"ds-tag ds-tag-nodata\">#9CA3AF · No hay datos</span><span class=\"ds-var-chip\"><strong>pm25</strong><small>µg/m³</small></span></div>",
+      "css": ".ds-tag-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } .ds-tag { display: inline-block; padding: 4px 10px; border: 1px solid var(--rule-color, #191d20); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; letter-spacing: 0.05em; font-variant-numeric: tabular-nums; } .ds-tag-amber { background: var(--accent-amber-fill, #e7b043); color: #181a1c; } .ds-tag-bottle { background: var(--accent-bottle, #265d43); color: var(--accent-bottle-ink, #f7f1e3); } .ds-tag-nodata { background: var(--nodata-bg, #9ca3af); color: var(--nodata-ink, #111827); } .ds-var-chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 4px 9px; border: 1px solid var(--rule-soft, #c7b698); background: var(--surface-ivory, #f7f1e3); color: var(--ink-primary, #181a1c); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; } .ds-var-chip small { color: var(--ink-secondary, #433a2e); font-size: 10.5px; }"
+    },
+    {
+      "name": "Glass-Slate Timetable Card",
+      "kind": "card",
+      "refersTo": "timetable-glass-slate",
+      "description": "Signature -2.5deg tilted smoked glass-slate schedule card with upright rows and an explicit #9CA3AF No hay datos row.",
+      "html": "<div class=\"ds-schedule-card\"><div class=\"ds-schedule-inner\"><div class=\"ds-schedule-head\"><span>HORA</span><span>SECTOR</span><span>INCA</span><span>ESTADO</span></div><button type=\"button\" class=\"ds-schedule-row\"><span>21:15</span><span class=\"ds-st\"><small>TRJ-01</small><strong>Plaza de Armas</strong></span><span class=\"ds-val\">42</span><span class=\"ds-state\"><i class=\"ds-sq-good\"></i>Buena</span></button><button type=\"button\" class=\"ds-schedule-row ds-is-nodata\"><span>21:15</span><span class=\"ds-st\"><small>SIN-COB</small><strong>Periferia sin nodo</strong></span><span class=\"ds-val\">—</span><span class=\"ds-state\"><i class=\"ds-sq-nodata\"></i>No hay datos</span></button></div></div>",
+      "css": ".ds-schedule-card { overflow: hidden; border: 1.5px solid var(--rule-color, #191d20); background: var(--glass-slate, rgba(25, 34, 38, 0.91)); color: var(--glass-slate-ink, #f7f1e3); backdrop-filter: blur(12px) saturate(118%); box-shadow: inset 0 1px 0 var(--glass-slate-border, rgba(255, 240, 200, 0.24)); transform: skewX(-2.5deg); width: 100%; max-width: 460px; } .ds-schedule-inner { transform: skewX(2.5deg); } .ds-schedule-head, .ds-schedule-row { display: grid; grid-template-columns: 52px 1.3fr 46px 1fr; gap: 8px; align-items: center; padding: 10px 16px; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 12px; font-variant-numeric: tabular-nums; } .ds-schedule-head { color: var(--glass-slate-muted, #d8ccb8); border-bottom: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; } .ds-schedule-row { width: 100%; text-align: left; border: none; border-top: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: transparent; color: var(--glass-slate-ink, #f7f1e3); cursor: pointer; transition: background-color 0.18s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), transform 0.18s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-schedule-row:hover { background: var(--glass-slate-row-hover, rgba(44, 58, 64, 0.88)); transform: translateX(3px); } .ds-schedule-row:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: -2px; } .ds-schedule-row.ds-is-nodata { background: var(--glass-slate-nodata, rgba(156, 163, 175, 0.24)); } .ds-st { display: flex; flex-direction: column; gap: 1px; } .ds-st small { font-size: 10px; font-weight: 600; color: var(--accent-amber-fill, #e7b043); } .ds-st strong { font-family: var(--font-body, 'Archivo', sans-serif); font-size: 13px; font-weight: 600; } .ds-val { font-size: 14px; font-weight: 600; } .ds-state { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; } .ds-sq-good, .ds-sq-nodata { display: inline-block; width: 10px; height: 10px; border: 1px solid var(--glass-slate-border, rgba(255, 240, 200, 0.24)); } .ds-sq-good { background: #22c55e; } .ds-sq-nodata { background: var(--nodata-bg, #9ca3af); }"
+    },
+    {
+      "name": "PCB Hardware Pad & BOM Dossier Stamp",
+      "kind": "custom",
+      "refersTo": "slide-sheet",
+      "description": "Copper-rimmed pine substrate block with active vermilion hardware selection and bottle-green subsystem stamp.",
+      "html": "<div class=\"ds-pcb-preview\"><button type=\"button\" class=\"ds-pcb-pad ds-is-selected\"><span class=\"ds-pad-des\">U1 · 1x</span><span class=\"ds-pad-name\">ESP32-S3-WROOM-1</span><span class=\"ds-pad-bus\">I2C · I2S · SPI · UART</span></button><button type=\"button\" class=\"ds-pcb-pad\"><span class=\"ds-pad-des\">U2 · 1x</span><span class=\"ds-pad-name\">SIMCom SIM7080G</span><span class=\"ds-pad-bus\">LTE-M · MQTT</span></button><span class=\"ds-subsystem-badge\">MCU Principal</span></div>",
+      "css": ".ds-pcb-preview { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 14px 16px; background: var(--pcb-board, #23332d); border: 2px solid var(--pcb-board-edge, #15211d); } .ds-pcb-pad { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 10px 12px; background: #151b18; border: 1.5px solid var(--pcb-copper, #d99b26); border-radius: 4px; text-align: left; cursor: pointer; transition: background-color 0.2s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.2s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-pcb-pad:hover { background: #27322c; border-color: #fff3d1; } .ds-pcb-pad.ds-is-selected { background: var(--accent-vermilion, #b83a28); border-color: #fff9f2; } .ds-pcb-pad:focus-visible { outline: 2px solid var(--focus-ring, #e6aa3c); outline-offset: 2px; } .ds-pad-des { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 9.5px; font-weight: 600; color: var(--pcb-copper, #d99b26); } .ds-pcb-pad.ds-is-selected .ds-pad-des { color: #ffe8d6; } .ds-pad-name { font-family: var(--font-body, 'Archivo', sans-serif); font-size: 12px; font-weight: 700; color: #f7f1e3; } .ds-pad-bus { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 9px; color: #b9c5bd; } .ds-pcb-pad.ds-is-selected .ds-pad-bus { color: #fff1e6; } .ds-subsystem-badge { display: inline-block; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; padding: 4px 10px; background: var(--accent-bottle, #265d43); color: var(--accent-bottle-ink, #f7f1e3); }"
+    },
+    {
+      "name": "Operative Map Top Toolbar",
+      "kind": "nav",
+      "refersTo": "map-topbar",
+      "description": "Solid carbon /map header pairing Inicio return link, condensed AIRE TRUJILLO wordmark, -9deg ECA/EPA switches, ivory layer select, and Lima timestamp chip.",
+      "html": "<header class=\"ds-map-topbar\"><div class=\"ds-map-brand\"><a href=\"#\" class=\"ds-map-back\" onclick=\"return false\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M19 12H5\"/><path d=\"m11 6-6 6 6 6\"/></svg><span>Inicio</span></a><span class=\"ds-map-title\">AIRE TRUJILLO</span><span class=\"ds-map-nodes\">4 nodos</span></div><div class=\"ds-map-controls\"><button type=\"button\" class=\"ds-std-tab ds-is-active\"><span>ECA / INCA (Perú)</span></button><button type=\"button\" class=\"ds-std-tab\"><span>AQI (EPA)</span></button><label class=\"ds-layer-select\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><polygon points=\"12 3 21 8 12 13 3 8 12 3\"/><path d=\"m3 12 9 5 9-5M3 16l9 5 9-5\"/></svg><select aria-label=\"Capa\"><option>Índice compuesto (ECA / INCA)</option><option>PM2.5 (µg/m³)</option></select><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></label></div><div class=\"ds-map-meta\"><span class=\"ds-map-clock\">14/11 14:25 UTC-5</span><button type=\"button\" class=\"ds-map-tool\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"6\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3\"/><circle cx=\"12\" cy=\"12\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/></svg><span>Centrar</span></button></div></header>",
+      "css": ".ds-map-topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; min-height: 56px; padding: 8px 16px; background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); border-bottom: 1.5px solid var(--rule-color, #191d20); border-radius: 0; } .ds-map-brand, .ds-map-controls, .ds-map-meta { display: flex; align-items: center; gap: 8px; } .ds-map-back { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); color: var(--ink-on-carbon, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: background-color 0.18s var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 0.18s; } .ds-map-back:hover { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); } .ds-map-back:focus-visible, .ds-std-tab:focus-visible, .ds-map-tool:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 2px; } .ds-map-title { font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 1.45rem; font-weight: 800; letter-spacing: 0.03em; line-height: 1; white-space: nowrap; } .ds-map-nodes { padding: 3px 8px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: var(--surface-slate, #29373e); color: var(--ink-on-carbon, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-std-tab { padding: 7px 13px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: transparent; color: var(--ink-muted-on-carbon, #cfc3af); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; transform: skewX(var(--rake-deg, -9deg)); transition: background-color 0.18s, color 0.18s, border-color 0.18s; } .ds-std-tab > span { display: inline-block; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-std-tab:hover { color: var(--ink-on-carbon, #f7f1e3); border-color: var(--accent-amber-fill, #e7b043); } .ds-std-tab.ds-is-active { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); } .ds-layer-select { position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; height: 33px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: var(--surface-ivory, #f7f1e3); color: var(--ink-primary, #181a1c); } .ds-layer-select select { appearance: none; border: none; background: transparent; color: inherit; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 600; padding-right: 6px; cursor: pointer; } .ds-layer-select select:focus-visible { outline: none; } .ds-layer-select:focus-within { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 2px; } .ds-map-clock { padding: 5px 9px; border: 1px solid var(--accent-amber, #8a5607); background: var(--accent-amber-fill, #e7b043); color: #181a1c; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-map-tool { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: transparent; color: var(--ink-on-carbon, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; text-transform: uppercase; cursor: pointer; transition: background-color 0.18s, border-color 0.18s; } .ds-map-tool:hover { background: var(--surface-slate, #29373e); border-color: var(--accent-amber-fill, #e7b043); }"
+    },
+    {
+      "name": "Dynamic Cartographic Legend",
+      "kind": "card",
+      "refersTo": "map-legend",
+      "description": "Collapsible 268px bottom-left legend panel with carbon header, regulatory swatches, 400–600 m fade ramp, and mandatory #9CA3AF No hay datos row.",
+      "html": "<aside class=\"ds-legend-panel\"><button type=\"button\" class=\"ds-legend-head\"><span><strong>ECA / INCA (PERÚ)</strong><small>INCA</small></span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button><div class=\"ds-legend-body\"><div class=\"ds-legend-row\"><span class=\"ds-swatch\" style=\"background:#22C55E\"></span><strong>Buena</strong><small>0 – 50</small></div><div class=\"ds-legend-row\"><span class=\"ds-swatch\" style=\"background:#EAB308\"></span><strong>Moderada</strong><small>51 – 100</small></div><div class=\"ds-fade-block\"><div class=\"ds-fade-labels\"><span>0–400 m Pleno</span><span>400–600 m Borde</span></div><div class=\"ds-fade-ramp\"></div></div><div class=\"ds-legend-nodata\"><span class=\"ds-swatch ds-swatch-nd\"></span><span class=\"ds-nd-copy\"><strong>No hay datos</strong><small>Sin cobertura</small></span><span class=\"ds-nd-rad\">&gt; 600 m</span></div></div></aside>",
+      "css": ".ds-legend-panel { width: 268px; background: var(--surface-ivory, #f7f1e3); color: var(--ink-primary, #181a1c); border: 1.5px solid var(--rule-color, #191d20); border-radius: 0; } .ds-legend-head { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; border: none; border-bottom: 1px solid var(--rule-color, #191d20); background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); cursor: pointer; text-align: left; } .ds-legend-head:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: -2px; } .ds-legend-head > span { display: flex; align-items: baseline; justify-content: space-between; flex: 1; gap: 8px; } .ds-legend-head strong { font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.03em; } .ds-legend-head small { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; color: var(--accent-amber-fill, #e7b043); } .ds-legend-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; } .ds-legend-row { display: grid; grid-template-columns: 14px 1fr auto; align-items: center; gap: 8px; font-family: var(--font-body, 'Archivo', sans-serif); font-size: 12px; } .ds-legend-row small { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; color: var(--ink-secondary, #433a2e); font-variant-numeric: tabular-nums; } .ds-swatch { width: 14px; height: 14px; border: 1px solid var(--rule-color, #191d20); display: inline-block; } .ds-fade-block { padding-top: 8px; border-top: 1px solid var(--rule-soft, #c7b698); display: flex; flex-direction: column; gap: 4px; } .ds-fade-labels { display: flex; justify-content: space-between; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 10px; color: var(--ink-secondary, #433a2e); font-variant-numeric: tabular-nums; } .ds-fade-ramp { height: 8px; border: 1px solid var(--rule-color, #191d20); background: linear-gradient(90deg, #22c55e 0%, #22c55e 45%, #9ca3af 100%); } .ds-legend-nodata { display: grid; grid-template-columns: 14px 1fr auto; align-items: center; gap: 8px; padding: 6px 8px; background: var(--nodata-bg, #9ca3af); color: var(--nodata-ink, #111827); border: 1px solid var(--rule-color, #191d20); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; } .ds-swatch-nd { background: var(--nodata-bg, #9ca3af); border-color: #111827; } .ds-nd-copy { display: flex; flex-direction: column; line-height: 1.2; } .ds-nd-copy small { font-size: 10px; font-weight: 500; } .ds-nd-rad { font-size: 10px; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "24h Temporal Playback Bar",
+      "kind": "custom",
+      "refersTo": "playback-bar",
+      "description": "Full-width bottom transport bar with carbon play button, 1x/2x/4x speed switches, 8px vermilion scrubber, and bottle-green synced En vivo CTA.",
+      "html": "<section class=\"ds-playback-bar\"><div class=\"ds-pb-controls\"><button type=\"button\" class=\"ds-play-btn\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><polygon points=\"7 5 19 12 7 19 7 5\" fill=\"currentColor\"/></svg><span>24h</span></button><div class=\"ds-speed-grp\"><button type=\"button\" class=\"ds-spd ds-is-active\">1x</button><button type=\"button\" class=\"ds-spd\">2x</button><button type=\"button\" class=\"ds-spd\">4x</button></div></div><div class=\"ds-pb-scrub\"><div class=\"ds-pb-top\"><strong>14/11/2026, 14:25 UTC-5</strong><small>Paso 5 min · America/Lima</small></div><input type=\"range\" class=\"ds-range\" min=\"0\" max=\"287\" value=\"216\" style=\"--progress:75%\" aria-label=\"Línea de tiempo 24h\" /><div class=\"ds-pb-ticks\"><span>14:25</span><span>02:25</span><span>14:25</span></div></div><button type=\"button\" class=\"ds-live-raked\"><span><i class=\"ds-live-sq\"></i>En vivo</span></button></section>",
+      "css": ".ds-playback-bar { display: grid; grid-template-columns: auto minmax(160px, 1fr) auto; align-items: center; gap: 14px; padding: 10px 14px; background: var(--surface-ivory, #f7f1e3); color: var(--ink-primary, #181a1c); border: 1.5px solid var(--rule-color, #191d20); border-radius: 0; width: 100%; } .ds-pb-controls { display: flex; align-items: center; gap: 8px; } .ds-play-btn { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 600; text-transform: uppercase; cursor: pointer; transition: background-color 0.18s, border-color 0.18s; } .ds-play-btn:hover { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); } .ds-speed-grp { display: inline-flex; border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-ivory-2, #efe6d2); } .ds-spd { height: 33px; padding: 0 9px; border: none; border-right: 1px solid var(--rule-soft, #c7b698); background: transparent; color: var(--ink-secondary, #433a2e); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; cursor: pointer; } .ds-spd:last-child { border-right: none; } .ds-spd:hover { color: var(--ink-primary, #181a1c); } .ds-spd.ds-is-active { background: var(--surface-carbon, #191d20); color: var(--accent-amber-fill, #e7b043); } .ds-pb-scrub { display: flex; flex-direction: column; gap: 4px; min-width: 0; } .ds-pb-top { display: flex; justify-content: space-between; gap: 10px; font-family: var(--font-mono, 'Azeret Mono', monospace); font-variant-numeric: tabular-nums; } .ds-pb-top strong { font-size: 12px; } .ds-pb-top small { font-size: 10.5px; color: var(--ink-secondary, #433a2e); } .ds-range { appearance: none; width: 100%; height: 8px; background: linear-gradient(90deg, var(--accent-vermilion, #b83a28) 0%, var(--accent-vermilion, #b83a28) var(--progress, 75%), var(--surface-ivory-2, #efe6d2) var(--progress, 75%), var(--surface-ivory-2, #efe6d2) 100%); border: 1px solid var(--rule-color, #191d20); border-radius: 0; cursor: pointer; } .ds-range::-webkit-slider-thumb { appearance: none; width: 14px; height: 18px; border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-carbon, #191d20); cursor: ew-resize; } .ds-pb-ticks { display: flex; justify-content: space-between; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 10px; color: var(--ink-secondary, #433a2e); font-variant-numeric: tabular-nums; } .ds-live-raked { display: inline-flex; align-items: center; justify-content: center; padding: 9px 16px; border: 1.5px solid var(--accent-bottle, #265d43); background: var(--accent-bottle, #265d43); color: var(--accent-bottle-ink, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 0; transform: skewX(var(--rake-deg, -9deg)); cursor: pointer; } .ds-live-raked > span { display: inline-flex; align-items: center; gap: 7px; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-live-sq { width: 8px; height: 8px; background: currentColor; display: inline-block; } .ds-play-btn:focus-visible, .ds-spd:focus-visible, .ds-range:focus-visible, .ds-live-raked:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 2px; }"
+    },
+    {
+      "name": "Point Inspection Drawer",
+      "kind": "card",
+      "refersTo": "point-drawer",
+      "description": "Right slide-over coordinate inspection sheet contrasting covered readout wells and IDW confidence bars against #9CA3AF No hay datos banners.",
+      "html": "<aside class=\"ds-point-drawer\"><header class=\"ds-drawer-head\"><div><div class=\"ds-head-row\"><span class=\"ds-node-tag\">TRJ-01</span><strong>Plaza de Armas</strong></div><p class=\"ds-coord\">-8.111600, -79.028700</p></div><button type=\"button\" class=\"ds-close-btn\" aria-label=\"Cerrar\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M6 6l12 12\"/><path d=\"M18 6 6 18\"/></svg></button></header><div class=\"ds-drawer-body\"><div class=\"ds-readout-well\"><div class=\"ds-readout-top\"><span>ECA / INCA (PERÚ)</span><span class=\"ds-cat-badge\">Buena</span></div><div class=\"ds-val-row\"><strong>42.0</strong><span>INCA</span></div><div class=\"ds-conf\"><div class=\"ds-conf-head\"><span>Confianza IDW</span><span>94%</span></div><div class=\"ds-conf-track\"><div style=\"width:94%\"></div></div></div></div><div class=\"ds-nd-banner\"><span class=\"ds-nd-dot\"></span><strong>NO HAY DATOS</strong></div></div></aside>",
+      "css": ".ds-point-drawer { width: 380px; max-width: 100%; background: var(--surface-ivory, #f7f1e3); color: var(--ink-primary, #181a1c); border: 1.5px solid var(--rule-color, #191d20); border-radius: 0; overflow: hidden; } .ds-drawer-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 12px 14px; background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); border-bottom: 1.5px solid var(--rule-color, #191d20); } .ds-head-row { display: flex; align-items: center; gap: 8px; } .ds-node-tag { padding: 2px 6px; background: var(--accent-amber-fill, #e7b043); color: #181a1c; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 10.5px; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-head-row strong { font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 1.35rem; font-weight: 700; line-height: 1.05; text-transform: uppercase; } .ds-coord { margin: 4px 0 0; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; color: var(--ink-muted-on-carbon, #cfc3af); font-variant-numeric: tabular-nums; } .ds-close-btn { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: transparent; color: var(--ink-on-carbon, #f7f1e3); cursor: pointer; transition: background-color 0.16s; } .ds-close-btn:hover { background: var(--accent-vermilion, #b83a28); border-color: var(--accent-vermilion, #b83a28); } .ds-close-btn:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 2px; } .ds-drawer-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; } .ds-readout-well { padding: 12px; background: var(--surface-ivory-2, #efe6d2); border: 1px solid var(--rule-color, #191d20); display: flex; flex-direction: column; gap: 8px; } .ds-readout-top { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; color: var(--ink-secondary, #433a2e); } .ds-cat-badge { padding: 3px 8px; border: 1px solid var(--rule-color, #191d20); background: #22C55E; color: #111827; } .ds-val-row { display: flex; align-items: baseline; gap: 8px; } .ds-val-row strong { font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 2.75rem; font-weight: 800; line-height: 0.95; font-variant-numeric: tabular-nums; } .ds-val-row span { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 12.5px; font-weight: 600; color: var(--ink-secondary, #433a2e); } .ds-conf { padding-top: 8px; border-top: 1px solid var(--rule-soft, #c7b698); display: flex; flex-direction: column; gap: 5px; } .ds-conf-head { display: flex; justify-content: space-between; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-conf-track { height: 7px; background: var(--surface-ivory, #f7f1e3); border: 1px solid var(--rule-color, #191d20); } .ds-conf-track > div { height: 100%; background: #22C55E; } .ds-nd-banner { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--nodata-bg, #9ca3af); color: var(--nodata-ink, #111827); border: 1.5px solid var(--rule-color, #191d20); font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 1.35rem; font-weight: 800; letter-spacing: 0.03em; } .ds-nd-dot { width: 11px; height: 11px; background: #111827; display: inline-block; }"
+    },
+    {
+      "name": "Operator Topbar & Offline Demo Banner",
+      "kind": "nav",
+      "refersTo": "admin-topbar",
+      "description": "Carbon /edit operator bar paired with the conditional amber offline demo strip and Reintentar API recovery button.",
+      "html": "<div class=\"ds-admin-shell\"><header class=\"ds-admin-top\"><div class=\"ds-admin-brand\"><a href=\"#\" class=\"ds-admin-chip\" onclick=\"return false\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z\"/><path d=\"M9 3v15M15 6v15\"/></svg><span>Mapa</span></a><span class=\"ds-admin-h1\">AIRE TRUJILLO</span><span class=\"ds-admin-count\"><i class=\"ds-admin-dot\"></i>4/4 estaciones activas</span></div><button type=\"button\" class=\"ds-admin-logout\"><span><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\"/><path d=\"m16 17 5-5-5-5\"/><path d=\"M21 12H9\"/></svg><span>Cerrar sesión</span></span></button></header><div class=\"ds-offline-banner\"><span class=\"ds-offline-copy\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><polygon points=\"12 3 21 19 3 19 12 3\"/><path d=\"M12 9v5M12 17h.01\"/></svg><span>Sin conexión al backend :8080 — sesión de muestra local</span></span><button type=\"button\" class=\"ds-retry-btn\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M20 11a8 8 0 0 0-14.5-4.5L3 9\"/><path d=\"M3 4v5h5\"/><path d=\"M4 13a8 8 0 0 0 14.5 4.5L21 15\"/><path d=\"M21 20v-5h-5\"/></svg><span>Reintentar API</span></button></div></div>",
+      "css": ".ds-admin-shell { width: 100%; border: 1.5px solid var(--rule-color, #191d20); border-radius: 0; overflow: hidden; } .ds-admin-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; min-height: 56px; padding: 8px 18px; background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); border-bottom: 1.5px solid var(--rule-color, #191d20); } .ds-admin-brand { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; } .ds-admin-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); color: var(--ink-on-carbon, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: background-color 0.18s, border-color 0.18s; } .ds-admin-chip:hover { background: var(--surface-slate, #29373e); border-color: var(--accent-amber-fill, #e7b043); } .ds-admin-h1 { font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 1.38rem; font-weight: 800; letter-spacing: 0.03em; line-height: 1; } .ds-admin-count { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border: 1px solid var(--glass-slate-rule, rgba(247, 241, 227, 0.16)); background: var(--surface-slate, #29373e); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; } .ds-admin-dot { width: 7px; height: 7px; background: #22c55e; display: inline-block; } .ds-admin-logout { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid var(--accent-vermilion, #b83a28); background: transparent; color: var(--ink-on-carbon, #f7f1e3); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; transform: skewX(var(--rake-deg, -9deg)); transition: background-color 0.18s, color 0.18s; } .ds-admin-logout > span { display: inline-flex; align-items: center; gap: 6px; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-admin-logout:hover { background: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); } .ds-offline-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 9px 18px; border-bottom: 1.5px solid var(--accent-amber, #8a5607); background: var(--accent-amber-fill, #e7b043); color: #181a1c; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 12px; font-weight: 600; } .ds-offline-copy { display: inline-flex; align-items: center; gap: 8px; } .ds-retry-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1.5px solid #181a1c; background: var(--surface-ivory, #f7f1e3); color: var(--ink-primary, #181a1c); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: background-color 0.15s, color 0.15s; } .ds-retry-btn:hover { background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); } .ds-admin-chip:focus-visible, .ds-admin-logout:focus-visible, .ds-retry-btn:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; }"
+    },
+    {
+      "name": "Operator Station Directory & Coordinate Tagging",
+      "kind": "card",
+      "refersTo": "directory-item-selected",
+      "description": "Carbon-inverted station directory (zero border-left stripe) paired with Virtual/Activa/Inactiva stamps and inline 2-step deletion.",
+      "html": "<section class=\"ds-dir-panel\"><ul class=\"ds-dir-list\"><li><button type=\"button\" class=\"ds-dir-item ds-is-selected\"><span class=\"ds-dir-main\"><i class=\"ds-dir-dot ds-is-active\"></i><span class=\"ds-dir-code\">TRJ-01</span><span class=\"ds-dir-name\">Plaza de Armas</span></span><span class=\"ds-dir-badges\"><span class=\"ds-dir-state ds-is-active\">Activa</span></span></button></li><li><button type=\"button\" class=\"ds-dir-item\"><span class=\"ds-dir-main\"><i class=\"ds-dir-dot ds-is-inactive\"></i><span class=\"ds-dir-code\">TRJ-V-01</span><span class=\"ds-dir-name\">Av. Larco · Sur</span></span><span class=\"ds-dir-badges\"><span class=\"ds-dir-kind\">Virtual</span><span class=\"ds-dir-state ds-is-inactive\">Inactiva</span></span></button></li></ul><div class=\"ds-dir-actions\"><button type=\"button\" class=\"ds-raked-save\"><span><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>Guardar cambios</span></span></button><button type=\"button\" class=\"ds-del-confirm\">Confirmar baja</button></div></section>",
+      "css": ".ds-dir-panel { width: 100%; max-width: 440px; padding: 14px; border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-ivory, #f7f1e3); display: flex; flex-direction: column; gap: 12px; border-radius: 0; } .ds-dir-list { list-style: none; margin: 0; padding: 0; border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-ivory-2, #efe6d2); } .ds-dir-list li + li { border-top: 1px solid var(--rule-soft, #c7b698); } .ds-dir-item { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border: none; background: transparent; color: var(--ink-primary, #181a1c); text-align: left; cursor: pointer; transition: background-color 0.14s, color 0.14s; } .ds-dir-item:hover { background: var(--surface-ivory, #f7f1e3); } .ds-dir-item.ds-is-selected { background: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); } .ds-dir-main { display: flex; align-items: center; gap: 8px; min-width: 0; } .ds-dir-dot { width: 8px; height: 8px; display: inline-block; flex-shrink: 0; } .ds-dir-dot.ds-is-active { background: #22c55e; } .ds-dir-dot.ds-is-inactive { border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-ivory-2, #efe6d2); } .ds-dir-code { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; } .ds-dir-name { font-family: var(--font-body, 'Archivo', sans-serif); font-size: 12.5px; color: var(--ink-secondary, #433a2e); } .ds-dir-item.ds-is-selected .ds-dir-name { color: var(--ink-muted-on-carbon, #cfc3af); } .ds-dir-badges { display: inline-flex; align-items: center; gap: 5px; } .ds-dir-kind, .ds-dir-state { padding: 2px 6px; font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 10px; font-weight: 600; text-transform: uppercase; } .ds-dir-kind { border: 1px solid var(--accent-amber, #8a5607); background: var(--accent-amber-fill, #e7b043); color: #181a1c; } .ds-dir-state.ds-is-active { border: 1px solid #22c55e; color: #166534; } .ds-dir-item.ds-is-selected .ds-dir-state.ds-is-active { border-color: #4ade80; color: #4ade80; } .ds-dir-state.ds-is-inactive { border: 1px solid var(--rule-soft, #c7b698); background: var(--surface-ivory, #f7f1e3); color: var(--ink-secondary, #433a2e); } .ds-dir-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; } .ds-raked-save { display: inline-flex; align-items: center; padding: 9px 18px; border: 1.5px solid var(--accent-vermilion, #b83a28); background: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; transform: skewX(var(--rake-deg, -9deg)); } .ds-raked-save > span { display: inline-flex; align-items: center; gap: 6px; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-del-confirm { padding: 6px 10px; border: 1px solid var(--accent-vermilion, #b83a28); background: var(--accent-vermilion, #b83a28); color: var(--accent-vermilion-ink, #fff9f2); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; } .ds-dir-item:focus-visible, .ds-raked-save:focus-visible, .ds-del-confirm:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; }"
+    },
+    {
+      "name": "Batch Preview Toggle & Metric Card",
+      "kind": "card",
+      "refersTo": "admin-metric-card",
+      "description": "Raked Combinado / Solo borrador / Solo guardado mode switches paired with sunken-well Guardado vs Borrador telemetry card.",
+      "html": "<div class=\"ds-preview-wrap\"><div class=\"ds-mode-tabs\"><button type=\"button\" class=\"ds-mode-tab ds-is-active\"><span>Combinado</span></button><button type=\"button\" class=\"ds-mode-tab\"><span>Solo borrador</span></button><button type=\"button\" class=\"ds-mode-tab\"><span>Solo guardado</span></button></div><article class=\"ds-metric-card\"><header class=\"ds-metric-head\"><div class=\"ds-metric-title\"><strong>PM2.5</strong><span>µg/m³</span></div><div class=\"ds-metric-right\"><span class=\"ds-metric-val\">15.40</span><span class=\"ds-chip ds-is-saved\">Guardado</span><span class=\"ds-chip ds-is-draft\">Borrador</span></div></header><div class=\"ds-metric-plot\"><span class=\"ds-plot-saved\"></span><span class=\"ds-plot-draft\"></span></div></article></div>",
+      "css": ".ds-preview-wrap { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 10px; } .ds-mode-tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; } .ds-mode-tab { padding: 5px 10px; border: 1px solid var(--rule-color, #191d20); background: var(--surface-ivory-2, #efe6d2); color: var(--ink-secondary, #433a2e); font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 10.5px; font-weight: 600; cursor: pointer; transform: skewX(var(--rake-deg, -9deg)); transition: background-color 0.16s, color 0.16s, border-color 0.16s; } .ds-mode-tab > span { display: inline-block; transform: skewX(calc(var(--rake-deg, -9deg) * -1)); } .ds-mode-tab:hover { color: var(--ink-primary, #181a1c); border-color: var(--accent-vermilion, #b83a28); } .ds-mode-tab.ds-is-active { background: var(--surface-carbon, #191d20); border-color: var(--surface-carbon, #191d20); color: var(--ink-on-carbon, #f7f1e3); } .ds-mode-tab:focus-visible { outline: 2px solid var(--focus-ring, #b83a28); outline-offset: 3px; } .ds-metric-card { padding: 10px 12px; border: 1.5px solid var(--rule-color, #191d20); background: var(--surface-ivory-2, #efe6d2); display: flex; flex-direction: column; gap: 8px; border-radius: 0; } .ds-metric-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; } .ds-metric-title { display: flex; align-items: baseline; gap: 6px; } .ds-metric-title strong { font-family: var(--font-display, 'Barlow Condensed', sans-serif); font-size: 0.98rem; font-weight: 800; color: var(--ink-primary, #181a1c); } .ds-metric-title span { font-family: var(--font-mono, 'Azeret Mono', monospace); font-size: 10.5px; color: var(--ink-secondary, #433a2e); } .ds-metric-right { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono, 'Azeret Mono', monospace); font-variant-numeric: tabular-nums; } .ds-metric-val { font-size: 12px; font-weight: 700; color: var(--ink-primary, #181a1c); } .ds-chip { padding: 2px 5px; font-size: 9.5px; font-weight: 600; text-transform: uppercase; } .ds-chip.ds-is-saved { border: 1px solid #22c55e; color: #166534; } .ds-chip.ds-is-draft { border: 1px solid var(--accent-vermilion, #b83a28); color: var(--accent-vermilion, #b83a28); } .ds-metric-plot { height: 48px; padding: 10px; border: 1px solid var(--rule-soft, #c7b698); background: var(--surface-ivory, #f7f1e3); display: flex; flex-direction: column; justify-content: center; gap: 10px; } .ds-plot-saved { height: 2px; width: 100%; background: #166534; } .ds-plot-draft { height: 0; width: 100%; border-top: 2px dashed var(--accent-vermilion, #b83a28); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Amber Timetable Slide Rack",
+    "overview": "Aire Trujillo organizes urban environmental monitoring for Trujillo and Huanchaco across three coordinated expressions of the `rw-timetable-slide-rack` system: an archival editorial landing rack (`/`) of six progressive slide sheets resting on an illuminated light table (`#dda126` in light polarity; `#15120e` umber charcoal in dark polarity), a full-viewport operative cartographic console (`/map`), and a discreet unlinked operator gate and administrative workbench (`/edit`) for managing virtual stations and 5-minute batch telemetry. Across all modes, the interface balances immediate civic legibility—live coastal timetables, `50 m` IDW spatial heatmaps, `ECA / INCA (Perú)` ↔ `AQI (EPA)` switching, and 24-hour point inspection—with engineering inspection across inverse-distance weighting (IDW), custom PCB hardware, Go/PostGIS backend math, and IEEE documentation.\n\nEvery sheet, dock, workbench panel, and control plate pairs crisp `0px`-cornered warm ivory (`#f7f1e3`) or warm slate-charcoal (`#211c16`) surfaces and sunken wells (`#efe6d2` / `#2b241c`) with solid carbon anchors (`#191d20` / `#100d0a`), hairline structural rules, and `-9deg` raked parallelogram triggers whose counter-skewed labels stay upright while signaling instrument precision. Warm light and warm dark themes operate as equal, switchable environmental polarities across `/`, the WebGL basemap on `/map`, and the `/edit` workbench.\n\nThe system explicitly rejects generic SaaS landing pages built from identical icon-plus-text cards, rounded pill buttons, cold dark-mode blues, decorative drop shadows, and fabricated zero readings where sensor coverage ends.",
+    "keyCharacteristics": [
+      "Illuminated warm-amber light-table bed supporting stacked, unrounded (`0px`) archival slide sheets (`01` through `06`) on `/` and full-bleed `100svh` WebGL cartographic framing on `/map`.",
+      "Sticky `86px` graduated left ruler rail synchronized via scroll observation on `/`, collapsing cleanly into a 3-column mobile strip below `960px`.",
+      "Operative `/map` desk governed by a `56px` solid carbon top toolbar, collapsible bottom-left dynamic legend, anchored 24h playback scrubber bar, and right-docked point inspection drawer (bottom sheet below `900px`).",
+      "Discreet `/edit` route isolated from all public navigation (`/` and `/map`), opening onto an unadorned single-field passphrase gate before unlocking a `1560px` two-pane operator workbench with bi-directional MapLibre coordinate picking, Peru `America/Lima` 24h batch ingestion, and individual Chart.js variable preview cards.",
+      "Raked `-9deg` parallelogram buttons and standard/preview switches with counter-skewed upright labels, balanced by unskewed `0deg` instrumental readouts, selects, directory rows, and playback scrubbers.",
+      "Single authored translucent glass-slate timetable panel (`-2.5deg` tilt on desktop) anchored in the opening viewport of `/`.",
+      "Cartographic honesty encoded as a normative token: neutral `#9ca3af` and `\"No hay datos\"` strictly represent areas beyond `600 m` without coverage.",
+      "Three self-hosted typefaces (`Barlow Condensed`, `Archivo`, `Azeret Mono`) enforcing tabular numeric lock across all telemetry cells, coordinates, and timestamps."
+    ],
+    "rules": [
+      {
+        "name": "The Warm-Polarity Parity Rule",
+        "body": "Both light and dark UI themes must remain anchored in warm amber, parchment, and umber charcoal (`#dda126`/`#f7f1e3` in light; `#15120e`/`#211c16` in dark); cool blue-gray or stark `#000000`/`#ffffff` UI surfaces are prohibited outside the smoked timetable slate, while ocean water fills (`#D5DFDC`/`#111A1C`) and regulatory status overlays remain confined to the geographic map canvas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Honest Boundary Rule",
+        "body": "Neutral `#9ca3af` with `#111827` ink is reserved exclusively for missing coverage (`has_data === false`, `> 600 m`, `\"No hay datos\"`). Never repurpose `#9ca3af` for inactive UI tabs, placeholder skeletons, or inactive station markers (`#EFE6D2`/`#433A2E` light and `#2B241C`/`#6B563A` dark on the map; sunken-well tokens in `/edit`), and never display `0` for uncovered readings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signal Scarcity Rule",
+        "body": "Reserve Signal Vermilion (`#b83a28` / `#bf4128`) for primary actions, active probes, selected coordinate targets, and selected hardware blocks so urgent focus never competes with background ornamentation.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Lock Rule",
+        "body": "Apply tabular numerals (`font-variant-numeric: tabular-nums`) to every clock time (`21:15 UTC-5`), pollutant readout, coordinate (`-8.111600, -79.028700`), distance checkpoint (`450 m`), node count, and stage code (`01–06`) so interactive state swaps never cause horizontal jitter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Upright-Label Skew Rule",
+        "body": "Whenever a control container is skewed (`-9deg`), its inner text wrapper must apply the exact inverse skew (`9deg`) so monospace labels never distort diagonally.",
+        "section": "typography"
+      },
+      {
+        "name": "The Zero-Shadow Hairline Rule",
+        "body": "Structural boundaries rely strictly on `1px`, `1.5px`, or `2px` hairline borders and tonal surface stepping; never add drop shadows to cards, buttons, floating map docks, or modals.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Authored Glass-Slate Exception",
+        "body": "Backdrop blur (`12px`, `saturate(118%)`) and inset top specular hairlines belong exclusively to the opening timetable card on `/`; do not apply glassmorphism to secondary panels, `/map` docks, or modals.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Sharp-Rectilinear Rule",
+        "body": "Keep `border-radius: 0px` across all HTML UI surfaces, MapLibre controls, range thumbs, tooltips, chips, and inputs; reserve curved corners exclusively for physical PCB board geometry inside SVG diagrams and circular geographic/chart coordinate markers.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do pair every light-mode surface change with its calibrated warm dark-mode token (`#dda126`/`#f7f1e3` ↔ `#15120e`/`#211c16`).",
+      "Do enforce `0px` corners on every HTML UI container, button, tab, chip, modal, MapLibre control group, range thumb, Chart.js tooltip (`cornerRadius: 0`), and input outside SVG PCB substrate geometry and circular map/chart point markers.",
+      "Do counter-skew inner text `<span>` elements (`9deg`) inside every `-9deg` raked control and apply `tabular-nums` to all numeric columns, coordinates, timestamps, and distance readouts.",
+      "Do render `#9ca3af` (`#111827` ink) and the exact text `\"No hay datos\"` wherever `has_data === false` or distance exceeds `600 m`, keeping `spanGaps: false` on 24h series charts while reserving warm sunken-well tokens (`#EFE6D2`/`#433A2E` light, `#2B241C`/`#6B563A` dark) for inactive station markers.",
+      "Do rely on `1px` / `1.5px` hairline borders and tonal surface contrast (`#f7f1e3` vs `#efe6d2` vs `#191d20`) rather than drop shadows across `/`, `/map`, and `/edit` (using carbon surface inversion rather than `border-left > 1px` stripes on selected directory rows).",
+      "Do keep `/edit` unlinked from public routes, keep its unauthenticated gate strictly to one `type=\"password\"` input and arrow submit button, activate offline demo mode only on non-empty passphrase submission when `:8080` is unreachable, and separate `nodeError`, `batchError`, and async-confirmed `lastNodeNotice` channels.",
+      "Do clamp all transitions and keyframe animations to `0.01ms` under `@media (prefers-reduced-motion: reduce)`."
+    ],
+    "donts": [
+      "Don't introduce cold blue-slate dark modes, neon cyan/purple gradients, or pure `#000000` / `#ffffff` UI surfaces outside cartographic water fills (`#D5DFDC` / `#111A1C`) and smoked timetable glass.",
+      "Don't add outer drop shadows (`box-shadow` with Y/blur spread) to cards, floating map docks, tooltips, or MapLibre controls, add `border-left > 1px` stripes to selected rows/cards, or convert buttons and status tags into rounded pills.",
+      "Don't place kickers or eyebrows above display or section headings; let condensed uppercase titles stand directly.",
+      "Don't substitute `0`, `null`, `NaN`, or extrapolated green colors in uncovered zones (`> 600 m`), repurpose `#9ca3af` for inactive station dots/badges, show public navigation links to `/edit`, or expose offline demo banners on the unauthenticated `/edit` gate.",
+      "Don't use glassmorphism (`backdrop-filter`) on cards other than the opening timetable slate on `/`, and don't replace drawn `1.8px`-stroke geometric SVG icons with emoji or text glyphs."
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # FE-004 — Consulta Puntual en Mapa y Gráfico de Evolución
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Frontend / Análisis Puntual
 
 ## 1. Objetivo

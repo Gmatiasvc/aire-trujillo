@@ -1,6 +1,6 @@
 # BE-001 — Infraestructura Base y Despliegue
 
-* **Estado:** Pendiente
+* **Estado:** Implementado
 * **Módulo:** Backend / Infraestructura
 
 ## 1. Objetivo
