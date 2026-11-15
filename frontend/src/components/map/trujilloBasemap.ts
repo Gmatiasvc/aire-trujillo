@@ -257,12 +257,12 @@ function buildCartoTileUrl(isDark: boolean): string {
   }
 
   const encodedKey = encodeURIComponent(apiKey)
-  if (baseUrl.includes('{api_key}')) {
-    return baseUrl.replaceAll('{api_key}', encodedKey)
+  if (baseUrl.includes('{key}') || baseUrl.includes('{api_key}')) {
+    return baseUrl.replaceAll('{key}', encodedKey).replaceAll('{api_key}', encodedKey)
   }
 
   const separator = baseUrl.includes('?') ? '&' : '?'
-  return `${baseUrl}${separator}api_key=${encodedKey}`
+  return `${baseUrl}${separator}key=${encodedKey}`
 }
 
 export function buildTrujilloMapStyle(
