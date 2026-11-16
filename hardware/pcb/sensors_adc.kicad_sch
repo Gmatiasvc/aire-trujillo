@@ -1,0 +1,8169 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid 6c0b8931-21d6-47b6-ba64-f48990434592)
+	(paper "A3")
+	(title_block
+		(title "aire-trujillo — Environmental Sensors, MEMS Mic & Dual ADS1115")
+		(date "2026-11-15")
+		(rev "1.0")
+		(company "aire-trujillo Open Hardware")
+	)
+	(lib_symbols
+        	(symbol "Device:R"
+    		(pin_numbers
+    			(hide yes)
+    		)
+    		(pin_names
+    			(offset 0)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "R"
+    			(at 2.032 0 90)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "R"
+    			(at 0 0 90)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" ""
+    			(at -1.778 0 90)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "~"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Resistor"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "R res resistor"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "R_*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "R_0_1"
+    			(rectangle
+    				(start -1.016 -2.54)
+    				(end 1.016 2.54)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    		)
+    		(symbol "R_1_1"
+    			(pin passive line
+    				(at 0 3.81 270)
+    				(length 1.27)
+    				(name "~"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 0 -3.81 90)
+    				(length 1.27)
+    				(name "~"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Sensor:BME280"
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "U"
+    			(at -8.89 11.43 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "BME280"
+    			(at 7.62 11.43 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
+    			(at 38.1 -11.43 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
+    			(at 0 -5.08 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "Bosch pressure humidity temperature environment environmental measurement digital"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "*LGA*2.5x2.5mm*P0.65mm*Clockwise*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "BME280_0_1"
+    			(rectangle
+    				(start -10.16 10.16)
+    				(end 10.16 -10.16)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type background)
+    				)
+    			)
+    		)
+    		(symbol "BME280_1_1"
+    			(pin power_in line
+    				(at -2.54 15.24 270)
+    				(length 5.08)
+    				(name "VDDIO"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "6"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at -2.54 -15.24 90)
+    				(length 5.08)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 2.54 15.24 270)
+    				(length 5.08)
+    				(name "VDD"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "8"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 2.54 -15.24 90)
+    				(length 5.08)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "7"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin bidirectional line
+    				(at 15.24 7.62 180)
+    				(length 5.08)
+    				(name "SDO"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "5"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 15.24 2.54 180)
+    				(length 5.08)
+    				(name "SCK"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin bidirectional line
+    				(at 15.24 -2.54 180)
+    				(length 5.08)
+    				(name "SDI"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 15.24 -7.62 180)
+    				(length 5.08)
+    				(name "CSB"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Device:C"
+    		(pin_numbers
+    			(hide yes)
+    		)
+    		(pin_names
+    			(offset 0.254)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "C"
+    			(at 0.635 2.54 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    		)
+    		(property "Value" "C"
+    			(at 0.635 -2.54 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    		)
+    		(property "Footprint" ""
+    			(at 0.9652 -3.81 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "~"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Unpolarized capacitor"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "cap capacitor"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "C_*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "C_0_1"
+    			(polyline
+    				(pts
+    					(xy -2.032 0.762) (xy 2.032 0.762)
+    				)
+    				(stroke
+    					(width 0.508)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -2.032 -0.762) (xy 2.032 -0.762)
+    				)
+    				(stroke
+    					(width 0.508)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    		)
+    		(symbol "C_1_1"
+    			(pin passive line
+    				(at 0 3.81 270)
+    				(length 2.794)
+    				(name "~"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 0 -3.81 90)
+    				(length 2.794)
+    				(name "~"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Sensor_Gas:SCD41-D-R2"
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "U"
+    			(at -7.62 6.35 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "SCD41-D-R2"
+    			(at 6.985 6.35 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" "Sensor:Sensirion_SCD4x-1EP_10.1x10.1mm_P1.25mm_EP4.8x4.8mm"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Photoacoustic CO2 sensor, 40 000 ppm, I2C, 2.4-5.5 V, High accuracy  400 - 5000 ppm"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "CO2 sensor I2C"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "Sensirion*SCD4?*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "SCD41-D-R2_0_1"
+    			(rectangle
+    				(start 7.62 5.08)
+    				(end -7.62 -5.08)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type background)
+    				)
+    			)
+    		)
+    		(symbol "SCD41-D-R2_1_1"
+    			(pin passive line
+    				(at 0 7.62 270)
+    				(length 2.54)
+    				(hide yes)
+    				(name "VDD"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "19"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 0 7.62 270)
+    				(length 2.54)
+    				(name "VDD"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "7"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 0 -7.62 90)
+    				(length 2.54)
+    				(hide yes)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "20"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 0 -7.62 90)
+    				(length 2.54)
+    				(hide yes)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "21"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 0 -7.62 90)
+    				(length 2.54)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "6"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin bidirectional line
+    				(at 10.16 2.54 180)
+    				(length 2.54)
+    				(name "SDA"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "10"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 10.16 0 180)
+    				(length 2.54)
+    				(name "SCL"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "9"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+          (symbol "aire-trujillo:SGP40"
+        (exclude_from_sim no)
+        (in_bom yes)
+        (on_board yes)
+        (property "Reference" "U"
+          (at 2.54 0 0)
+          (effects
+            (font (size 1.27 1.27))
+          )
+        )
+        (property "Value" "SGP40"
+          (at 0 -2.54 0)
+          (effects
+            (font (size 1.27 1.27))
+          )
+        )
+        (property "Footprint" "aire-trujillo:sgp40"
+          (at 0 -5.08 0)
+          (effects
+            (font (size 1.27 1.27))
+          )
+          (hide yes)
+        )
+        (property "Datasheet" "https://sensirion.com/media/documents/296373BB/6203C5DF/Sensirion_Gas_Sensors_Datasheet_SGP40.pdf"
+          (at 0 -7.62 0)
+          (effects
+            (font (size 1.27 1.27))
+          )
+          (hide yes)
+        )
+        (property "Description" "Indoor Air Quality VOC Sensor for VOC Index, DFN-6"
+          (at 0 -10.16 0)
+          (effects
+            (font (size 1.27 1.27))
+          )
+          (hide yes)
+        )
+        (property "ki_keywords" "VOC MOx gas sensor I2C SGP40"
+          (at 0 0 0)
+          (effects
+            (font (size 1.27 1.27))
+          )
+          (hide yes)
+        )
+        (symbol "SGP40_0_1"
+          (rectangle
+            (start -7.62 -7.62)
+            (end 7.62 7.62)
+            (stroke (width 0.254) (type default))
+            (fill (type background))
+          )
+        )
+        (symbol "SGP40_1_1"
+          (pin power_in line
+            (at -10.16 5.08 0)
+            (length 2.54)
+            (name "VDD"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "1"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+          (pin power_in line
+            (at -10.16 2.54 0)
+            (length 2.54)
+            (name "VDDH"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "5"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+          (pin power_in line
+            (at -10.16 -2.54 0)
+            (length 2.54)
+            (name "GND_NA"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "4"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+          (pin input line
+            (at 10.16 2.54 180)
+            (length 2.54)
+            (name "SCL"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "6"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+          (pin bidirectional line
+            (at 10.16 -2.54 180)
+            (length 2.54)
+            (name "SDA"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "3"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+          (pin power_in line
+            (at -2.54 -10.16 90)
+            (length 2.54)
+            (name "VSS"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "2"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+          (pin power_in line
+            (at 2.54 -10.16 90)
+            (length 2.54)
+            (name "DIE_GND"
+              (effects (font (size 1.27 1.27)))
+            )
+            (number "7"
+              (effects (font (size 1.27 1.27)))
+            )
+          )
+        )
+      )
+  
+        	(symbol "Sensor_Audio:ICS-43434"
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "MK"
+    			(at -7.62 6.35 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    		)
+    		(property "Value" "ICS-43434"
+    			(at 1.27 6.35 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    		)
+    		(property "Footprint" "Sensor_Audio:InvenSense_ICS-43434-6_3.5x2.65mm"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "https://www.invensense.com/wp-content/uploads/2016/02/DS-000069-ICS-43434-v1.2.pdf"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "TDK InvenSense MEMS Microphone, 24-bit I2S, 65 dBA SNR, LGA-6"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "microphone MEMS 24bit I2S ICS-43434 TDK InvenSense"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "InvenSense*ICS*43434*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "ICS-43434_1_1"
+    			(rectangle
+    				(start -7.62 5.08)
+    				(end 7.62 -5.08)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type background)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -5.08 1.27) (xy -5.08 -1.27)
+    				)
+    				(stroke
+    					(width 0.381)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(circle
+    				(center -3.81 0)
+    				(radius 1.27)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(pin input line
+    				(at -10.16 2.54 0)
+    				(length 2.54)
+    				(name "LR"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 0 7.62 270)
+    				(length 2.54)
+    				(name "VDD"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "5"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 0 -7.62 90)
+    				(length 2.54)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 10.16 2.54 180)
+    				(length 2.54)
+    				(name "WS"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 10.16 0 180)
+    				(length 2.54)
+    				(name "SCK"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin output line
+    				(at 10.16 -2.54 180)
+    				(length 2.54)
+    				(name "SD"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "6"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Connector_Generic:Conn_01x05"
+    		(pin_names
+    			(offset 1.016)
+    			(hide yes)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "J"
+    			(at 0 7.62 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "Conn_01x05"
+    			(at 0 -7.62 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" ""
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "~"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "connector"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "Connector*:*_1x??_*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "Conn_01x05_1_1"
+    			(rectangle
+    				(start -1.27 6.35)
+    				(end 1.27 -6.35)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type background)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 5.207)
+    				(end 0 4.953)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 2.667)
+    				(end 0 2.413)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 0.127)
+    				(end 0 -0.127)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 -2.413)
+    				(end 0 -2.667)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 -4.953)
+    				(end 0 -5.207)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 5.08 0)
+    				(length 3.81)
+    				(name "Pin_1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 2.54 0)
+    				(length 3.81)
+    				(name "Pin_2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 0 0)
+    				(length 3.81)
+    				(name "Pin_3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 -2.54 0)
+    				(length 3.81)
+    				(name "Pin_4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 -5.08 0)
+    				(length 3.81)
+    				(name "Pin_5"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "5"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Jumper:SolderJumper_2_Bridged"
+    		(pin_numbers
+    			(hide yes)
+    		)
+    		(pin_names
+    			(offset 0)
+    			(hide yes)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom no)
+    		(on_board yes)
+    		(property "Reference" "JP"
+    			(at 0 2.032 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "SolderJumper_2_Bridged"
+    			(at 0 -2.54 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" ""
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "~"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "solder jumper SPST"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "SolderJumper*Bridged*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "SolderJumper_2_Bridged_0_1"
+    			(rectangle
+    				(start -0.508 0.508)
+    				(end 0.508 -0.508)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type outline)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -0.254 1.016) (xy -0.254 -1.016)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(arc
+    				(start -0.254 -1.016)
+    				(mid -1.2656 0)
+    				(end -0.254 1.016)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(arc
+    				(start -0.254 -1.016)
+    				(mid -1.2656 0)
+    				(end -0.254 1.016)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type outline)
+    				)
+    			)
+    			(arc
+    				(start 0.254 1.016)
+    				(mid 1.2656 0)
+    				(end 0.254 -1.016)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(arc
+    				(start 0.254 1.016)
+    				(mid 1.2656 0)
+    				(end 0.254 -1.016)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type outline)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 0.254 1.016) (xy 0.254 -1.016)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    		)
+    		(symbol "SolderJumper_2_Bridged_1_1"
+    			(pin passive line
+    				(at -3.81 0 0)
+    				(length 2.54)
+    				(name "A"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 3.81 0 180)
+    				(length 2.54)
+    				(name "B"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Analog_ADC:ADS1115IDGS"
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "U"
+    			(at 2.54 13.97 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "ADS1115IDGS"
+    			(at 7.62 11.43 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" "Package_SO:TSSOP-10_3x3mm_P0.5mm"
+    			(at 0 -12.7 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1113.pdf"
+    			(at -1.27 -22.86 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "16 bit 4 channel I2C ADC"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "TSSOP*3x3mm*P0.5mm*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "ADS1115IDGS_0_1"
+    			(rectangle
+    				(start -7.62 10.16)
+    				(end 7.62 -7.62)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type background)
+    				)
+    			)
+    		)
+    		(symbol "ADS1115IDGS_1_1"
+    			(pin input line
+    				(at -10.16 2.54 0)
+    				(length 2.54)
+    				(name "AIN0"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at -10.16 0 0)
+    				(length 2.54)
+    				(name "AIN1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "5"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at -10.16 -2.54 0)
+    				(length 2.54)
+    				(name "AIN2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "6"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at -10.16 -5.08 0)
+    				(length 2.54)
+    				(name "AIN3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "7"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 0 12.7 270)
+    				(length 2.54)
+    				(name "VDD"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "8"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin power_in line
+    				(at 0 -10.16 90)
+    				(length 2.54)
+    				(name "GND"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin output line
+    				(at 10.16 5.08 180)
+    				(length 2.54)
+    				(name "ALERT/RDY"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 10.16 0 180)
+    				(length 2.54)
+    				(name "SCL"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "10"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin bidirectional line
+    				(at 10.16 -2.54 180)
+    				(length 2.54)
+    				(name "SDA"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "9"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin input line
+    				(at 10.16 -5.08 180)
+    				(length 2.54)
+    				(name "ADDR"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Connector_Generic:Conn_01x04"
+    		(pin_names
+    			(offset 1.016)
+    			(hide yes)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "J"
+    			(at 0 5.08 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Value" "Conn_01x04"
+    			(at 0 -7.62 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" ""
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "~"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "connector"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "Connector*:*_1x??_*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "Conn_01x04_1_1"
+    			(rectangle
+    				(start -1.27 3.81)
+    				(end 1.27 -6.35)
+    				(stroke
+    					(width 0.254)
+    					(type default)
+    				)
+    				(fill
+    					(type background)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 2.667)
+    				(end 0 2.413)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 0.127)
+    				(end 0 -0.127)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 -2.413)
+    				(end 0 -2.667)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(rectangle
+    				(start -1.27 -4.953)
+    				(end 0 -5.207)
+    				(stroke
+    					(width 0.1524)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 2.54 0)
+    				(length 3.81)
+    				(name "Pin_1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 0 0)
+    				(length 3.81)
+    				(name "Pin_2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 -2.54 0)
+    				(length 3.81)
+    				(name "Pin_3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at -5.08 -5.08 0)
+    				(length 3.81)
+    				(name "Pin_4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "4"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "Diode:BAT54S"
+    		(pin_names
+    			(offset 0)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "D"
+    			(at 2.54 -5.08 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    		)
+    		(property "Value" "BAT54S"
+    			(at -6.35 3.175 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    		)
+    		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+    			(at 1.905 3.175 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+    			(at -3.048 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "schottky diode"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_fp_filters" "SOT?23*"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "BAT54S_0_1"
+    			(polyline
+    				(pts
+    					(xy -4.445 1.27) (xy -4.445 -1.27) (xy -2.54 0) (xy -4.445 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -3.81 0) (xy -1.27 0)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -3.175 -1.27) (xy -3.175 -1.016)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -2.54 1.27) (xy -1.905 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -2.54 -1.27) (xy -3.175 -1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -2.54 -1.27) (xy -2.54 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -1.905 1.27) (xy -1.905 1.016)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy -1.905 0) (xy 1.905 0)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(circle
+    				(center 0 0)
+    				(radius 0.254)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type outline)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 1.27 0) (xy 3.81 0)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 1.905 1.27) (xy 1.905 -1.27) (xy 3.81 0) (xy 1.905 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 3.175 -1.27) (xy 3.175 -1.016)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 3.81 1.27) (xy 4.445 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 3.81 -1.27) (xy 3.175 -1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 3.81 -1.27) (xy 3.81 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    			(polyline
+    				(pts
+    					(xy 4.445 1.27) (xy 4.445 1.016)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    		)
+    		(symbol "BAT54S_1_1"
+    			(pin passive line
+    				(at -7.62 0 0)
+    				(length 3.81)
+    				(name "A"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 0 -5.08 90)
+    				(length 5.08)
+    				(name "COM"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "3"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    			(pin passive line
+    				(at 7.62 0 180)
+    				(length 3.81)
+    				(name "K"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "2"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  
+        	(symbol "power:PWR_FLAG"
+    		(power)
+    		(pin_numbers
+    			(hide yes)
+    		)
+    		(pin_names
+    			(offset 0)
+    			(hide yes)
+    		)
+    		(exclude_from_sim no)
+    		(in_bom yes)
+    		(on_board yes)
+    		(property "Reference" "#FLG"
+    			(at 0 1.905 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Value" "PWR_FLAG"
+    			(at 0 3.81 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    		)
+    		(property "Footprint" ""
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Datasheet" "~"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "Description" "Special symbol for telling ERC where power comes from"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(property "ki_keywords" "flag power"
+    			(at 0 0 0)
+    			(effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(hide yes)
+    			)
+    		)
+    		(symbol "PWR_FLAG_0_0"
+    			(pin power_out line
+    				(at 0 0 90)
+    				(length 0)
+    				(name "~"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    				(number "1"
+    					(effects
+    						(font
+    							(size 1.27 1.27)
+    						)
+    					)
+    				)
+    			)
+    		)
+    		(symbol "PWR_FLAG_0_1"
+    			(polyline
+    				(pts
+    					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+    				)
+    				(stroke
+    					(width 0)
+    					(type default)
+    				)
+    				(fill
+    					(type none)
+    				)
+    			)
+    		)
+    		(embedded_fonts no)
+    	)
+  )
+	  (symbol (lib_id "Device:R") (at 45.72 58.42 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "8e3bac24-9db3-4a15-a68a-320effc12a6e")
+    (property "Reference" "R40"
+      (at 43.18 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "4.7k"
+      (at 48.26 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 43.942 58.42 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 45.72 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 45.72 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "017c53bb-81e6-4328-98c4-3c41f87e46f0"))
+    (pin "2" (uuid "166ba45f-3446-4c11-8a8a-5d41594cc3cb"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R40")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 55.88 58.42 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "417e67c7-c9f1-43a6-b924-a8421f9732a4")
+    (property "Reference" "R41"
+      (at 53.34 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "4.7k"
+      (at 58.42 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 54.102 58.42 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 55.88 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 55.88 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "26482640-d70f-489e-a5b4-6feebc185b4a"))
+    (pin "2" (uuid "b3cfa930-64ec-4a57-9a1e-b14edf236e23"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R41")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Sensor:BME280") (at 88.9 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "2426258a-9c6e-48a5-aae4-2b9021f2194d")
+    (property "Reference" "U11"
+      (at 88.9 50.8 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "BME280"
+      (at 88.9 86.36 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
+      (at 127 57.15 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
+      (at 88.9 63.5 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
+      (at 88.9 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "4af25664-e79c-4de8-92be-07f61695fd18"))
+    (pin "2" (uuid "d1879a1a-9735-4a2a-83f8-79bd959a09ca"))
+    (pin "3" (uuid "3f9797b1-1e54-4053-b989-92c33595068e"))
+    (pin "4" (uuid "a20616e0-842a-4678-8dbc-d2ee14fa76f0"))
+    (pin "5" (uuid "6a5a82d3-e299-4a74-a96f-2646f4bd82fc"))
+    (pin "6" (uuid "39432273-450b-4b85-a1af-23f5aade5910"))
+    (pin "7" (uuid "a30724db-b8b8-46c2-a83c-7f1b5c31df16"))
+    (pin "8" (uuid "fd945040-63c1-47a1-afe9-5fdba894a05b"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "U11")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 66.04 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "482000b6-6a5b-4bd8-b4f8-a45134c3a539")
+    (property "Reference" "C42"
+      (at 63.5 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 68.58 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 67.005 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 66.04 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 66.04 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "cc0a65b4-c2ea-4f4a-ad84-cf002bae32a5"))
+    (pin "2" (uuid "755cfdf2-2ead-4e48-a95b-70502a912901"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C42")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 73.66 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "6a98fd43-495e-4bc5-8398-51d6abe0760d")
+    (property "Reference" "C43"
+      (at 71.12 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 76.2 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 74.625 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 73.66 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 73.66 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "038ba79f-2668-4028-b3c2-bc09932136b7"))
+    (pin "2" (uuid "ec1aaabd-9b0f-422c-bc7b-1bd7287f2e79"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C43")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Sensor_Gas:SCD41-D-R2") (at 142.24 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "f05c8f85-b038-452b-903c-e69bf1984c77")
+    (property "Reference" "U12"
+      (at 142.24 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "SCD41-D-R2"
+      (at 142.24 78.74 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Sensor:Sensirion_SCD4x-1EP_10.1x10.1mm_P1.25mm_EP4.8x4.8mm"
+      (at 142.24 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" "https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf"
+      (at 142.24 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Photoacoustic CO2 sensor, 40 000 ppm, I2C, 2.4-5.5 V, High accuracy  400 - 5000 ppm"
+      (at 142.24 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "10" (uuid "882e428c-6ee0-4605-bbad-9da453012693"))
+    (pin "19" (uuid "8b7e4135-1e5c-47ad-b52f-0a7b6e50f54c"))
+    (pin "20" (uuid "d9500b4f-d012-4f4f-8362-a6500a6ff390"))
+    (pin "21" (uuid "ac36ad80-ff56-4171-83df-985a2565e7bd"))
+    (pin "6" (uuid "7aaa10e8-7e02-4c81-a685-dc1348df2ba1"))
+    (pin "7" (uuid "4f5c8280-1a43-425b-9e99-c19b7a90f72e"))
+    (pin "9" (uuid "057f7e8d-3237-4169-9b53-eb305bac0e8c"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "U12")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 121.92 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "9e729a14-7ab5-498c-a873-3dfdcf62bea6")
+    (property "Reference" "C44"
+      (at 119.38 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "10uF"
+      (at 124.46 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 122.885 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 121.92 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 121.92 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "c7327916-ce9b-4dca-ba1a-62ce2860586e"))
+    (pin "2" (uuid "2ffb3c89-02f5-4020-923c-e6274a894473"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C44")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 129.54 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "a4c5e084-c31e-4971-a90d-78fb8d954b58")
+    (property "Reference" "C45"
+      (at 127.0 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 132.08 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 130.505 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 129.54 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 129.54 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "a378a19c-ff3a-45a6-a8f0-ecd86586daa5"))
+    (pin "2" (uuid "3000ba4d-6fc1-456c-b77a-cad2f5bf588a"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C45")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "aire-trujillo:SGP40") (at 200.66 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "29e71258-bbf3-4bcf-9ab2-0d02b715be7b")
+    (property "Reference" "U13"
+      (at 200.66 60.96 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+            (font (size 1.27 1.27))
+          )
+    )
+    (property "Value" "SGP40"
+      (at 200.66 81.28 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+            (font (size 1.27 1.27))
+          )
+    )
+    (property "Footprint" "aire-trujillo:sgp40"
+      (at 200.66 63.5 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+            (font (size 1.27 1.27))
+          )
+    )
+    (property "Datasheet" "https://sensirion.com/media/documents/296373BB/6203C5DF/Sensirion_Gas_Sensors_Datasheet_SGP40.pdf"
+      (at 200.66 60.96 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+            (font (size 1.27 1.27))
+          )
+    )
+    (property "Description" "Indoor Air Quality VOC Sensor for VOC Index, DFN-6"
+      (at 200.66 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+            (font (size 1.27 1.27))
+          )
+    )
+    (pin "1" (uuid "6e71e839-0967-4266-b645-caa4b2a76614"))
+    (pin "2" (uuid "e6e4ceb9-71ab-4be0-92eb-d0ebd26d9cdc"))
+    (pin "3" (uuid "5b541544-abe6-4399-ac9b-97a79408565b"))
+    (pin "4" (uuid "d580be22-6fb2-4289-b7e9-30c40556c87c"))
+    (pin "5" (uuid "d180afc8-d7ee-4b69-af4a-a24945843a00"))
+    (pin "6" (uuid "50406901-c868-44d1-a6ec-bef0c1cfbbff"))
+    (pin "7" (uuid "61f5c0ef-31ed-4f8d-b6a8-8186fb7aa15e"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "U13")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 172.72 76.2 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "2e60f415-d226-4160-a3d9-7e56feed2e7a")
+    (property "Reference" "C46"
+      (at 170.18 76.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "1uF"
+      (at 175.26 76.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 173.685 72.39 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 172.72 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 172.72 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "44d845fd-ba9b-4784-a238-06d102a5e3f6"))
+    (pin "2" (uuid "db178569-e8d6-4f30-bd93-63861cc0b7ce"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C46")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 180.34 58.42 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "f5ab5fdd-c208-4239-bb6d-73317f9bd328")
+    (property "Reference" "R42"
+      (at 177.8 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "22R"
+      (at 182.88 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 178.562 58.42 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 180.34 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 180.34 58.42 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "5fb9644e-99b1-41a3-bd9d-fa90366b6701"))
+    (pin "2" (uuid "9f847770-af0d-4680-b91c-6822d6984468"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R42")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 180.34 76.2 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "d3cf70f0-a76a-4698-9720-fb68d195b63a")
+    (property "Reference" "C47"
+      (at 177.8 76.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 182.88 76.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 181.305 72.39 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 180.34 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 180.34 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "315207ac-5b36-4c8f-8fd4-ab5b233f58a6"))
+    (pin "2" (uuid "fcd46d6b-85bc-4e03-91e9-333c339d177a"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C47")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Sensor_Audio:ICS-43434") (at 269.24 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "5b588499-493a-40b0-b5e8-08751027fb34")
+    (property "Reference" "MK1"
+      (at 269.24 58.42 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "ICS-43434"
+      (at 269.24 78.74 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Sensor_Audio:InvenSense_ICS-43434-6_3.5x2.65mm"
+      (at 269.24 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" "https://www.invensense.com/wp-content/uploads/2016/02/DS-000069-ICS-43434-v1.2.pdf"
+      (at 269.24 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "TDK InvenSense MEMS Microphone, 24-bit I2S, 65 dBA SNR, LGA-6"
+      (at 269.24 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "226c6320-65da-4b30-9d71-c4ab260569a4"))
+    (pin "2" (uuid "23a7c30e-2bcf-4ce1-b2d3-7a52bd8c2dee"))
+    (pin "3" (uuid "09a7f029-a58a-46fd-abb6-e60147e38aff"))
+    (pin "4" (uuid "66f91760-4a57-49d1-8311-4056ddb05b1d"))
+    (pin "5" (uuid "2ee5b95a-a762-4b98-baa1-04a2427eb535"))
+    (pin "6" (uuid "7ab97ae5-8d5a-4d41-8544-fbc0a23d6f89"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "MK1")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 241.3 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "5a354598-9ee0-4ef4-9ab9-83afec694e95")
+    (property "Reference" "C48"
+      (at 238.76 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 243.84 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 242.265 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 241.3 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 241.3 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "4c92cfcb-a4f7-4045-9b0a-7bad53637301"))
+    (pin "2" (uuid "a0ad5a9e-c94a-4ea4-8306-61afedbd2795"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C48")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 248.92 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "5c5e0079-4e2d-4e55-b196-a050904e3810")
+    (property "Reference" "C49"
+      (at 246.38 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "1uF"
+      (at 251.46 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 249.885 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 248.92 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 248.92 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "15757051-d94c-4064-bced-8f412d3a5b5e"))
+    (pin "2" (uuid "58a14f5d-5228-463a-b929-0cee4e486442"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C49")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 294.64 73.66 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "fcc100d0-a007-4f91-a60a-8b59efef3c36")
+    (property "Reference" "R43"
+      (at 292.1 73.66 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "100k"
+      (at 297.18 73.66 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 292.862 73.66 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 294.64 73.66 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 294.64 73.66 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "cceddf16-6a35-415e-96f5-2163e3244206"))
+    (pin "2" (uuid "71aec163-972b-4ecc-bff1-9c2e739e720b"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R43")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Connector_Generic:Conn_01x05") (at 347.98 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "ad02b02e-ec14-430e-9b56-f0d735af4fe8")
+    (property "Reference" "J9"
+      (at 347.98 60.96 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "SPS30_ZHR5"
+      (at 347.98 76.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Connector_JST:JST_ZH_B5B-ZR-SM4-TF_1x05-1MP_P1.50mm_Vertical"
+      (at 347.98 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 347.98 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 347.98 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "69d12527-5284-4963-8d04-29ba937e8b5c"))
+    (pin "2" (uuid "d4cea3f9-ec1b-45e8-9767-0ad136539cf1"))
+    (pin "3" (uuid "b24218d6-6a77-4eca-bf57-7000e65b6b7e"))
+    (pin "4" (uuid "2e324b3a-3be2-4419-97f2-fa3369b7332e"))
+    (pin "5" (uuid "acde5ff8-b509-4340-8113-194f619e0997"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "J9")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 322.58 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "756920f0-f210-4717-bf45-38fe1f2925be")
+    (property "Reference" "C50"
+      (at 320.04 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "10uF"
+      (at 325.12 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 323.545 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 322.58 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 322.58 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "6c3eb1d8-17c6-4034-84c0-56f28751c3c7"))
+    (pin "2" (uuid "d41ac874-15f4-41b1-8168-aa618835e03e"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C50")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 330.2 68.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "187772d4-8908-43be-b3f1-09b37af4b59b")
+    (property "Reference" "C51"
+      (at 327.66 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 332.74 68.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 331.165 64.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 330.2 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 330.2 68.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "5fc18f95-fef7-400c-919e-a5df212e0319"))
+    (pin "2" (uuid "e704f32e-de6c-4f5d-8f6a-8394f5a39c59"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C51")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Jumper:SolderJumper_2_Bridged") (at 368.3 76.2 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "ca442912-00f1-48b2-be3f-8bed5bca88e6")
+    (property "Reference" "JP1"
+      (at 368.3 73.66 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "I2C_SEL"
+      (at 368.3 78.74 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+      (at 368.3 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 368.3 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Solder Jumper, 2-pole, closed/bridged"
+      (at 368.3 76.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "98ebc94c-d3e8-43c5-a4f1-1da0f303257f"))
+    (pin "2" (uuid "b1d9c0c9-cedb-4b5e-a050-38608afc5dc1"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "JP1")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Analog_ADC:ADS1115IDGS") (at 292.1 149.86 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "db8e70e3-7e8d-45d0-b9df-8d701ca99b98")
+    (property "Reference" "U14"
+      (at 292.1 134.62 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "ADS1115_CO_NO2"
+      (at 292.1 162.56 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Package_SO:TSSOP-10_3x3mm_P0.5mm"
+      (at 292.1 137.16 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1113.pdf"
+      (at 290.83 127 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
+      (at 292.1 149.86 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "86caa288-15d5-41a8-89c5-82142d4584c1"))
+    (pin "10" (uuid "7f24a182-da0b-42cc-9e3f-6739b850ad99"))
+    (pin "2" (uuid "3dcd841f-60ff-47b1-bc0d-0879f2ff810f"))
+    (pin "3" (uuid "9348b9e8-6264-48b4-8f9a-17ddef9a12f5"))
+    (pin "4" (uuid "7e913f00-9bb5-4c01-9468-084fba858d06"))
+    (pin "5" (uuid "95646e84-f7a1-4eee-b889-4c2949b35c82"))
+    (pin "6" (uuid "59e177b8-96a0-43e9-a1e6-424a8c7f77f8"))
+    (pin "7" (uuid "c840b79b-181e-4eca-8e12-7d00691dbadf"))
+    (pin "8" (uuid "e36561ad-1d50-4c34-97ea-e064ca6ac8a6"))
+    (pin "9" (uuid "821a2ef0-f06c-4289-8a5e-c7b2d8a51576"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "U14")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 269.24 137.16 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "96b44704-7a8e-4a7d-99b0-f317033a47bf")
+    (property "Reference" "C52"
+      (at 266.7 137.16 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 271.78 137.16 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 270.205 133.35 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 269.24 137.16 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 269.24 137.16 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "e03ca715-48e0-48f5-a818-a7d319980ba5"))
+    (pin "2" (uuid "9b069551-7eb9-4201-a71c-d5eebe043baa"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C52")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 322.58 137.16 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "90af9588-f883-4bb9-b41c-55c5668be9aa")
+    (property "Reference" "R44"
+      (at 320.04 137.16 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "10k"
+      (at 325.12 137.16 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 320.802 137.16 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 322.58 137.16 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 322.58 137.16 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "6d53b417-29a9-4ee2-bc6c-e2d617c3d45f"))
+    (pin "2" (uuid "6b69ed3a-aefa-481e-8f1f-e11401432112"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R44")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Analog_ADC:ADS1115IDGS") (at 292.1 215.9 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "d16cae2d-06f7-48e5-8cc8-34378f5e268a")
+    (property "Reference" "U15"
+      (at 292.1 200.66 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "ADS1115_SO2_H2S"
+      (at 292.1 228.6 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Package_SO:TSSOP-10_3x3mm_P0.5mm"
+      (at 292.1 203.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1113.pdf"
+      (at 290.83 193.04 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
+      (at 292.1 215.9 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "71120c6d-ec2c-42f2-ad37-02606c0dcab2"))
+    (pin "10" (uuid "575891a5-7404-4e9b-adb3-5a2f447c9ed7"))
+    (pin "2" (uuid "c2fcbb0a-fbae-4a24-8e2f-bd827afbf610"))
+    (pin "3" (uuid "4226896b-796f-469d-96a2-aa7c62abc7a8"))
+    (pin "4" (uuid "9d8747cc-3c51-4bd4-ac1c-614ff402c58e"))
+    (pin "5" (uuid "7e01c534-58c9-4473-8774-5cee4c7c1079"))
+    (pin "6" (uuid "f2bd16bd-9517-4efa-a9da-15a1016ea9d4"))
+    (pin "7" (uuid "b69b5cbf-5358-4bfc-b337-ba5ba1b70939"))
+    (pin "8" (uuid "cdbf3352-378b-4f7b-b838-ccd1f1de838e"))
+    (pin "9" (uuid "106ab99d-e618-4869-96ed-860d6b2ad526"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "U15")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 269.24 203.2 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "4dd2ed0d-d37a-42bf-9759-bdb80838e5fd")
+    (property "Reference" "C53"
+      (at 266.7 203.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 271.78 203.2 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 270.205 199.39 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 269.24 203.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 269.24 203.2 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "a9a25b58-5c41-44e0-87d0-9e7c8538e9e4"))
+    (pin "2" (uuid "57338786-80af-47c8-a1dc-9f7170ddda34"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C53")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Connector_Generic:Conn_01x04") (at 53.34 132.08 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "946d873b-b0c3-4f1e-94b4-0882949985c3")
+    (property "Reference" "J10"
+      (at 53.34 127.0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "ZE03_CO_XH4"
+      (at 53.34 139.7 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+      (at 53.34 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 53.34 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 53.34 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "18be1261-84dd-4456-b851-6c6db787897e"))
+    (pin "2" (uuid "bc8791ac-54d7-4399-a953-febf09e96e7c"))
+    (pin "3" (uuid "834b35e1-2096-43ab-8cd1-870d47331b00"))
+    (pin "4" (uuid "941d9143-9870-463e-b0e5-bdf0b4024490"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "J10")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Connector_Generic:Conn_01x04") (at 53.34 165.1 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "4bc34952-75ea-4c4d-b5b8-f47a809a75af")
+    (property "Reference" "J11"
+      (at 53.34 160.02 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "ZE03_NO2_XH4"
+      (at 53.34 172.72 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+      (at 53.34 165.1 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 53.34 165.1 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 53.34 165.1 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "17086e22-116b-471b-affd-020702b9f544"))
+    (pin "2" (uuid "c6c69b2d-8d5d-43f8-a511-63fa01cea9a1"))
+    (pin "3" (uuid "63d6fda2-51ad-4915-925f-be8896d59f4e"))
+    (pin "4" (uuid "e0a2f962-26cc-410d-bd4e-2451564f7f1c"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "J11")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Connector_Generic:Conn_01x04") (at 53.34 198.12 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "90f4b57c-cb54-445a-869f-c826cf72ee79")
+    (property "Reference" "J12"
+      (at 53.34 193.04 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "ZE03_SO2_XH4"
+      (at 53.34 205.74 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+      (at 53.34 198.12 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 53.34 198.12 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 53.34 198.12 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "ea159d6d-52ae-499c-b9bc-7f50cc38b2f7"))
+    (pin "2" (uuid "6d793142-88ed-4bcc-80d7-8afa78d9ab14"))
+    (pin "3" (uuid "06e54f4c-e691-4cf9-ba27-80fc33b7159a"))
+    (pin "4" (uuid "923e7ebe-131f-4a1d-a67b-62c640d76c9a"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "J12")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Connector_Generic:Conn_01x04") (at 53.34 231.14 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "e5544938-fad4-4e53-8ac4-c2329610cb01")
+    (property "Reference" "J13"
+      (at 53.34 226.06 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "ZE03_H2S_XH4"
+      (at 53.34 238.76 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+      (at 53.34 231.14 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 53.34 231.14 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+      (at 53.34 231.14 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "47ce29f3-fe1d-4af3-8c70-1c48fe9360b9"))
+    (pin "2" (uuid "f9f2074b-978b-45dc-97c3-8d622399a06e"))
+    (pin "3" (uuid "7d3ce17c-c9d8-4392-b43e-e341d6156840"))
+    (pin "4" (uuid "1dd093cd-a7c8-45a8-8852-2d103ce86068"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "J13")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 127 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "6ff36081-b607-4bff-9050-e0e36e8bfd29")
+    (property "Reference" "R45"
+      (at 91.44 127.0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 127.0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 127 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 127 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 127 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "788fc8a2-2da6-42ed-bde0-205e53e0c423"))
+    (pin "2" (uuid "12611ee1-9da0-4bb9-bd4e-1aa40967ab13"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R45")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 132.08 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "488bd985-a75c-40c1-bb79-6055f344d89f")
+    (property "Reference" "C54"
+      (at 106.68 132.08 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 132.08 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 128.27 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "8ccdc599-5132-4002-94f4-140867466322"))
+    (pin "2" (uuid "b50c9798-96b5-41ee-98dd-c9dc4e624a80"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C54")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 132.08 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "dc690dff-1ada-476d-a43d-e3df1505438e")
+    (property "Reference" "D7"
+      (at 134.62 129.54 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 139.7 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 135.255 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 132.08 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "22c712c1-0806-4ad4-972e-46b2e4a7a043"))
+    (pin "2" (uuid "2c646483-203c-4658-8ff5-d4937cbfb268"))
+    (pin "3" (uuid "f303bbaa-8465-4c4a-aff8-b75a29a4a0f4"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D7")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 142.24 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "34af5e5f-7314-42a4-96bd-1ca0bcd675ae")
+    (property "Reference" "R46"
+      (at 91.44 142.24 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 142.24 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 142.24 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 142.24 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 142.24 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "652ea915-6ea6-46cb-94a3-aa105dd914a1"))
+    (pin "2" (uuid "f550d3ee-46a7-4d85-81c5-5223eda7f05c"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R46")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 144.78 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "4fadfd51-4843-4e1b-8a37-31a70fadd76e")
+    (property "Reference" "C55"
+      (at 106.68 144.78 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 144.78 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 140.97 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 144.78 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 144.78 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "cc0a2f04-4e83-4294-8962-a18abd96bc29"))
+    (pin "2" (uuid "b65b135f-092e-40eb-baaf-ae38483b0bbc"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C55")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 147.32 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "6c9c1d21-31a6-4423-8075-477e9e555143")
+    (property "Reference" "D8"
+      (at 134.62 144.78 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 154.94 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 150.495 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 147.32 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 147.32 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "9a97f7ea-340b-4e70-96e8-29bfdc23e655"))
+    (pin "2" (uuid "45379cb2-0bdc-43cb-9139-ae3af5f99967"))
+    (pin "3" (uuid "388a8799-2ceb-4ceb-a9d1-64cea2475c99"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D8")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 160.02 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "fa8d28c3-4734-4965-b1ab-24102905b6f9")
+    (property "Reference" "R47"
+      (at 91.44 160.02 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 160.02 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 160.02 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 160.02 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 160.02 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "423c3c45-d4e2-445a-b91e-57588aec453b"))
+    (pin "2" (uuid "5f4e1648-4f79-4612-9476-cdfb690b19e1"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R47")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 162.56 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "3013fa6e-769a-4d09-ae1d-79f33d26737d")
+    (property "Reference" "C56"
+      (at 106.68 162.56 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 162.56 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 158.75 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 162.56 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 162.56 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "a57551da-1fd2-4278-90db-a4d9315fc5e4"))
+    (pin "2" (uuid "d504402a-2088-48b6-830b-a65e7cd9a597"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C56")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 165.1 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "95ab8f18-9662-4707-ad10-29062ff84d3e")
+    (property "Reference" "D9"
+      (at 134.62 162.56 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 172.72 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 168.275 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 165.1 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 165.1 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "05a2a720-9b6d-44ff-9978-75b11e43a55a"))
+    (pin "2" (uuid "deadfae2-9fcc-4496-9102-26a13f1cb471"))
+    (pin "3" (uuid "aaed1c2d-a17a-4e24-8f51-5eb86252ddfc"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D9")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 175.26 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "c0130870-4d3f-4818-8624-2a00178fb266")
+    (property "Reference" "R48"
+      (at 91.44 175.26 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 175.26 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 175.26 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 175.26 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 175.26 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "1dffd224-9d16-4ce8-a97c-ad91348e917c"))
+    (pin "2" (uuid "0a15d32f-7467-4d10-8c31-4300d031bdcb"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R48")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 177.8 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "23dd1623-a5b3-46c5-88ef-df6e0a4d636c")
+    (property "Reference" "C57"
+      (at 106.68 177.8 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 177.8 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 173.99 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 177.8 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 177.8 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "ca4a1fa8-d1b8-4221-8341-06010ca2b519"))
+    (pin "2" (uuid "7b80a0ba-fd3e-4747-9c0e-82f2dce86e88"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C57")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 180.34 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "928e46cb-8d31-483c-93e0-821f86bd7dc8")
+    (property "Reference" "D10"
+      (at 134.62 177.8 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 187.96 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 183.515 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 180.34 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 180.34 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "5a4b7e00-ec20-41bb-9fd4-51976b43f7c4"))
+    (pin "2" (uuid "a588f0ec-da70-43c1-9007-ad8fe36743e5"))
+    (pin "3" (uuid "475e822d-d29b-4018-a18a-bc551fb6af4a"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D10")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 193.04 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "bed01875-6cd4-4041-89a6-dbabaf08cb36")
+    (property "Reference" "R49"
+      (at 91.44 193.04 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 193.04 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 193.04 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 193.04 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 193.04 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "076ce13c-02ff-4996-b174-0032b5494f5a"))
+    (pin "2" (uuid "794f07b6-76d4-4273-ae09-4611236e3dff"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R49")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 195.58 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "567b90c3-1f18-4e47-bc6f-f2a418c2da56")
+    (property "Reference" "C58"
+      (at 106.68 195.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 195.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 191.77 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 195.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 195.58 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "69919d3e-ddb0-4c0f-9f06-588521a3303f"))
+    (pin "2" (uuid "8411d84b-9530-4f01-b91c-e51c663db31e"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C58")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 198.12 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "849da879-2bb2-4522-89e7-a64289301dcd")
+    (property "Reference" "D11"
+      (at 134.62 195.58 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 205.74 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 201.295 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 198.12 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 198.12 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "561f5b56-d831-49f2-9026-346f6211a4aa"))
+    (pin "2" (uuid "bf842fda-6ffa-478a-9bc6-d523f25364a4"))
+    (pin "3" (uuid "069c954e-c9f7-493b-b4d2-d0a10d8c0053"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D11")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 208.28 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "c8a05461-46b9-4af3-954a-08d4dcd9bd97")
+    (property "Reference" "R50"
+      (at 91.44 208.28 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 208.28 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 208.28 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 208.28 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 208.28 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "786fd8f0-205a-4d7d-9b40-866a17a71ea5"))
+    (pin "2" (uuid "65b04363-49e5-45ae-8793-162934afb65a"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R50")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 210.82 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "5d56ce07-c0e3-4cdd-8cf5-3afab45fb958")
+    (property "Reference" "C59"
+      (at 106.68 210.82 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 210.82 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 207.01 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 210.82 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 210.82 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "31b1979d-cea5-4844-9aa8-8e4b9ad3d6fc"))
+    (pin "2" (uuid "3dcf5cfb-4875-40cb-bc64-56ca2a886131"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C59")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 213.36 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "cf59b402-f4d6-4757-b6c6-21615d8f4a59")
+    (property "Reference" "D12"
+      (at 134.62 210.82 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 220.98 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 216.535 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 213.36 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 213.36 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "88f39b73-ab61-4476-b6cd-0050d4429fa8"))
+    (pin "2" (uuid "a9595e10-15ca-4047-b30d-2ed9c1bb3349"))
+    (pin "3" (uuid "c65cdf33-3dcc-4187-93a1-5ce0d8ddd3bd"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D12")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 226.06 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "56ea23a5-0821-4bda-9f7d-315e7bc252bf")
+    (property "Reference" "R51"
+      (at 91.44 226.06 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 226.06 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 226.06 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 226.06 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 226.06 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "462d3995-b71e-46cc-944c-6c80d7eb5715"))
+    (pin "2" (uuid "f62cc4e3-cfa7-4350-a723-9ebd9dc8f088"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R51")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 228.6 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "a321a426-84b3-4dba-a4b1-6e8cb0825321")
+    (property "Reference" "C60"
+      (at 106.68 228.6 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 228.6 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 224.79 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 228.6 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 228.6 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "2444fa2f-8f98-4786-9d99-e87204a5aaa6"))
+    (pin "2" (uuid "f88adae2-98d9-4956-a916-13ac5cb2590c"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C60")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 231.14 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "f52dda21-34ac-4453-999e-81da684b4f9b")
+    (property "Reference" "D13"
+      (at 134.62 228.6 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 238.76 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 234.315 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 231.14 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 231.14 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "203ddd53-f3a5-4df3-b093-8911857f5537"))
+    (pin "2" (uuid "34429ece-b7de-43ad-8087-a645ab2840d1"))
+    (pin "3" (uuid "63ce0b07-bd5e-4b5c-8deb-cade581b9f8f"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D13")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:R") (at 93.98 241.3 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "313e3e90-425b-4e26-b873-b5c3a6658f07")
+    (property "Reference" "R52"
+      (at 91.44 241.3 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "1k"
+      (at 96.52 241.3 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 92.202 241.3 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 93.98 241.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 93.98 241.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "3cf4a71d-cec0-4275-baef-8a2491a27a15"))
+    (pin "2" (uuid "839b72bb-725f-453d-ac7f-599dfbd699a6"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R52")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Device:C") (at 109.22 243.84 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "e681b21b-8869-4f5c-bd5d-cae2365c0f11")
+    (property "Reference" "C61"
+      (at 106.68 243.84 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "100nF"
+      (at 111.76 243.84 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 110.185 240.03 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 109.22 243.84 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Unpolarized capacitor"
+      (at 109.22 243.84 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "22cd3bb1-4193-44c7-9cd9-d43fd5627f0d"))
+    (pin "2" (uuid "612ef96c-3a09-4740-b264-8d6022c407e9"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "C61")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "Diode:BAT54S") (at 134.62 246.38 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "d8278b8d-785c-46c9-ba94-6459cd8398fd")
+    (property "Reference" "D14"
+      (at 134.62 243.84 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Value" "BAT54S"
+      (at 134.62 254.0 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+      (at 136.525 249.555 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    				(justify left)
+    			)
+    )
+    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+      (at 131.572 246.38 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-323"
+      (at 134.62 246.38 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "98b23dff-2474-464c-91d9-ac9c3bf4a33e"))
+    (pin "2" (uuid "fd7122a2-7527-4063-a394-efcde9b46af7"))
+    (pin "3" (uuid "fe289aaf-b61e-4430-bebc-01fc5ed31e08"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "D14")
+          (unit 1)
+        )
+      )
+    )
+  )
+    (symbol (lib_id "power:PWR_FLAG") (at 210.82 96.52 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "bbcb93a1-ccba-4986-b6fe-4b24237c8962")
+    (property "Reference" "#FLG08"
+      (at 210.82 93.98 0)
+     
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "PWR_FLAG"
+      (at 210.82 99.06 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" ""
+      (at 210.82 96.52 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 210.82 96.52 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Special symbol for telling ERC where power comes from"
+      (at 210.82 96.52 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "e47942fb-4760-42d1-a576-375c69ec64ac"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "#FLG08")
+          (unit 1)
+        )
+      )
+    )
+  )
+  	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 45.7200 54.6100 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c9138944-28e1-49a3-b4a2-f1026f5b2ea6")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 45.7200 62.2300 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "8acdc90c-b4b3-4c39-a799-d330406e5f56")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 55.8800 54.6100 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "9f42c5e5-6310-410c-9f08-736a4bbd10f5")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 55.8800 62.2300 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2b2b8ef9-ed52-43c2-8e4f-13d975b64aea")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 86.3600 83.8200 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2122de5c-5d7c-4a28-9c89-b2c4960a02c8")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 91.4400 83.8200 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "6afbab62-b28e-41b8-982a-9a93e201bef3")
+	)
+	(global_label "BME_SDO"
+		(shape bidirectional)
+		(at 104.1400 60.9600 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "983893d1-41b3-4084-a1c0-8bf5af118606")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 104.1400 76.2000 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3b87aee1-ba63-445f-acc8-d48c8a4a53b9")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 86.3600 53.3400 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "469fdd29-00b7-4179-810e-3451e99bd300")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 91.4400 53.3400 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "30c88751-c34b-4164-9830-52fbfd52c8c9")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 104.1400 71.1200 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "09c08bb8-a1b3-477a-88da-9134980ce03c")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 104.1400 66.0400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "f8b7b7b7-3505-4b57-ad4f-89c0f35bf44c")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 66.0400 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "70cba10d-60ba-4d39-9f47-4e9a0fb6e5bc")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 66.0400 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "dba6d53a-d41e-4f60-a693-4c10c4113feb")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 73.6600 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "1a7b3629-01c7-4b10-8d66-464e69666411")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 73.6600 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "3b218a4a-868c-4995-8076-83c135c7afe5")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 142.2400 76.2000 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "86269566-a53c-4625-a800-4a8281316a10")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 60.9600 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "62907466-3291-4abd-a4b6-d342b90150be")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 152.4000 68.5800 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "fae9c572-5e34-4cd4-b8d0-832c09e6361a")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 152.4000 66.0400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "258b1521-c3f0-468c-a37c-2ed29a6dfe29")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 121.9200 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "7322b768-5a8a-4306-a9ef-6b699bb504c7")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 121.9200 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "8a9baf16-7075-4a86-a25e-54c8f5463437")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 129.5400 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "f69a2ee0-2593-4d81-b964-6233811756df")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 129.5400 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2d484448-12fd-4de5-abe8-15c19ad04fa3")
+	)
+	(global_label "SGP_VDD"
+		(shape bidirectional)
+		(at 190.5000 63.5000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "4364421a-1bd2-4a5c-bf9d-0765dc003124")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 190.5000 66.0400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "b90ebc86-e1bb-4aab-aa5b-4ee99878b897")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 190.5000 71.1200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "dc9ee26b-baee-430c-ac6d-f7676bea0668")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 198.1200 78.7400 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e7cdc42e-a083-45a6-b61d-fcf6bf6f00b5")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 203.2000 78.7400 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "540e3a7a-f667-4d90-9a64-27b4377467ad")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 210.8200 71.1200 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "56c3adca-9146-4abf-a090-797f0f7e7565")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 210.8200 66.0400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "10a1c146-c2e1-47ae-9f5c-8ada02798c67")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 180.3400 54.6100 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "f4adee90-cd22-4f31-9491-d44a8cb87dd8")
+	)
+	(global_label "SGP_VDD"
+		(shape bidirectional)
+		(at 180.3400 62.2300 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "c124eb07-d3a9-4a66-adc6-510f2287a448")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 172.7200 72.3900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "4e9f653f-56d4-4b54-8ebb-9427f6b61706")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 172.7200 80.0100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "af51e564-00af-442b-8657-1c968cebe8cb")
+	)
+	(global_label "SGP_VDD"
+		(shape bidirectional)
+		(at 180.3400 72.3900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "e34ccb76-ae05-475d-a8d0-4467fb916d65")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 180.3400 80.0100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ef62d8b9-43d7-4774-914c-c65dd8711a4e")
+	)
+	(global_label "SGP_VDD"
+		(shape bidirectional)
+		(at 210.8200 96.5200 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "5f3e7b9b-ed57-45ce-bbf5-4befb39ad8b0")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 269.2400 60.9600 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "e1efceb7-33e9-4fda-9663-4330bb88e2c3")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 269.2400 76.2000 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "9fc5002e-893e-49c7-bb17-02b605b8f406")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 259.0800 66.0400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "da91b960-8a69-4ed3-b12e-1671ea71ea4c")
+	)
+	(global_label "I2S_WS"
+		(shape bidirectional)
+		(at 279.4000 66.0400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ea365996-d545-464d-8b03-1f0d02c48db1")
+	)
+	(global_label "I2S_SCK"
+		(shape bidirectional)
+		(at 279.4000 68.5800 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "1c9d2b6b-c8f7-436d-bc04-619d4c0cc08b")
+	)
+	(global_label "I2S_SD"
+		(shape bidirectional)
+		(at 279.4000 71.1200 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "8ab8519e-0427-46c2-9973-33163ae9a2d4")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 241.3000 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "b967eccb-31f2-496a-b6fd-e72930f6d931")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 241.3000 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "20948bf2-6ea9-48ed-b3ed-a2e676646add")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 248.9200 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ebd142b3-e32b-49ee-ae09-914a47edd205")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 248.9200 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "42ff94d9-274c-4cb2-b7f5-1710aa167232")
+	)
+	(global_label "I2S_SD"
+		(shape bidirectional)
+		(at 294.6400 69.8500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "0b3e2708-c37d-4367-9bd3-1be457b6e51d")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 294.6400 77.4700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ae24a1d3-23eb-444f-8cea-c215dda66a44")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 342.9000 63.5000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "578e0d52-48c8-4ea3-bd88-74f1888b123a")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 342.9000 66.0400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e397cfd9-47d6-40e9-904e-910b26b26e36")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 342.9000 68.5800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "34134301-2b96-49ae-a86b-c0bb9496e6d4")
+	)
+	(global_label "SPS_SEL"
+		(shape bidirectional)
+		(at 342.9000 71.1200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "14155adf-3a56-4a37-83fd-ae248cef65d2")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 342.9000 73.6600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "d51adf6a-9c76-4aea-85f9-a35870f52d5b")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 322.5800 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "a0a16be6-cb29-4131-9830-139210be3e57")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 322.5800 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "c8195e91-4720-4118-8374-678f4d400247")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 330.2000 64.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c3c4cb52-ee1e-413f-a185-364e40e40fee")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 330.2000 72.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ad8310f2-4418-49a8-ad24-fcb4b031166e")
+	)
+	(global_label "SPS_SEL"
+		(shape bidirectional)
+		(at 364.4900 76.2000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "6fa8b4af-08a7-4510-a68b-f35a37e77c59")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 372.1100 76.2000 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ee6c73fa-8247-4f75-b0aa-ccf4eee7f631")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 302.2600 154.9400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "9a026833-fc03-4c0e-ae76-d32087d2876f")
+	)
+	(global_label "ADS_ALERT"
+		(shape bidirectional)
+		(at 302.2600 144.7800 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ffdb246d-9592-4492-a74b-6c0b6d9c43d6")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 292.1000 160.0200 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "57743543-eb2c-4ab4-a89b-baa3f4ae79f7")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 292.1000 137.1600 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "6dd129cb-fdea-4a2e-8043-c37871b0e842")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 302.2600 152.4000 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "16ad7c69-bc99-40c5-b3cc-cb90790530da")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 302.2600 149.8600 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "85e2ca61-eaa2-4350-8dc1-f9f0f49d06cf")
+	)
+	(global_label "ADC_CO_VO"
+		(shape bidirectional)
+		(at 281.9400 147.3200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "cb4cd447-096b-48a5-97c4-c80838e68d29")
+	)
+	(global_label "ADC_CO_CORR"
+		(shape bidirectional)
+		(at 281.9400 149.8600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "a10ec5d5-fcea-4704-bb3f-65060c4c853a")
+	)
+	(global_label "ADC_NO2_VO"
+		(shape bidirectional)
+		(at 281.9400 152.4000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "c402dc6b-895d-49bc-b2de-f9ee37829fff")
+	)
+	(global_label "ADC_NO2_CORR"
+		(shape bidirectional)
+		(at 281.9400 154.9400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "178ee13c-f593-4c4f-abd9-9b69d7a5d9f3")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 269.2400 133.3500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "1f4345b9-920c-42ba-8ce6-b519f95003c1")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 269.2400 140.9700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2396efd5-1e95-4aaa-bd87-0687caed36fd")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 322.5800 133.3500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ded4e570-5bb5-4fdf-aa02-bc81355e495e")
+	)
+	(global_label "ADS_ALERT"
+		(shape bidirectional)
+		(at 322.5800 140.9700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "5caee2cf-167c-4f88-a4eb-82fff43bc4c1")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 302.2600 220.9800 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "7cc23dfb-aa75-4b92-b45e-ad419b244b85")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 292.1000 226.0600 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "9e2b007b-0c55-4d30-af41-c521f60f6f1b")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 292.1000 203.2000 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ca875dc7-3a2b-4ba6-994a-f2b4ece3a889")
+	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 302.2600 218.4400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ef3b9ba2-c44d-4ad2-b882-053cff04c577")
+	)
+	(global_label "I2C_SCL"
+		(shape bidirectional)
+		(at 302.2600 215.9000 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "075d9d89-c976-48e0-8276-18146d0f33c1")
+	)
+	(global_label "ADC_SO2_VO"
+		(shape bidirectional)
+		(at 281.9400 213.3600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "272e3f00-1787-4792-bdf4-29f2b8e604d6")
+	)
+	(global_label "ADC_SO2_CORR"
+		(shape bidirectional)
+		(at 281.9400 215.9000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ad8db4bd-5467-476f-9365-7e3bbd4debbb")
+	)
+	(global_label "ADC_H2S_VO"
+		(shape bidirectional)
+		(at 281.9400 218.4400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "f7aee560-f493-4f54-aaab-7e6c82ca85eb")
+	)
+	(global_label "ADC_H2S_CORR"
+		(shape bidirectional)
+		(at 281.9400 220.9800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "4e1dc326-78a8-443d-9bf2-d981f02425a1")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 269.2400 199.3900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c175e7fe-0e2c-43a4-a3d7-874ba6526dee")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 269.2400 207.0100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "f74a7a50-a1ca-4e0f-8cb5-c3ec9d52b6eb")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 48.2600 129.5400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "90153e9f-0a3d-4dab-b0f0-ebd44f15767d")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 48.2600 132.0800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "d48c246c-3aec-4c01-807e-184389b2a682")
+	)
+	(global_label "ZE03_CO_VO"
+		(shape bidirectional)
+		(at 48.2600 134.6200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "25563eff-9d99-4740-9851-958f3d7c9e9c")
+	)
+	(global_label "ZE03_CO_CORR"
+		(shape bidirectional)
+		(at 48.2600 137.1600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "d8596f7a-a108-49d1-9a95-0c7f906c98af")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 48.2600 162.5600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "7ab98ce3-5e63-40ad-a2ef-88e793e608ad")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 48.2600 165.1000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "47acb414-544c-49b8-a1a8-aa2f4fdb19db")
+	)
+	(global_label "ZE03_NO2_VO"
+		(shape bidirectional)
+		(at 48.2600 167.6400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "8781fee7-cdef-49e3-8119-67fe82a22b21")
+	)
+	(global_label "ZE03_NO2_CORR"
+		(shape bidirectional)
+		(at 48.2600 170.1800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "68dc239d-5713-43e1-a82a-c02796fe1c91")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 48.2600 195.5800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "edd41d96-8d7b-4a8a-a86a-f9314f389c90")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 48.2600 198.1200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "108d4669-6c1b-4f01-b261-830420b8a917")
+	)
+	(global_label "ZE03_SO2_VO"
+		(shape bidirectional)
+		(at 48.2600 200.6600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "8211721d-0b7b-47af-bf09-f32de72459dc")
+	)
+	(global_label "ZE03_SO2_CORR"
+		(shape bidirectional)
+		(at 48.2600 203.2000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "f6b6f1c0-6bfd-44cd-ad30-45a17b99690c")
+	)
+	(global_label "5V_SENS"
+		(shape bidirectional)
+		(at 48.2600 228.6000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "9497e24e-6046-4ab2-91e9-d34c04b60cc4")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 48.2600 231.1400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "1cbf3fd5-ec71-47d2-8d4a-52c8baff3c54")
+	)
+	(global_label "ZE03_H2S_VO"
+		(shape bidirectional)
+		(at 48.2600 233.6800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "c520fb1f-be8c-4b16-a369-cf3fbb97af4b")
+	)
+	(global_label "ZE03_H2S_CORR"
+		(shape bidirectional)
+		(at 48.2600 236.2200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "34759b4e-283c-4dff-a428-1a2241e09fa7")
+	)
+	(global_label "ZE03_CO_VO"
+		(shape bidirectional)
+		(at 93.9800 123.1900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "7d84a110-0b8e-4a92-8c70-fe56e908f99b")
+	)
+	(global_label "ADC_CO_VO"
+		(shape bidirectional)
+		(at 93.9800 130.8100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "18bf4f9e-ca28-499d-bf62-669d9e95ec8e")
+	)
+	(global_label "ADC_CO_VO"
+		(shape bidirectional)
+		(at 109.2200 128.2700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "733d9b99-437f-4d98-a1d7-91dfbd135a38")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 135.8900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "f292c99a-fe63-4ebf-bdfd-ce2e1167fae2")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 132.0800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "03f3e076-e21e-4c92-925a-9d8503bb368b")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 132.0800 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3296f5b0-f8c8-443d-8657-9d9d5a237fea")
+	)
+	(global_label "ADC_CO_VO"
+		(shape bidirectional)
+		(at 134.6200 137.1600 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "9b03722f-b5d9-4122-a3ad-5aaa50977129")
+	)
+	(global_label "ZE03_CO_CORR"
+		(shape bidirectional)
+		(at 93.9800 138.4300 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "5e7edf42-3eb3-4a7a-bd20-74f8b7f07afb")
+	)
+	(global_label "ADC_CO_CORR"
+		(shape bidirectional)
+		(at 93.9800 146.0500 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2067f354-ffdb-4a19-9b0c-ad39d88dfff6")
+	)
+	(global_label "ADC_CO_CORR"
+		(shape bidirectional)
+		(at 109.2200 140.9700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "6dc9ca93-9da6-4441-a0ee-dc4c19724141")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 148.5900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "3807d212-524e-4e35-a8eb-79777dbc0bc9")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 147.3200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "cef4dfcb-d997-442c-b2b0-c7aeb853f46c")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 147.3200 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "f9b8c815-4d3c-4902-92a8-a5f452b66254")
+	)
+	(global_label "ADC_CO_CORR"
+		(shape bidirectional)
+		(at 134.6200 152.4000 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "03dacf02-d3d6-4b80-96a2-8fefd57be65e")
+	)
+	(global_label "ZE03_NO2_VO"
+		(shape bidirectional)
+		(at 93.9800 156.2100 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "f5f7674f-705f-40a5-a560-dbebc244d808")
+	)
+	(global_label "ADC_NO2_VO"
+		(shape bidirectional)
+		(at 93.9800 163.8300 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "7888bf1e-d2e5-4f97-9281-b3777c17ff4f")
+	)
+	(global_label "ADC_NO2_VO"
+		(shape bidirectional)
+		(at 109.2200 158.7500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "8b409ccb-3bd0-4059-a58a-bdfc58d9c34b")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 166.3700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e5e8a8c3-e835-4f5c-8df2-938473e416a3")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 165.1000 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "07b37f02-f315-47de-acf2-80b50f2d2879")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 165.1000 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "14c4387b-47dc-426d-a068-46cd8e125755")
+	)
+	(global_label "ADC_NO2_VO"
+		(shape bidirectional)
+		(at 134.6200 170.1800 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2fdb0a8b-b7cf-404e-861b-1d886c6bf818")
+	)
+	(global_label "ZE03_NO2_CORR"
+		(shape bidirectional)
+		(at 93.9800 171.4500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "0089afd8-7c40-4510-8dff-052137264539")
+	)
+	(global_label "ADC_NO2_CORR"
+		(shape bidirectional)
+		(at 93.9800 179.0700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "01ef898a-bfcf-4fd0-8bff-6210c4f27cd9")
+	)
+	(global_label "ADC_NO2_CORR"
+		(shape bidirectional)
+		(at 109.2200 173.9900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ede90eb2-c3b0-42d0-85fc-18398a0d43aa")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 181.6100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ae1dc08b-f699-4494-ab73-b65a9bb871cd")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 180.3400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "1d631e35-aa14-4b25-91aa-288a603f1957")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 180.3400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "e9f70a7e-27ac-4558-ab2e-fde0992d086c")
+	)
+	(global_label "ADC_NO2_CORR"
+		(shape bidirectional)
+		(at 134.6200 185.4200 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "b7c68f87-1beb-463c-ab3f-03a2b31d9baf")
+	)
+	(global_label "ZE03_SO2_VO"
+		(shape bidirectional)
+		(at 93.9800 189.2300 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "925ef3f6-b91d-40c5-b7f9-e4e849f3a884")
+	)
+	(global_label "ADC_SO2_VO"
+		(shape bidirectional)
+		(at 93.9800 196.8500 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "46409d73-50ae-4c91-8295-36b30cc62b81")
+	)
+	(global_label "ADC_SO2_VO"
+		(shape bidirectional)
+		(at 109.2200 191.7700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "4682987b-dfc3-4d6b-8c01-d1fe102e2fe3")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 199.3900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "778b0ad7-c8e5-43e0-b207-4a80a55401f6")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 198.1200 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "d93f3c73-3a41-44eb-9fe4-bf4f66da81a9")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 198.1200 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "2bbac301-99e5-4cd0-9ca3-307c4fc5b9ef")
+	)
+	(global_label "ADC_SO2_VO"
+		(shape bidirectional)
+		(at 134.6200 203.2000 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "0ff985be-feef-4822-9e3e-0deabf0c92b9")
+	)
+	(global_label "ZE03_SO2_CORR"
+		(shape bidirectional)
+		(at 93.9800 204.4700 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "ea55abd2-a4cc-4b33-9b10-cff1e006c9b2")
+	)
+	(global_label "ADC_SO2_CORR"
+		(shape bidirectional)
+		(at 93.9800 212.0900 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "0ca56fa5-d4f9-4114-87bf-c990787d6a97")
+	)
+	(global_label "ADC_SO2_CORR"
+		(shape bidirectional)
+		(at 109.2200 207.0100 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "026a6002-5397-4ca9-9d3c-be630f5cdbd4")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 214.6300 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "a416aca4-7602-4000-8643-a1ce178280ed")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 213.3600 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "c180c311-be2d-4d07-a7b9-597953d40f97")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 213.3600 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "a792c5d7-39ff-4def-a828-c52c77c68af6")
+	)
+	(global_label "ADC_SO2_CORR"
+		(shape bidirectional)
+		(at 134.6200 218.4400 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "3bd93ba4-154f-4717-929a-a715f1ebd68c")
+	)
+	(global_label "ZE03_H2S_VO"
+		(shape bidirectional)
+		(at 93.9800 222.2500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "dfb4f986-b07d-42f7-b181-037c8cbf11ae")
+	)
+	(global_label "ADC_H2S_VO"
+		(shape bidirectional)
+		(at 93.9800 229.8700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "a119ccbf-9bf0-44d2-8dac-45b28c8b0639")
+	)
+	(global_label "ADC_H2S_VO"
+		(shape bidirectional)
+		(at 109.2200 224.7900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "440523e5-4f91-4e1e-970b-226d1d37bbf0")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 232.4100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "9156567f-8202-4d1c-b8da-89650485b2cd")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 231.1400 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "f9b07701-0942-4fb2-896b-2b3f201c7f5f")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 231.1400 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "80680fcc-7b56-4a84-b832-c55b49544746")
+	)
+	(global_label "ADC_H2S_VO"
+		(shape bidirectional)
+		(at 134.6200 236.2200 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "cd59a5bb-f814-47de-b63d-cd9204de4144")
+	)
+	(global_label "ZE03_H2S_CORR"
+		(shape bidirectional)
+		(at 93.9800 237.4900 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "9a8e7e52-fd83-4bac-b6dc-4781da2465d3")
+	)
+	(global_label "ADC_H2S_CORR"
+		(shape bidirectional)
+		(at 93.9800 245.1100 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "96aaf9d5-daa6-46fb-9ef5-7f16b4823532")
+	)
+	(global_label "ADC_H2S_CORR"
+		(shape bidirectional)
+		(at 109.2200 240.0300 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "2b1a00b3-d0f7-427b-b7b5-e6f0af7c067c")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 109.2200 247.6500 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "b37a62b7-a603-4a9f-a8dd-5a3d8ebd02dd")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 127.0000 246.3800 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "3fd04fa7-7137-41be-ac95-ec9a770ff344")
+	)
+	(global_label "3V3_SENS"
+		(shape bidirectional)
+		(at 142.2400 246.3800 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "dab56b27-5da8-44eb-8661-2846dd1b0530")
+	)
+	(global_label "ADC_H2S_CORR"
+		(shape bidirectional)
+		(at 134.6200 251.4600 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "18e1997b-f98d-48fa-99c7-2b19b115534c")
+	)
+	(no_connect (at 302.2600 210.8200) (uuid "a8e659de-a456-40c6-9926-4e8d3fd30c01"))
+	(text "BME280 (0x76) & I2C PULL-UPS"
+		(exclude_from_sim no)
+		(at 35.00 32.00 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "301393e5-f004-4f8b-a226-44b41b584879")
+	)
+	(text "SCD41 CO2 (0x62)"
+		(exclude_from_sim no)
+		(at 115.00 32.00 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "13dfa966-a6a9-4c28-8fd5-8607aec61739")
+	)
+	(text "SGP40 VOC (0x59)"
+		(exclude_from_sim no)
+		(at 170.00 32.00 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "6d01e818-272e-4cea-a3d4-04932f6756b8")
+	)
+	(text "ICS-43434 I2S MIC"
+		(exclude_from_sim no)
+		(at 240.00 32.00 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "68b61cb8-224f-4c14-b51d-8b222906510f")
+	)
+	(text "SPS30 PM (0x69, ZHR-5)"
+		(exclude_from_sim no)
+		(at 315.00 32.00 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "79a850f5-e36f-4e0d-9a23-ab08ab8b3fd4")
+	)
+	(text "4x WINSEN ZE03 ELECTROCHEMICAL SENSORS (JST-XH-4) -> RC + BAT54S CLAMP -> DUAL ADS1115 (0x48, 0x49)"
+		(exclude_from_sim no)
+		(at 35.00 108.00 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "1b754593-5d55-4d4f-969e-15515a9f892a")
+	)
+  (symbol (lib_id "Device:R") (at 106.68 86.36 0) (unit 1)
+    (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+    (uuid "1c2c0687-a45e-4480-898b-5ea75433d0fb")
+    (property "Reference" "R53"
+      (at 104.14 86.36 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Value" "0R"
+      (at 109.22 86.36 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 104.902 86.36 90)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Datasheet" ""
+      (at 106.68 86.36 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (property "Description" "Resistor"
+      (at 106.68 86.36 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+    				(font
+    					(size 1.27 1.27)
+    				)
+    			)
+    )
+    (pin "1" (uuid "3619c78d-2c43-4661-8d8b-dbafd5145131"))
+    (pin "2" (uuid "6b516adc-9f00-4986-a41c-ae083e0149bd"))
+    (instances
+      (project "aire-trujillo"
+        (path "/317f46a3-634b-40aa-aa01-b92be3fb4353/0ed54688-45c1-4419-b3bf-c54f6d2b60cd"
+          (reference "R53")
+          (unit 1)
+        )
+      )
+    )
+  )
+  	(global_label "BME_SDO"
+		(shape bidirectional)
+		(at 106.6800 82.5500 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "2f29df39-ffa8-4491-8522-b6dece419b4f")
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 106.6800 90.1700 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e5a0d048-3d13-485c-868e-75b3a26fac97")
+	)
+(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

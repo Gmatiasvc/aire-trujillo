@@ -1,0 +1,45 @@
+menu "Aire-Trujillo Node Configuration (HW-002)"
+
+    config AIRE_NODE_CODE
+        string "Identificador único de nodo (node_code)"
+        default "TRJ-HUANCHACO-01"
+        help
+            Debe coincidir exactamente con el campo `code` registrado en PostgreSQL (tabla nodes).
+
+    config AIRE_SAMPLE_INTERVAL_SEC
+        int "Intervalo nominal de muestreo y envío LTE-M (segundos)"
+        range 60 3600
+        default 300
+        help
+            Cadencia objetivo entre ciclos deep-sleep (300 s = 5 min; 600 s = 10 min).
+
+    config AIRE_WARMUP_5V_MS
+        int "Tiempo de estabilización SPS30 + ZE03 en modo light-sleep (ms)"
+        range 5000 60000
+        default 25000
+
+    config AIRE_CELLULAR_APN
+        string "APN de operadora LTE-M (ej. movistar.pe / claro.pe / internet.entel.pe)"
+        default "internet.m2m"
+
+    config AIRE_MQTT_BROKER_HOST
+        string "Host/IP del broker Eclipse Mosquitto"
+        default "mqtt.aire-trujillo.local"
+
+    config AIRE_MQTT_BROKER_PORT
+        int "Puerto TCP del broker MQTT"
+        default 1883
+
+    config AIRE_MQTT_USERNAME
+        string "Usuario MQTT (vacío si anónimo)"
+        default ""
+
+    config AIRE_MQTT_PASSWORD
+        string "Contraseña MQTT (vacía si anónimo)"
+        default ""
+
+    config AIRE_MIC_CAL_OFFSET_DB
+        string "Offset de calibración acústica dBA (string flotante)"
+        default "0.0"
+
+endmenu

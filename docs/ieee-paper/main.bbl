@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{who2021aqg}
+{World Health Organization (WHO)}, {\em {WHO} Global Air Quality Guidelines:
+  Particulate Matter ({PM2.5} and {PM10}), Ozone, Nitrogen Dioxide, Sulfur
+  Dioxide and Carbon Monoxide}.
+\newblock Geneva, Switzerland: World Health Organization, 2021.
+
+\bibitem{castell2017lowcost}
+N.~Castell, F.~R. Dauge, P.~Schneider, M.~Vogt, U.~Lerner, B.~Fishbain,
+  D.~Broday, and A.~Bartonova, ``Can commercial low-cost sensor platforms
+  contribute to air quality monitoring and exposure estimates?,'' {\em
+  Environment International}, vol.~99, pp.~293--302, 2017.
+
+\bibitem{morawska2018applications}
+L.~Morawska, P.~K. Thai, X.~Liu, A.~Asumadu-Sakyi, G.~Ayoko, A.~Bartonova,
+  A.~Bedini, F.~Chai, B.~Christensen, M.~Dunbabin, J.~Gao, G.~S.~W. Hagler,
+  R.~Jayaratne, P.~Kumar, A.~K.~H. Lau, P.~K.~K. Louie, M.~Mazaheri, Z.~Ning,
+  N.~Motta, B.~Mullins, M.~M. Rahman, Z.~Ristovski, M.~Shafiei,
+  D.~Tjondronegoro, D.~Westerdahl, and R.~Williams, ``Applications of low-cost
+  sensing technologies for air quality monitoring and exposure assessment: How
+  far have they gone?,'' {\em Environment International}, vol.~116,
+  pp.~286--299, 2018.
+
+\bibitem{li2011reviewidw}
+J.~Li and A.~D. Heap, ``A review of comparative studies of spatial
+  interpolation methods in environmental sciences: Performance and impact
+  factors,'' {\em Ecological Informatics}, vol.~6, no.~3--4, pp.~228--241,
+  2011.
+
+\bibitem{rai2017enduser}
+A.~C. Rai, P.~Kumar, F.~Pilla, A.~N. Skouloudis, S.~Di~Sabatino, C.~Ratti,
+  A.~Yasar, and D.~Rickerby, ``End-user perspective of low-cost sensors for
+  outdoor air pollution monitoring,'' {\em Science of the Total Environment},
+  vol.~607--608, pp.~691--705, 2017.
+
+\bibitem{mead2013electrochemical}
+M.~I. Mead, O.~A.~M. Popoola, G.~B. Stewart, P.~Landshoff, M.~Calleja,
+  M.~Hayes, J.~J. Baldovi, M.~W. McLeod, T.~F. Hodgson, J.~Dicks, A.~Lewis,
+  J.~Cohen, R.~Baron, J.~R. Saffell, and R.~L. Jones, ``The use of
+  electrochemical sensors for monitoring urban air quality in low-cost,
+  high-density networks,'' {\em Atmospheric Environment}, vol.~70,
+  pp.~186--203, 2013.
+
+\bibitem{kang2022calibration}
+Y.~Kang, L.~Aye, T.~D. Ngo, and J.~Zhou, ``Performance evaluation of low-cost
+  air quality sensors: A review,'' {\em Science of the Total Environment},
+  vol.~818, p.~151769, 2022.
+
+\bibitem{zimmerman2018machinemean}
+N.~Zimmerman, A.~A. Presto, S.~P.~N. Kumar, J.~Gu, A.~Hauryliuk, E.~S.
+  Robinson, A.~L. Robinson, and R.~Subramanian, ``A machine learning
+  calibration model using random forests to improve sensor performance for
+  lower-cost air quality monitoring,'' {\em Atmospheric Measurement
+  Techniques}, vol.~11, no.~1, pp.~291--313, 2018.
+
+\bibitem{minam2017eca}
+{Ministerio del Ambiente (MINAM)}, ``{Decreto Supremo N.$^\circ$
+  003-2017-MINAM: Aprueban Est{\'a}ndares de Calidad Ambiental (ECA) para Aire
+  y establecen Disposiciones Complementarias}.'' Normas Legales, Diario Oficial
+  El Peruano, June 2017.
+
+\bibitem{minam2016inca}
+{Ministerio del Ambiente (MINAM)}, ``{Resoluci{\'o}n Ministerial N.$^\circ$
+  181-2016-MINAM: {\'I}ndice de Calidad del Aire (INCA)}.'' Ministerio del
+  Ambiente del Per{\'u}, 2016.
+
+\bibitem{usepa2024aqi}
+{U.S. Environmental Protection Agency (EPA)}, ``Technical assistance document
+  for the reporting of daily air quality -- the air quality index ({AQI}),''
+  tech. rep., Office of Air Quality Planning and Standards, EPA-454/B-24-002,
+  Research Triangle Park, NC, USA, 2024.
+
+\bibitem{consonance2018cn3791}
+Shanghai Consonance Electronics, {\em {CN3791: 1-Cell Li-Ion Battery Charger IC
+  with Solar Maximum Power Point Tracking}}, 2018.
+
+\bibitem{simcom2021sim7080g}
+SIMCom Wireless Solutions, {\em {SIM7080G Hardware Design \& AT Command
+  Manual}}, v1.02~ed., 2021.
+
+\bibitem{ti2020power}
+Texas Instruments, {\em {TPS61023 3-A Boost Converter, TLV62569 2-A Buck
+  Converter, and TPS22919 Load Switch Datasheets}}, 2020.
+
+\bibitem{espressif2024esp32s3}
+Espressif Systems, {\em {ESP32-S3-WROOM-1 \& ESP32-S3-WROOM-1U Datasheet}},
+  v1.5~ed., 2024.
+
+\bibitem{bosch2022bme280}
+Bosch Sensortec GmbH, {\em {BME280 Combined Humidity and Pressure Sensor --
+  Datasheet}}, 2022.
+
+\bibitem{sensirion2021scd41}
+Sensirion AG, {\em {SCD4x -- Breaking the Size Barrier in CO2 Sensing --
+  Datasheet}}, 2021.
+
+\bibitem{sensirion2020sgp40}
+Sensirion AG, {\em {SGP40 -- Indoor Air Quality Sensor for VOC Measurements --
+  Datasheet}}, 2020.
+
+\bibitem{sensirion2020sps30}
+Sensirion AG, {\em {SPS30 Particulate Matter Sensor for Air Quality Monitoring
+  and Control -- Datasheet}}, 2020.
+
+\bibitem{ti2018ads1115}
+Texas Instruments, {\em {ADS111x Ultra-Small, Low-Power, I2C-Compatible,
+  860-SPS, 16-Bit ADCs with Internal Reference, Oscillator, and Programmable
+  Comparator}}, 2018.
+
+\bibitem{winsen2019ze03}
+Zhengzhou Winsen Electronics Technology Co., Ltd., {\em {ZE03 Series
+  Electrochemical Gas Module User's Manual (CO, NO2, SO2, H2S)}}, 2019.
+
+\bibitem{invensense2016ics43434}
+TDK InvenSense, {\em {ICS-43434 Multi-Mode Digital Microphone with I2S Output
+  -- Datasheet}}, 2016.
+
+\bibitem{iec61672}
+{International Electrotechnical Commission (IEC)}, ``Electroacoustics -- sound
+  level meters -- part 1: Specifications,'' Tech. Rep. IEC 61672-1:2013,
+  International Electrotechnical Commission, Geneva, Switzerland, 2013.
+
+\bibitem{shepard1968idw}
+D.~Shepard, ``A two-dimensional interpolation function for irregularly-spaced
+  data,'' in {\em Proceedings of the 1968 23rd ACM National Conference},
+  pp.~517--524, 1968.
+
+\end{thebibliography}

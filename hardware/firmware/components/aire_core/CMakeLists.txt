@@ -1,0 +1,11 @@
+idf_component_register(
+    SRCS
+        "src/aire_telemetry.c"
+        "src/aire_calibration.c"
+        "src/aire_queue.c"
+        "src/aire_modem_at.c"
+    INCLUDE_DIRS
+        "include"
+    REQUIRES
+        ""
+)

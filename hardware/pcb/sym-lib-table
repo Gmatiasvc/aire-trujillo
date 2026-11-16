@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "aire-trujillo")(type "KiCad")(uri "${KIPRJMOD}/lib/aire-trujillo.kicad_sym")(options "")(descr "Project local symbols for aire-trujillo (SIM7080G, CN3791, SGP40, TPS61023DRLR, TPS22919DCKR)"))
+)

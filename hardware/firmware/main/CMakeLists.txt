@@ -1,0 +1,17 @@
+idf_component_register(
+    SRCS
+        "app_main.c"
+        "drivers/bus_hal.c"
+        "drivers/sensors_hal.c"
+    INCLUDE_DIRS
+        "."
+        "drivers"
+    REQUIRES
+        aire_core
+        driver
+        esp_adc
+        esp_timer
+        fatfs
+        sdmmc
+        nvs_flash
+)

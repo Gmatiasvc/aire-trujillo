@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "aire-trujillo")(type "KiCad")(uri "${KIPRJMOD}/lib/aire-trujillo.pretty")(options "")(descr "Project local footprints for aire-trujillo (SIMCom_SIM7080G, cn3791, sgp40)"))
+)
