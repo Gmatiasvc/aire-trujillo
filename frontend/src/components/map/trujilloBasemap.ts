@@ -1,6 +1,5 @@
-import type { Feature, FeatureCollection, Polygon } from 'geojson'
+import type { Feature, FeatureCollection } from 'geojson'
 import type { StyleSpecification } from 'maplibre-gl'
-import type { HeatmapCell, HeatmapResponse } from '../../types/telemetry'
 import type { ThemeMode } from '../../stores/theme'
 
 export const TRUJILLO_DEFAULT_CENTER: [number, number] = [-79.064, -8.101]
@@ -25,7 +24,10 @@ export const OFFLINE_CARTO_LABELS: CartoLabelSpec[] = [
   { id: 'lbl-larco', text: 'VÍCTOR LARCO', lon: -79.051, lat: -8.131, kind: 'sector' },
 ]
 
-const METERS_PER_DEG_LAT = 111320
+export const EMPTY_GEOJSON: FeatureCollection = {
+  type: 'FeatureCollection',
+  features: [],
+}
 
 function buildGraticuleFeatures(): FeatureCollection {
   const features: Feature[] = []
@@ -175,70 +177,6 @@ const LOCAL_ARTERIALS: FeatureCollection = {
 
 const LOCAL_GRATICULE = buildGraticuleFeatures()
 
-export const EMPTY_GEOJSON: FeatureCollection = {
-  type: 'FeatureCollection',
-  features: [],
-}
-
-export interface HeatmapCellProperties {
-  value: number | null
-  category: string
-  color: string
-  confidence: number
-  has_data: boolean
-  lat: number
-  lon: number
-}
-
-export function cellsToGeoJson(
-  response: HeatmapResponse | null,
-): FeatureCollection<Polygon, HeatmapCellProperties> {
-  if (!response || response.cells.length === 0) {
-    return { type: 'FeatureCollection', features: [] }
-  }
-
-  const sizeM = response.cell_size_m > 0 ? response.cell_size_m : 50
-  // Slight 5% overlap avoids hairline seams between adjacent 50m tiles under fractional WebGL scaling.
-  const halfLat = (sizeM / METERS_PER_DEG_LAT) * 0.525
-
-  const features: Array<Feature<Polygon, HeatmapCellProperties>> = response.cells.map(
-    (cell: HeatmapCell) => {
-      const cosLat = Math.max(0.01, Math.cos((cell.lat * Math.PI) / 180))
-      const halfLon = (sizeM / (METERS_PER_DEG_LAT * cosLat)) * 0.525
-
-      return {
-        type: 'Feature',
-        properties: {
-          value: cell.value,
-          category: cell.category,
-          color: cell.color,
-          confidence: cell.confidence,
-          has_data: cell.has_data,
-          lat: cell.lat,
-          lon: cell.lon,
-        },
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [cell.lon - halfLon, cell.lat - halfLat],
-              [cell.lon + halfLon, cell.lat - halfLat],
-              [cell.lon + halfLon, cell.lat + halfLat],
-              [cell.lon - halfLon, cell.lat + halfLat],
-              [cell.lon - halfLon, cell.lat - halfLat],
-            ],
-          ],
-        },
-      }
-    },
-  )
-
-  return {
-    type: 'FeatureCollection',
-    features,
-  }
-}
-
 function buildCartoTileUrl(isDark: boolean): string {
   const customTemplate = (
     isDark ? import.meta.env.VITE_CARTO_TILE_URL_DARK : import.meta.env.VITE_CARTO_TILE_URL_LIGHT
@@ -291,9 +229,14 @@ export function buildTrujilloMapStyle(
       type: 'geojson',
       data: LOCAL_ARTERIALS,
     },
-    'heatmap-cells': {
-      type: 'geojson',
-      data: EMPTY_GEOJSON,
+    'heatmap-surface': {
+      type: 'image',
+      coordinates: [
+        [TRUJILLO_CORRIDOR_BOUNDS[0][0], TRUJILLO_CORRIDOR_BOUNDS[1][1]],
+        [TRUJILLO_CORRIDOR_BOUNDS[1][0], TRUJILLO_CORRIDOR_BOUNDS[1][1]],
+        [TRUJILLO_CORRIDOR_BOUNDS[1][0], TRUJILLO_CORRIDOR_BOUNDS[0][1]],
+        [TRUJILLO_CORRIDOR_BOUNDS[0][0], TRUJILLO_CORRIDOR_BOUNDS[0][1]],
+      ],
     },
     'active-nodes': {
       type: 'geojson',
@@ -378,13 +321,13 @@ export function buildTrujilloMapStyle(
 
   layers.push(
     {
-      id: 'heatmap-cells-fill',
-      type: 'fill',
-      source: 'heatmap-cells',
+      id: 'heatmap-surface-layer',
+      type: 'raster',
+      source: 'heatmap-surface',
       paint: {
-        'fill-color': ['get', 'color'],
-        'fill-opacity': ['case', ['==', ['get', 'has_data'], false], 0.34, 0.72],
-        'fill-antialias': false,
+        'raster-opacity': isDark ? 0.72 : 0.78,
+        'raster-resampling': 'linear',
+        'raster-fade-duration': 0,
       },
     },
     {

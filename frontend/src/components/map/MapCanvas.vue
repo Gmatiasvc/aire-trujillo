@@ -8,6 +8,7 @@ import {
   setWorkerUrl,
   type ErrorEvent,
   type GeoJSONSource,
+  type ImageSource,
   type MapMouseEvent,
 } from 'maplibre-gl'
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
@@ -28,8 +29,13 @@ import {
   TRUJILLO_DEFAULT_CENTER,
   TRUJILLO_DEFAULT_ZOOM,
   buildTrujilloMapStyle,
-  cellsToGeoJson,
 } from './trujilloBasemap'
+import {
+  buildHeatmapSurface,
+  createEmptyHeatmapImage,
+  lookupHeatmapCell,
+  type HeatmapGridIndex,
+} from './heatmapSurface'
 
 interface HoverReadout {
   x: number
@@ -65,8 +71,17 @@ let map: MapLibreMap | null = null
 let resizeObserver: ResizeObserver | null = null
 let hasUserMoved = false
 let lastFitWidth = 0
+let heatmapGridIndex: HeatmapGridIndex | null = null
+let emptyHeatmapImage: ImageData | null = null
 const nodeMarkers: Marker[] = []
 const cartoMarkers: Marker[] = []
+
+function getEmptyHeatmapImage(): ImageData {
+  if (!emptyHeatmapImage) {
+    emptyHeatmapImage = createEmptyHeatmapImage()
+  }
+  return emptyHeatmapImage
+}
 
 function nodesToGeoJson(nodeList: PublicNode[]): FeatureCollection<Point> {
   return {
@@ -162,9 +177,21 @@ function syncCartoLabels(instance: MapLibreMap): void {
 }
 
 function syncGeoSources(instance: MapLibreMap): void {
-  const heatSrc = instance.getSource('heatmap-cells') as GeoJSONSource | undefined
+  const surface = buildHeatmapSurface(props.heatmap)
+  heatmapGridIndex = surface?.gridIndex ?? null
+
+  const heatSrc = instance.getSource('heatmap-surface') as ImageSource | undefined
   if (heatSrc) {
-    heatSrc.setData(cellsToGeoJson(props.heatmap))
+    if (surface?.image && surface.coordinates) {
+      heatSrc.updateImage({
+        image: surface.image,
+        coordinates: surface.coordinates,
+      })
+    } else {
+      heatSrc.updateImage({
+        image: getEmptyHeatmapImage(),
+      })
+    }
   }
   const nodesSrc = instance.getSource('active-nodes') as GeoJSONSource | undefined
   if (nodesSrc) {
@@ -184,17 +211,7 @@ function resolveHoverAtPoint(instance: MapLibreMap, event: MapMouseEvent): Hover
   ]
 
   const nodeHits = instance.queryRenderedFeatures(hitBox, { layers: ['nodes-core'] })
-  const cellHits = instance.queryRenderedFeatures(pt, { layers: ['heatmap-cells-fill'] })
-
-  const topCell = cellHits[0]?.properties as
-    | {
-        has_data?: boolean
-        value?: number | null
-        category?: string
-        color?: string
-        confidence?: number
-      }
-    | undefined
+  const topCell = lookupHeatmapCell(heatmapGridIndex, event.lngLat.lat, event.lngLat.lng)
 
   const topNode = nodeHits[0]?.properties as { code?: string; name?: string } | undefined
 
@@ -212,9 +229,10 @@ function resolveHoverAtPoint(instance: MapLibreMap, event: MapMouseEvent): Hover
     category: hasData ? String(topCell?.category ?? '') : NO_DATA_LABEL,
     valueText,
     color: hasData && topCell?.color ? String(topCell.color) : NO_DATA_COLOR,
-    confidencePct: hasData && typeof topCell?.confidence === 'number'
-      ? Math.round(topCell.confidence * 100)
-      : 0,
+    confidencePct:
+      hasData && typeof topCell?.confidence === 'number'
+        ? Math.round(topCell.confidence * 100)
+        : 0,
     hasData,
     isNode: Boolean(topNode),
   }

@@ -1,10 +1,7 @@
 package spatial
 
 import (
-	"fmt"
 	"math"
-	"strconv"
-	"strings"
 
 	"github.com/gmatiasvc/air-quality-trujillo/backend/internal/aqi"
 	"github.com/gmatiasvc/air-quality-trujillo/backend/internal/domain"
@@ -57,51 +54,10 @@ func HaversineDistanceM(lat1, lon1, lat2, lon2 float64) float64 {
 
 // BlendHexWithGray linearly blends a base #RRGGBB color with #9CA3AF according to confidence in [0, 1].
 func BlendHexWithGray(baseHex string, confidence float64) string {
-	if confidence >= 1.0 {
-		return strings.ToUpper(baseHex)
-	}
-	if confidence <= 0.0 {
-		return domain.NoDataColor
-	}
-
-	br, bg, bb, ok := parseHexRGB(baseHex)
-	if !ok {
-		return domain.NoDataColor
-	}
-	gr, gg, gb, _ := parseHexRGB(domain.NoDataColor)
-
-	r := int(math.Round(confidence*float64(br) + (1.0-confidence)*float64(gr)))
-	g := int(math.Round(confidence*float64(bg) + (1.0-confidence)*float64(gg)))
-	b := int(math.Round(confidence*float64(bb) + (1.0-confidence)*float64(gb)))
-
-	return fmt.Sprintf("#%02X%02X%02X", clampByte(r), clampByte(g), clampByte(b))
+	return aqi.BlendHexColors(domain.NoDataColor, baseHex, confidence)
 }
 
-func parseHexRGB(hex string) (int, int, int, bool) {
-	s := strings.TrimPrefix(strings.TrimSpace(hex), "#")
-	if len(s) != 6 {
-		return 0, 0, 0, false
-	}
-	r, err1 := strconv.ParseInt(s[0:2], 16, 64)
-	g, err2 := strconv.ParseInt(s[2:4], 16, 64)
-	b, err3 := strconv.ParseInt(s[4:6], 16, 64)
-	if err1 != nil || err2 != nil || err3 != nil {
-		return 0, 0, 0, false
-	}
-	return int(r), int(g), int(b), true
-}
-
-func clampByte(v int) int {
-	if v < 0 {
-		return 0
-	}
-	if v > 255 {
-		return 255
-	}
-	return v
-}
-
-// InterpolatePoint evaluates IDW interpolation and edge fade-to-gray at (lat, lon).
+// InterpolatePoint evaluates compactly-supported Shepard IDW, directional interior confidence, and edge fade-to-gray at (lat, lon).
 func InterpolatePoint(lat, lon float64, samples []SamplePoint, layer, standard string, cfg Config) domain.HeatmapCell {
 	if cfg.MaxRadiusM <= 0 {
 		cfg.MaxRadiusM = 600
@@ -110,14 +66,21 @@ func InterpolatePoint(lat, lon float64, samples []SamplePoint, layer, standard s
 		cfg.Power = 2
 	}
 
+	cosLat := math.Cos(lat * math.Pi / 180.0)
+
 	var (
-		hasMatch   bool
-		exactMatch bool
-		exactVal   float64
-		exactDist  float64
-		weightSum  float64
-		valueSum   float64
-		dMin       = math.Inf(1)
+		hasMatch     bool
+		exactMatch   bool
+		exactVal     float64
+		exactDist    float64
+		nearestVal   float64
+		weightSum    float64
+		valueSum     float64
+		confSum      float64
+		dirWeightSum float64
+		dirX         float64
+		dirY         float64
+		dMin         = math.Inf(1)
 	)
 
 	for _, s := range samples {
@@ -128,7 +91,23 @@ func InterpolatePoint(lat, lon float64, samples []SamplePoint, layer, standard s
 		hasMatch = true
 		if d < dMin {
 			dMin = d
+			nearestVal = s.Value
 		}
+
+		confSum += computeConfidence(d, cfg.FadeStartM, cfg.MaxRadiusM)
+
+		// O(1)-per-sample directional balance vector: opposes directions cancel between flanked nodes
+		// (I -> 1), while outer boundaries point predominantly inward toward one side (I -> 0).
+		dy := (s.Lat - lat) * 111320.0
+		dx := (s.Lon - lon) * 111320.0 * cosLat
+		norm := math.Hypot(dx, dy)
+		dirW := 1.0 - d/cfg.MaxRadiusM
+		if dirW > 0 && norm > 1e-6 {
+			dirWeightSum += dirW
+			dirX += dirW * (dx / norm)
+			dirY += dirW * (dy / norm)
+		}
+
 		if d < 1.0 {
 			if !exactMatch || d < exactDist {
 				exactMatch = true
@@ -137,9 +116,12 @@ func InterpolatePoint(lat, lon float64, samples []SamplePoint, layer, standard s
 			}
 			continue
 		}
-		w := 1.0 / math.Pow(d, cfg.Power)
-		weightSum += w
-		valueSum += w * s.Value
+		if d < cfg.MaxRadiusM {
+			taper := (cfg.MaxRadiusM - d) / (cfg.MaxRadiusM * d)
+			w := math.Pow(taper, cfg.Power)
+			weightSum += w
+			valueSum += w * s.Value
+		}
 	}
 
 	if !hasMatch {
@@ -158,15 +140,34 @@ func InterpolatePoint(lat, lon float64, samples []SamplePoint, layer, standard s
 	if exactMatch {
 		interpVal = exactVal
 		dMin = exactDist
-	} else {
+	} else if weightSum > 0 {
 		interpVal = valueSum / weightSum
+	} else {
+		interpVal = nearestVal
 	}
 
-	confidence := computeConfidence(dMin, cfg.FadeStartM, cfg.MaxRadiusM)
+	baseConf := computeConfidence(dMin, cfg.FadeStartM, cfg.MaxRadiusM)
+	confidence := baseConf
+	if !exactMatch && dirWeightSum > 0 && baseConf < 1.0 && confSum > 0 {
+		rx := dirX / dirWeightSum
+		ry := dirY / dirWeightSum
+		rSq := rx*rx + ry*ry
+		if rSq > 1.0 {
+			rSq = 1.0
+		}
+		interiority := 1.0 - rSq
+		supportEnvelope := math.Min(1.0, confSum/0.35)
+		confidence = baseConf + interiority*supportEnvelope*(1.0-baseConf)
+		if confidence > 1.0 {
+			confidence = 1.0
+		}
+	}
+
 	roundedVal := math.Round(interpVal*100) / 100
 	roundedConf := math.Round(confidence*10000) / 10000
 
-	cat, baseColor := aqi.ClassifyLayerValue(layer, standard, roundedVal)
+	cat, _ := aqi.ClassifyLayerValue(layer, standard, roundedVal)
+	baseColor := aqi.InterpolateLayerColor(layer, standard, roundedVal)
 	finalColor := BlendHexWithGray(baseColor, confidence)
 
 	return domain.HeatmapCell{

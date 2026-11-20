@@ -132,3 +132,41 @@ func TestCalculateCompositeIndex(t *testing.T) {
 		}
 	})
 }
+
+func TestInterpolateLayerColorGradualTransitions(t *testing.T) {
+	tests := []struct {
+		name     string
+		layer    string
+		standard string
+		value    float64
+		want     string
+	}{
+		{name: "inca low clamps to Buena", layer: domain.LayerAirQuality, standard: domain.StandardINCA, value: 10, want: "#22C55E"},
+		{name: "inca boundary 50 blends Buena and Moderada", layer: domain.LayerAirQuality, standard: domain.StandardINCA, value: 50, want: "#86BC33"},
+		{name: "inca 75 matches Moderada center", layer: domain.LayerAirQuality, standard: domain.StandardINCA, value: 75, want: "#EAB308"},
+		{name: "inca boundary 100 blends Moderada and Mala", layer: domain.LayerAirQuality, standard: domain.StandardINCA, value: 100, want: "#F2930F"},
+		{name: "inca high clamps to Peligrosa", layer: domain.LayerAirQuality, standard: domain.StandardINCA, value: 240, want: "#EF4444"},
+		{name: "epa low clamps to Good", layer: domain.LayerAirQuality, standard: domain.StandardEPA, value: 15, want: "#00E400"},
+		{name: "epa boundary 100 blends Moderate and USG", layer: domain.LayerAirQuality, standard: domain.StandardEPA, value: 100, want: "#FFBF00"},
+		{name: "epa high clamps to Hazardous", layer: domain.LayerAirQuality, standard: domain.StandardEPA, value: 450, want: "#7E0023"},
+	}
+
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			got := InterpolateLayerColor(tc.layer, tc.standard, tc.value)
+			if got != tc.want {
+				t.Fatalf("InterpolateLayerColor(%q, %q, %v) = %s, want %s", tc.layer, tc.standard, tc.value, got, tc.want)
+			}
+		})
+	}
+
+	pm25Boundary := InterpolateLayerColor(domain.MetricPM25, domain.StandardINCA, 25)
+	if pm25Boundary == "#22C55E" || pm25Boundary == "#EAB308" {
+		t.Fatalf("expected pm25=25 to blend smoothly between #22C55E and #EAB308, got %s", pm25Boundary)
+	}
+
+	tempMid := InterpolateLayerColor(domain.MetricTemperatureC, domain.StandardINCA, 16.5)
+	if tempMid != "#2FA4AA" {
+		t.Fatalf("expected temperature_c=16.5 midpoint between #3B82F6 and #22C55E (#2FA4AA), got %s", tempMid)
+	}
+}

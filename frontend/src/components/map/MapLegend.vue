@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import UiIcon from '../UiIcon.vue'
 import type { LegendSpec } from '../../data/legends'
 
-defineProps<{
+const props = defineProps<{
   legend: LegendSpec
 }>()
+
+const scaleGradient = computed<string>(() => {
+  const colors = props.legend.bands.map((band) => band.color)
+  if (colors.length === 0) return 'none'
+  if (colors.length === 1) return colors[0]!
+  return `linear-gradient(90deg, ${colors.join(', ')})`
+})
 
 const isCollapsed = ref<boolean>(typeof window !== 'undefined' ? window.innerWidth <= 900 : false)
 let mobileMediaQuery: MediaQueryList | null = null
@@ -49,6 +56,12 @@ onBeforeUnmount(() => {
     <div v-if="!isCollapsed" class="legend-body">
       <p class="legend-subtitle">{{ legend.subtitle }}</p>
 
+      <div
+        class="scale-ramp"
+        :style="{ background: scaleGradient }"
+        aria-hidden="true"
+      ></div>
+
       <ul class="legend-bands">
         <li v-for="band in legend.bands" :key="band.label" class="legend-row">
           <span class="swatch" :style="{ backgroundColor: band.color }" aria-hidden="true"></span>
@@ -59,8 +72,8 @@ onBeforeUnmount(() => {
 
       <div class="fade-block">
         <div class="fade-labels tabular">
-          <span>0–400 m Pleno</span>
-          <span>400–600 m Borde</span>
+          <span>Pleno / Entre nodos</span>
+          <span>Borde ext. 400–600 m</span>
         </div>
         <div class="fade-ramp" aria-hidden="true"></div>
       </div>
@@ -146,6 +159,11 @@ onBeforeUnmount(() => {
   font-size: 11.5px;
   line-height: 1.35;
   color: var(--ink-secondary);
+}
+
+.scale-ramp {
+  height: 8px;
+  border: 1px solid var(--rule-color);
 }
 
 .legend-bands {

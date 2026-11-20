@@ -167,20 +167,113 @@ function distanceMeters(lat1: number, lon1: number, lat2: number, lon2: number):
   return 6371000 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 }
 
-function blendHexToGray(baseHex: string, confidence: number): string {
-  if (confidence >= 1) return baseHex
-  if (confidence <= 0) return NO_DATA_COLOR
-  const r0 = parseInt(baseHex.slice(1, 3), 16)
-  const g0 = parseInt(baseHex.slice(3, 5), 16)
-  const b0 = parseInt(baseHex.slice(5, 7), 16)
-  const gr = 156
-  const gg = 163
-  const gb = 175
-  const r = Math.round(confidence * r0 + (1 - confidence) * gr)
-  const g = Math.round(confidence * g0 + (1 - confidence) * gg)
-  const b = Math.round(confidence * b0 + (1 - confidence) * gb)
+function blendHexColors(hexA: string, hexB: string, t: number): string {
+  if (t <= 0) return hexA.toUpperCase()
+  if (t >= 1) return hexB.toUpperCase()
+  const ar = parseInt(hexA.slice(1, 3), 16)
+  const ag = parseInt(hexA.slice(3, 5), 16)
+  const ab = parseInt(hexA.slice(5, 7), 16)
+  const br = parseInt(hexB.slice(1, 3), 16)
+  const bg = parseInt(hexB.slice(3, 5), 16)
+  const bb = parseInt(hexB.slice(5, 7), 16)
+  const r = Math.round(ar + t * (br - ar))
+  const g = Math.round(ag + t * (bg - ag))
+  const b = Math.round(ab + t * (bb - ab))
   const toHex = (n: number): string => Math.max(0, Math.min(255, n)).toString(16).padStart(2, '0').toUpperCase()
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`
+}
+
+function blendHexToGray(baseHex: string, confidence: number): string {
+  return blendHexColors(NO_DATA_COLOR, baseHex, confidence)
+}
+
+interface ColorStop {
+  value: number
+  hex: string
+}
+
+function interpolateStops(value: number, stops: ColorStop[]): string {
+  if (stops.length === 0) return NO_DATA_COLOR
+  if (value <= stops[0]!.value) return stops[0]!.hex
+  const last = stops[stops.length - 1]!
+  if (value >= last.value) return last.hex
+  for (let i = 0; i < stops.length - 1; i++) {
+    const a = stops[i]!
+    const b = stops[i + 1]!
+    if (value <= b.value) {
+      const span = b.value - a.value
+      return span <= 0 ? b.hex : blendHexColors(a.hex, b.hex, (value - a.value) / span)
+    }
+  }
+  return last.hex
+}
+
+function fourTierStops(t1: number, t2: number, t3: number): ColorStop[] {
+  return [
+    { value: t1 * 0.5, hex: '#22C55E' },
+    { value: (t1 + t2) * 0.5, hex: '#EAB308' },
+    { value: (t2 + t3) * 0.5, hex: '#F97316' },
+    { value: t3 * 1.35, hex: '#EF4444' },
+  ]
+}
+
+const INCA_STOPS: ColorStop[] = [
+  { value: 25, hex: '#22C55E' },
+  { value: 75, hex: '#EAB308' },
+  { value: 125, hex: '#F97316' },
+  { value: 200, hex: '#EF4444' },
+]
+
+const EPA_STOPS: ColorStop[] = [
+  { value: 25, hex: '#00E400' },
+  { value: 75, hex: '#FFFF00' },
+  { value: 125, hex: '#FF7E00' },
+  { value: 175, hex: '#FF0000' },
+  { value: 250, hex: '#8F3F97' },
+  { value: 400, hex: '#7E0023' },
+]
+
+const METRIC_STOPS: Record<MetricKey, ColorStop[]> = {
+  pm25: fourTierStops(25, 50, 100),
+  pm10: fourTierStops(50, 100, 200),
+  co: fourTierStops(10, 30, 45),
+  no2: fourTierStops(100, 200, 400),
+  so2: fourTierStops(125, 250, 500),
+  h2s: fourTierStops(75, 150, 300),
+  voc_index: fourTierStops(100, 200, 400),
+  co2: [
+    { value: 600, hex: '#22C55E' },
+    { value: 1500, hex: '#EAB308' },
+    { value: 2500, hex: '#EF4444' },
+  ],
+  noise_dba: [
+    { value: 45, hex: '#22C55E' },
+    { value: 70, hex: '#EAB308' },
+    { value: 90, hex: '#EF4444' },
+  ],
+  temperature_c: [
+    { value: 12, hex: '#3B82F6' },
+    { value: 21, hex: '#22C55E' },
+    { value: 29, hex: '#F97316' },
+    { value: 36, hex: '#EF4444' },
+  ],
+  humidity_pct: [
+    { value: 20, hex: '#EAB308' },
+    { value: 52.5, hex: '#22C55E' },
+    { value: 85, hex: '#3B82F6' },
+  ],
+  pressure_hpa: [
+    { value: 998, hex: '#3B82F6' },
+    { value: 1012.5, hex: '#22C55E' },
+    { value: 1026, hex: '#F97316' },
+  ],
+}
+
+function interpolateSampleColor(layer: LayerKey, standard: AirQualityStandard, value: number): string {
+  if (layer === LAYER_AIR_QUALITY) {
+    return interpolateStops(value, standard === 'epa' ? EPA_STOPS : INCA_STOPS)
+  }
+  return interpolateStops(value, METRIC_STOPS[layer])
 }
 
 function pickSampleStyle(layer: LayerKey, standard: AirQualityStandard, value: number): { category: string; color: string } {
@@ -279,6 +372,12 @@ function stationSampleValue(
   return Math.round(Math.max(1, base * factor) * 100) / 100
 }
 
+function computeSampleConfidence(dMin: number): number {
+  if (dMin <= 400) return 1
+  if (dMin >= 600) return 0
+  return Math.max(0, Math.min(1, 1 - (dMin - 400) / 200))
+}
+
 function evaluateFixtureCell(
   lat: number,
   lon: number,
@@ -286,20 +385,42 @@ function evaluateFixtureCell(
   standard: AirQualityStandard,
   factor: number,
 ): HeatmapCell {
+  const cosLat = Math.cos((lat * Math.PI) / 180)
   let dMin = Infinity
+  let nearestVal = 0
   let weightSum = 0
   let valueSum = 0
+  let confSum = 0
+  let dirWeightSum = 0
+  let dirX = 0
+  let dirY = 0
   let exact: number | null = null
 
   for (const st of SAMPLE_STATIONS) {
     const d = distanceMeters(lat, lon, st.node.lat, st.node.lon)
     if (d > 600) continue
     const val = stationSampleValue(st, layer, standard, factor)
-    if (d < dMin) dMin = d
+    if (d < dMin) {
+      dMin = d
+      nearestVal = val
+    }
+    confSum += computeSampleConfidence(d)
+
+    const dy = (st.node.lat - lat) * 111320
+    const dx = (st.node.lon - lon) * 111320 * cosLat
+    const norm = Math.hypot(dx, dy)
+    const dirW = 1 - d / 600
+    if (dirW > 0 && norm > 1e-6) {
+      dirWeightSum += dirW
+      dirX += dirW * (dx / norm)
+      dirY += dirW * (dy / norm)
+    }
+
     if (d < 1) {
       exact = val
-    } else {
-      const w = 1 / (d * d)
+    } else if (d < 600) {
+      const taper = (600 - d) / (600 * d)
+      const w = taper * taper
       weightSum += w
       valueSum += w * val
     }
@@ -317,16 +438,27 @@ function evaluateFixtureCell(
     }
   }
 
-  const raw = exact !== null ? exact : valueSum / weightSum
+  const raw = exact !== null ? exact : weightSum > 0 ? valueSum / weightSum : nearestVal
   const value = Math.round(raw * 100) / 100
-  const confidence = dMin <= 400 ? 1 : dMin >= 600 ? 0 : Math.round((1 - (dMin - 400) / 200) * 10000) / 10000
+  const baseConf = computeSampleConfidence(dMin)
+  let rawConf = baseConf
+  if (exact === null && dirWeightSum > 0 && baseConf < 1 && confSum > 0) {
+    const rx = dirX / dirWeightSum
+    const ry = dirY / dirWeightSum
+    const rSq = Math.min(1, rx * rx + ry * ry)
+    const interiority = 1 - rSq
+    const supportEnvelope = Math.min(1, confSum / 0.35)
+    rawConf = Math.min(1, baseConf + interiority * supportEnvelope * (1 - baseConf))
+  }
+  const confidence = Math.round(rawConf * 10000) / 10000
   const styled = pickSampleStyle(layer, standard, value)
+  const continuousColor = interpolateSampleColor(layer, standard, value)
   return {
     lat: Math.round(lat * 1e6) / 1e6,
     lon: Math.round(lon * 1e6) / 1e6,
     value,
     category: styled.category,
-    color: blendHexToGray(styled.color, confidence),
+    color: blendHexToGray(continuousColor, rawConf),
     confidence,
     has_data: true,
   }
@@ -354,19 +486,30 @@ export function getDemoHeatmap(
   const factor = sampleFactorForTimestamp(at)
   const recordedAt = at ?? SAMPLE_TIMESTAMPS[SAMPLE_TIMESTAMPS.length - 1] ?? new Date().toISOString()
 
-  // Local patches around Trujillo Centro and Huanchaco in 50m cells (includes >600m gray rim)
+  // Local patches around Trujillo Centro and Huanchaco in coherent 50m lattice cells (includes >600m gray rim)
   const sectors = [
     { minLat: -8.128, maxLat: -8.0985, minLon: -79.048, maxLon: -79.0205 },
     { minLat: -8.087, maxLat: -8.0715, minLon: -79.1285, maxLon: -79.1125 },
   ]
 
+  const originLat = -8.128
+  const originLon = -79.1285
   const dLat = 50 / 111320
   const dLon = 50 / (111320 * Math.cos((-8.1 * Math.PI) / 180))
   const cells: HeatmapCell[] = []
 
   for (const box of sectors) {
-    for (let lat = box.minLat + dLat * 0.5; lat <= box.maxLat; lat += dLat) {
-      for (let lon = box.minLon + dLon * 0.5; lon <= box.maxLon; lon += dLon) {
+    const startR = Math.max(0, Math.floor((box.minLat - originLat) / dLat))
+    const endR = Math.ceil((box.maxLat - originLat) / dLat)
+    const startC = Math.max(0, Math.floor((box.minLon - originLon) / dLon))
+    const endC = Math.ceil((box.maxLon - originLon) / dLon)
+
+    for (let r = startR; r <= endR; r++) {
+      const lat = originLat + (r + 0.5) * dLat
+      if (lat < box.minLat || lat > box.maxLat) continue
+      for (let c = startC; c <= endC; c++) {
+        const lon = originLon + (c + 0.5) * dLon
+        if (lon < box.minLon || lon > box.maxLon) continue
         let near = Infinity
         for (const st of SAMPLE_STATIONS) {
           const d = distanceMeters(lat, lon, st.node.lat, st.node.lon)

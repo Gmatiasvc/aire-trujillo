@@ -1,10 +1,18 @@
 package aqi
 
 import (
+	"fmt"
 	"math"
+	"strconv"
+	"strings"
 
 	"github.com/gmatiasvc/air-quality-trujillo/backend/internal/domain"
 )
+
+type colorStop struct {
+	value float64
+	hex   string
+}
 
 type breakpoint struct {
 	CLo float64
@@ -392,4 +400,154 @@ func classifyFourTier(v, t1, t2, t3 float64, l1, l2, l3, l4 string) (string, str
 	default:
 		return l4, "#EF4444"
 	}
+}
+
+// BlendHexColors linearly interpolates between two #RRGGBB hex colors for t in [0, 1].
+func BlendHexColors(hexA, hexB string, t float64) string {
+	if t <= 0.0 {
+		return strings.ToUpper(hexA)
+	}
+	if t >= 1.0 {
+		return strings.ToUpper(hexB)
+	}
+
+	ar, ag, ab, okA := parseHexRGB(hexA)
+	br, bg, bb, okB := parseHexRGB(hexB)
+	if !okA || !okB {
+		return domain.NoDataColor
+	}
+
+	r := int(math.Round(float64(ar) + t*float64(br-ar)))
+	g := int(math.Round(float64(ag) + t*float64(bg-ag)))
+	b := int(math.Round(float64(ab) + t*float64(bb-ab)))
+
+	return fmt.Sprintf("#%02X%02X%02X", clampByte(r), clampByte(g), clampByte(b))
+}
+
+func parseHexRGB(hex string) (int, int, int, bool) {
+	s := strings.TrimPrefix(strings.TrimSpace(hex), "#")
+	if len(s) != 6 {
+		return 0, 0, 0, false
+	}
+	r, err1 := strconv.ParseInt(s[0:2], 16, 64)
+	g, err2 := strconv.ParseInt(s[2:4], 16, 64)
+	b, err3 := strconv.ParseInt(s[4:6], 16, 64)
+	if err1 != nil || err2 != nil || err3 != nil {
+		return 0, 0, 0, false
+	}
+	return int(r), int(g), int(b), true
+}
+
+func clampByte(v int) int {
+	if v < 0 {
+		return 0
+	}
+	if v > 255 {
+		return 255
+	}
+	return v
+}
+
+func interpolateColorStops(value float64, stops []colorStop) string {
+	if len(stops) == 0 {
+		return domain.NoDataColor
+	}
+	if value <= stops[0].value {
+		return strings.ToUpper(stops[0].hex)
+	}
+	last := stops[len(stops)-1]
+	if value >= last.value {
+		return strings.ToUpper(last.hex)
+	}
+
+	for i := 0; i < len(stops)-1; i++ {
+		a := stops[i]
+		b := stops[i+1]
+		if value <= b.value {
+			span := b.value - a.value
+			if span <= 0 {
+				return strings.ToUpper(b.hex)
+			}
+			t := (value - a.value) / span
+			return BlendHexColors(a.hex, b.hex, t)
+		}
+	}
+	return strings.ToUpper(last.hex)
+}
+
+func fourTierStops(t1, t2, t3 float64) []colorStop {
+	return []colorStop{
+		{value: t1 * 0.5, hex: "#22C55E"},
+		{value: (t1 + t2) * 0.5, hex: "#EAB308"},
+		{value: (t2 + t3) * 0.5, hex: "#F97316"},
+		{value: t3 * 1.35, hex: "#EF4444"},
+	}
+}
+
+var (
+	incaColorStops = []colorStop{
+		{value: 25, hex: "#22C55E"},
+		{value: 75, hex: "#EAB308"},
+		{value: 125, hex: "#F97316"},
+		{value: 200, hex: "#EF4444"},
+	}
+	epaColorStops = []colorStop{
+		{value: 25, hex: "#00E400"},
+		{value: 75, hex: "#FFFF00"},
+		{value: 125, hex: "#FF7E00"},
+		{value: 175, hex: "#FF0000"},
+		{value: 250, hex: "#8F3F97"},
+		{value: 400, hex: "#7E0023"},
+	}
+	metricColorStops = map[string][]colorStop{
+		domain.MetricPM25:     fourTierStops(25, 50, 100),
+		domain.MetricPM10:     fourTierStops(50, 100, 200),
+		domain.MetricCO:       fourTierStops(10, 30, 45),
+		domain.MetricNO2:      fourTierStops(100, 200, 400),
+		domain.MetricSO2:      fourTierStops(125, 250, 500),
+		domain.MetricH2S:      fourTierStops(75, 150, 300),
+		domain.MetricVOCIndex: fourTierStops(100, 200, 400),
+		domain.MetricCO2: {
+			{value: 600, hex: "#22C55E"},
+			{value: 1500, hex: "#EAB308"},
+			{value: 2500, hex: "#EF4444"},
+		},
+		domain.MetricNoiseDBA: {
+			{value: 45, hex: "#22C55E"},
+			{value: 70, hex: "#EAB308"},
+			{value: 90, hex: "#EF4444"},
+		},
+		domain.MetricTemperatureC: {
+			{value: 12, hex: "#3B82F6"},
+			{value: 21, hex: "#22C55E"},
+			{value: 29, hex: "#F97316"},
+			{value: 36, hex: "#EF4444"},
+		},
+		domain.MetricHumidityPct: {
+			{value: 20, hex: "#EAB308"},
+			{value: 52.5, hex: "#22C55E"},
+			{value: 85, hex: "#3B82F6"},
+		},
+		domain.MetricPressureHPA: {
+			{value: 998, hex: "#3B82F6"},
+			{value: 1012.5, hex: "#22C55E"},
+			{value: 1026, hex: "#F97316"},
+		},
+	}
+)
+
+// InterpolateLayerColor returns a continuous #RRGGBB color blended smoothly between band centers.
+func InterpolateLayerColor(layer, standard string, value float64) string {
+	if layer == domain.LayerAirQuality {
+		if standard == domain.StandardEPA {
+			return interpolateColorStops(value, epaColorStops)
+		}
+		return interpolateColorStops(value, incaColorStops)
+	}
+
+	stops, ok := metricColorStops[layer]
+	if !ok {
+		return domain.NoDataColor
+	}
+	return interpolateColorStops(value, stops)
 }
